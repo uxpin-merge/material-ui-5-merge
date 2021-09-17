@@ -4,7 +4,7 @@ module.exports = {
         {
           name: 'Inputs',
           include: [
-            
+            'src/components/Icon/Icon.js',
           ],
         },
         { 
