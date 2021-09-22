@@ -11,9 +11,17 @@ module.exports = {
         { 
           name: 'Data Dispaly',
           include: [
+              'src/components/Typography/Typography.js'
             
           ],
         },
+        {
+          name: 'Layout',
+          include: [
+              'src/components/Box/Box.js'
+          ]  
+
+        }
       ],
       wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
       webpackConfig: 'uxpin.webpack.config.js',
