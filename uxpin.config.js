@@ -6,6 +6,7 @@ module.exports = {
           include: [
             'src/components/Button/Button.js',
             'src/components/Icon/Icon.js',
+            'src/components/IconButton/IconButton.js',
             'src/components/Tooltip/Tooltip.js'
           ],
         },
