@@ -12,6 +12,7 @@ module.exports = {
         { 
           name: 'Data Dispaly',
           include: [
+            'src/components/Avatar/Avatar.js',
               'src/components/Typography/Typography.js'
             
           ],
