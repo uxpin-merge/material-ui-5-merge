@@ -11,7 +11,7 @@ import { styled } from '@mui/material/styles';
   function Badge(props) {
     const sx = Root;
   
-    return <BadgeM {...props} sx={{ flexGrow: 1, bgcolor: 'headerBadges.main' }} anchorOrigin={{vertical: `${props.vertical}`, horizontal: `${props.horizontal}`}}>{props.children}</BadgeM>;
+    return <BadgeM {...props} sx={{ flexGrow: 1, bgcolor: 'headerBadges.main' }} showZero={props.showZero} anchorOrigin={{vertical: `${props.vertical}`, horizontal: `${props.horizontal}`}}>{props.children}</BadgeM>;
   }
 
   Badge.propTypes = {
@@ -29,6 +29,16 @@ import { styled } from '@mui/material/styles';
      * @uxpinpropname  Count
      */
     badgeContent: PropTypes.node,
+
+    /**
+     * Max count to show.
+     */
+     max: PropTypes.number,
+
+     /**
+      * Wrapped shape the badge should overlap.
+      */
+     overlap: PropTypes.oneOf(['circular', 'rectangular']),
   
     /**
      * If `true`, the badge will be invisible.
@@ -38,6 +48,7 @@ import { styled } from '@mui/material/styles';
     /**
      * Controls whether the badge is hidden when badgeContent is zero.
      */
+    /** @uxpinignoreprop */
     showZero: PropTypes.bool,
   
     /**
@@ -56,7 +67,7 @@ import { styled } from '@mui/material/styles';
     /**
      * The color of the component. It supports those theme colors that make sense for this component.
      */
-    color: PropTypes.oneOf(["default", "primary", "secondary", "error", "info", "success", "warning"]),
+    color: PropTypes.oneOf(["primary", "secondary", "error", "info", "success", "warning"]),
 
     /**
      * The variant to use.
@@ -66,3 +77,7 @@ import { styled } from '@mui/material/styles';
   };
   
   export default Badge;
+
+
+
+  
