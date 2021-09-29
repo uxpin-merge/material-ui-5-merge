@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BoxM from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 
+
+
+const Root = styled('div')({
+  width: "100%", display: "table"
+})
 
 /**
  * @uxpinwrappers
  * SkipContainerWrapper
  */
 function Box (props) {
+  const sx = Root;
   const { uxpinRef, ...other } = props;
   return (
-<div style={{width: "100%", display: "table"}} ref={uxpinRef} >
-  <BoxM sx={props.sx}
+  <BoxM
           {...other}
         >
-       
           {!props.children ? (
               <span>
                 <center>
@@ -26,7 +31,6 @@ function Box (props) {
             )}
            
         </BoxM>
-       </div>
   );
 }
 
@@ -35,6 +39,7 @@ Box.propTypes = {
     /**
      * Accepts all system properties, as well as any valid CSS properties.
      */
+    /** @uxpinignoreprop */
   sx: PropTypes.object,
 
     /**
