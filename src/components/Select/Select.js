@@ -3,12 +3,8 @@ import PropTypes, { func } from 'prop-types';
 import SelectM from '@mui/material/Select';
 // Replaced package imports below with local component
 import FormControl from '@mui/material/FormControl';
-import Input from '@mui/material/Input';
-
 import InputLabel from "@mui/material/InputLabel";
 import OutlinedInput from "@mui/material/OutlinedInput";
-
-
 
 function Select(props) {
   const [personName, setPersonName] = React.useState([]);
@@ -17,8 +13,6 @@ function Select(props) {
     console.log(e.target.value)
     setPersonName(e.target.value);
   };
-
-  
 
   return (
     <FormControl sx={{ width: props.width }}>
@@ -107,7 +101,7 @@ Select.propTypes = {
 
   /**
    * If true, value must be an array and the menu will support multiple selections.
-  //  * @uxpinignoreprop
+   * @uxpinignoreprop
    */
   multiple: PropTypes.bool,
 
