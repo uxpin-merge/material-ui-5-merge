@@ -10,6 +10,8 @@ module.exports = {
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
             'src/components/Switch/Switch.js',
+            'src/components/IconButton/IconButton.js',
+            'src/components/TextField/TextField.js',
             'src/components/Tooltip/Tooltip.js'
           ],
         },
@@ -17,19 +19,22 @@ module.exports = {
           name: 'Data Dispaly',
           include: [
             'src/components/Icon/Icon.js',
+            'src/components/Avatar/Avatar.js',
+            'src/components/Badge/Badge.js',
+            'src/components/Typography/Typography.js'
           ],
         },
         {
           name: 'Layout',
           include: [
-            'src/components/Stack/Stack.js',
-          ]
+              'src/components/Box/Box.js'
+          ]  
         },
         {
-          name: 'Navigation',
+          name: 'Surfaces',
           include: [
-            'src/components/MenuItem/MenuItem.js'
-          ]
+              'src/components/Paper/Paper.js',
+          ]  
         }
       ],
       wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
