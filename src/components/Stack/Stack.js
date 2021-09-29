@@ -42,6 +42,12 @@ Stack.propTypes = {
    * Defines the space between immediate children in px
    */
   spacing: PropTypes.number,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   * @uxpinignoreprop
+   */
+  sx: PropTypes.object,
 }
 
 export default Stack;

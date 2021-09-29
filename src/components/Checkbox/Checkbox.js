@@ -60,7 +60,13 @@ Checkbox.propTypes = {
   /**
    * The value of the component.
    */
-  value: PropTypes.string
+  value: PropTypes.string,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   * @uxpinignoreprop
+   */
+  sx: PropTypes.object,
 }
 
 Checkbox.defaultProps = {
