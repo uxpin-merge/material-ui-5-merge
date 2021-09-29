@@ -7,6 +7,7 @@ module.exports = {
             'src/components/Button/Button.js',
             'src/components/Icon/Icon.js',
             'src/components/IconButton/IconButton.js',
+            'src/components/TextField/TextField.js',
             'src/components/Tooltip/Tooltip.js'
           ],
         },
@@ -23,6 +24,13 @@ module.exports = {
           name: 'Layout',
           include: [
               'src/components/Box/Box.js'
+          ]  
+
+        },
+        {
+          name: 'Surfaces',
+          include: [
+              'src/components/Paper/Paper.js',
           ]  
 
         }
