@@ -27,6 +27,11 @@ Icon.propTypes = {
    */
   fontSize: PropTypes.oneOf(['inherit', 'large', 'medium', 'small']),
 
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   * @uxpinignoreprop
+   */
+  sx: PropTypes.object,
 }
 
 
