@@ -6,6 +6,7 @@ module.exports = {
           include: [
             //'src/components/Autocomplete/Autocomplete.js',
             'src/components/Button/Button.js',
+            'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
