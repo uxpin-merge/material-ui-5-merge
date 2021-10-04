@@ -2,18 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import TypographyM from '@mui/material/Typography';
 import ReactHtmlParser from "react-html-parser";
-import BoxM from "../Box/Box";
+//import BoxM from "../Box/Box";
 
 function Typography(props) {
-  const { uxpinRef, ...other } = props;
+  //const { uxpinRef, ...other } = props;
     return (
-    <div style={{ width: "100%", display: "table" }} ref={uxpinRef} key="wwwww">
-    <BoxM {...other}>
-    <TypographyM  {...other} >
-      {ReactHtmlParser(props.children)}{" "}
-    </TypographyM>
-    </BoxM>
-    </div>
+      <TypographyM {...props}>{props.children}</TypographyM>
     )
 }
 
