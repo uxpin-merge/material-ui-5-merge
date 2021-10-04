@@ -4,6 +4,7 @@ module.exports = {
         {
           name: 'Inputs',
           include: [
+            //'src/components/Autocomplete/Autocomplete.js',
             'src/components/Button/Button.js',
             'src/components/Checkbox/Checkbox.js',
             'src/components/Radio/Radio.js',
@@ -25,6 +26,12 @@ module.exports = {
           ],
         },
         {
+          name: 'Navigation',
+          include: [
+            //'src/components/Toolbar/Toolbar.js',
+          ]
+        },
+        {
           name: 'Layout',
           include: [
               'src/components/Box/Box.js'
@@ -33,7 +40,8 @@ module.exports = {
         {
           name: 'Surfaces',
           include: [
-              'src/components/Paper/Paper.js',
+            'src/components/AppBar/AppBar.js',
+            'src/components/Paper/Paper.js',
           ]  
         }
       ],
