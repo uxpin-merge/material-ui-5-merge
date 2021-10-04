@@ -23,6 +23,7 @@ module.exports = {
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
             'src/components/Icon/Icon.js',
+            'src/components/ListItemIcon/ListItemIcon.js',
             'src/components/ListItemText/ListItemText.js',
             'src/components/Tooltip/Tooltip.js',
             'src/components/Typography/Typography.js'
