@@ -24,6 +24,7 @@ module.exports = {
         { 
           name: 'Data Dispaly',
           include: [
+            'src/components/Icon/Icon.js',
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
             'src/components/Icon/Icon.js',
