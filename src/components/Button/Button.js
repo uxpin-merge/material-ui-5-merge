@@ -18,7 +18,7 @@ function Button(props) {
 Button.propTypes ={
   /**
    * The label of the button.
-   * @uxpinpropname  Label
+   * @uxpinpropname Label
    * */
   children: PropTypes.string,
 

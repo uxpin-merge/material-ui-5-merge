@@ -2,7 +2,7 @@ import ListItemText from '../ListItemText';
 
 export default (
   <ListItemText 
-    uxpId="1" 
+    uxpId="List-item-text-1" 
     primary="Primary Text" 
     secondary="Secondary Text"
   />

@@ -4,7 +4,9 @@ module.exports = {
         {
           name: 'Inputs',
           include: [
+            //'src/components/Autocomplete/Autocomplete.js',
             'src/components/Button/Button.js',
+            'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
@@ -15,6 +17,8 @@ module.exports = {
             'src/components/Switch/Switch.js',
             'src/components/TextField/TextField.js',
             'src/components/ToggleButton/ToggleButton.js',
+            'src/components/ToggleButtonGroup/ToggleButtonGroup.js',
+            'src/components/Tooltip/Tooltip.js'
           ],
         },
         { 
@@ -23,8 +27,13 @@ module.exports = {
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
             'src/components/Icon/Icon.js',
+            'src/components/List/List.js',
+            'src/components/ListItem/ListItem.js',
+            'src/components/ListItemAvatar/ListItemAvatar.js',
+            'src/components/ListItemButton/ListItemButton.js',
             'src/components/ListItemIcon/ListItemIcon.js',
             'src/components/ListItemText/ListItemText.js',
+            'src/components/ListSubheader/ListSubheader.js',
             'src/components/Tooltip/Tooltip.js',
             'src/components/Typography/Typography.js'
           ],
@@ -33,24 +42,20 @@ module.exports = {
           name: 'Navigation',
           include: [
             'src/components/MenuItem/MenuItem.js',
+            //'src/components/Toolbar/Toolbar.js',
           ]
         },
         {
           name: 'Layout',
           include: [
-              'src/components/Box/Box.js'
+            'src/components/Box/Box.js'
           ]  
-        },
-        {
-          name: 'Grouping',
-          include: [
-            'src/components/ToggleButtonGroup/ToggleButtonGroup.js',
-          ]
         },
         {
           name: 'Surfaces',
           include: [
-              'src/components/Paper/Paper.js',
+            'src/components/AppBar/AppBar.js',
+            'src/components/Paper/Paper.js',
           ]  
         }
       ],
