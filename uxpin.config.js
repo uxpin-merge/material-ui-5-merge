@@ -13,7 +13,15 @@ module.exports = {
             'src/components/Select/Select.js',
             'src/components/Switch/Switch.js',
             'src/components/IconButton/IconButton.js',
+            'src/components/FloatingActionButton/FloatingActionButton.js',
+            'src/components/Radio/Radio.js',
+            'src/components/Rating/Rating.js',
+            'src/components/Select/Select.js',
+            // 'src/components/Slider/Slider.js',
+            'src/components/Switch/Switch.js',
             'src/components/TextField/TextField.js',
+            'src/components/ToggleButton/ToggleButton.js',
+            'src/components/ToggleButtonGroup/ToggleButtonGroup.js',
             'src/components/Tooltip/Tooltip.js'
           ],
         },
@@ -23,29 +31,29 @@ module.exports = {
             'src/components/Icon/Icon.js',
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
-            'src/components/FormGroup/FormGroup.js',
+            'src/components/Icon/Icon.js',
+            'src/components/List/List.js',
+            'src/components/ListItem/ListItem.js',
+            'src/components/ListItemAvatar/ListItemAvatar.js',
+            'src/components/ListItemButton/ListItemButton.js',
+            'src/components/ListItemIcon/ListItemIcon.js',
+            'src/components/ListItemText/ListItemText.js',
+            'src/components/ListSubheader/ListSubheader.js',
+            'src/components/Tooltip/Tooltip.js',
             'src/components/Typography/Typography.js'
           ],
         },
         {
           name: 'Navigation',
           include: [
-            'src/components/Toolbar/Toolbar.js',
-          ]
-        },
-        {
-          name: 'Form',
-          include: [
-            'src/components/FormControl/FormControl.js',
-            'src/components/FormHelperText/FormHelperText.js',
-            'src/components/FormLabel/FormLabel.js',
-            'src/components/InputLabel/InputLabel.js',
+            'src/components/MenuItem/MenuItem.js',
+            //'src/components/Toolbar/Toolbar.js',
           ]
         },
         {
           name: 'Layout',
           include: [
-              'src/components/Box/Box.js'
+            'src/components/Box/Box.js'
           ]  
         },
         {
