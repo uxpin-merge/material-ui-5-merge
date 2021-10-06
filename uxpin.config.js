@@ -23,13 +23,23 @@ module.exports = {
             'src/components/Icon/Icon.js',
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
+            'src/components/FormGroup/FormGroup.js',
             'src/components/Typography/Typography.js'
           ],
         },
         {
           name: 'Navigation',
           include: [
-            //'src/components/Toolbar/Toolbar.js',
+            'src/components/Toolbar/Toolbar.js',
+          ]
+        },
+        {
+          name: 'Form',
+          include: [
+            'src/components/FormControl/FormControl.js',
+            'src/components/FormHelperText/FormHelperText.js',
+            'src/components/FormLabel/FormLabel.js',
+            'src/components/InputLabel/InputLabel.js',
           ]
         },
         {
