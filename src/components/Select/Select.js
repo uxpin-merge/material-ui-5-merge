@@ -96,6 +96,8 @@ Select.propTypes = {
 
   /**
    * Props applied to the Menu element.
+   * @uxpinignoreprop
+
    */
   MenuProps: PropTypes.object,
 
@@ -139,6 +141,7 @@ Select.propTypes = {
 
   /**
    * Props applied to the clickable div element.
+   * @uxpinignoreprop
    */
   SelectDisplayProps: PropTypes.object,
 
