@@ -22,7 +22,6 @@ module.exports = {
             'src/components/TextField/TextField.js',
             'src/components/ToggleButton/ToggleButton.js',
             'src/components/ToggleButtonGroup/ToggleButtonGroup.js',
-            'src/components/Tooltip/Tooltip.js'
           ],
         },
         { 
@@ -46,9 +45,22 @@ module.exports = {
         {
           name: 'Navigation',
           include: [
+            'src/components/BottomNavigation/BottomNavigation.js',
+            'src/components/BottomNavigationAction/BottomNavigationAction.js',
+            // 'src/components/Menu/Menu.js',
             'src/components/MenuItem/MenuItem.js',
-            //'src/components/Toolbar/Toolbar.js',
+            'src/components/Toolbar/Toolbar.js',
           ]
+        },
+        {
+          name: 'Form',
+          include: [
+            'src/components/FormControl/FormControl.js',
+            'src/components/FormControlLabel/FormControlLabel.js',
+            'src/components/FormGroup/FormGroup.js',
+            'src/components/FormHelperText/FormHelperText.js',
+            'src/components/FormLabel/FormLabel.js',
+          ]  
         },
         {
           name: 'Layout',
