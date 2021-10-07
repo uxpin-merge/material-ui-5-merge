@@ -18,7 +18,7 @@ FormHelperText.propTypes = {
    * Override or extend the styles applied to the component.
    * See [CSS API](#css-api) below for more details.
    */
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
 
     /**
    * @uxpinignoreprop 

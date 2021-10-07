@@ -6,7 +6,7 @@
 // import FormHelperText from "../../FormHelperText/FormHelperText";
 
 // export default (
-//   <FormControl uxpId="1">
+//   <FormControl uxpId="1" fullWidth>
 //     <InputLabel uxpId="2">
 //       Age
 //     </InputLabel>
