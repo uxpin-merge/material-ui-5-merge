@@ -51,6 +51,8 @@ module.exports = {
             // 'src/components/Menu/Menu.js',
             'src/components/Link/Link.js',
             'src/components/MenuItem/MenuItem.js',
+            'src/components/Tab/Tab.js',
+            'src/components/Tabs/Tabs.js',
             'src/components/Toolbar/Toolbar.js',
           ]
         },
