@@ -47,7 +47,9 @@ module.exports = {
           include: [
             'src/components/BottomNavigation/BottomNavigation.js',
             'src/components/BottomNavigationAction/BottomNavigationAction.js',
+            'src/components/Breadcrumbs/Breadcrumbs.js',
             // 'src/components/Menu/Menu.js',
+            'src/components/Link/Link.js',
             'src/components/MenuItem/MenuItem.js',
             'src/components/Toolbar/Toolbar.js',
           ]
