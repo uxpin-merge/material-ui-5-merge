@@ -9,11 +9,11 @@ function Icon (props) {
 }
 
 Icon.propTypes = {
-    /**
-  * The icon to display.
-  * Use the name of the icon from https://material.io/tools/icons.
-  * @uxpinpropname  Icon
-  */
+  /**
+   * The icon to display.
+   * Use the name of the icon from https://material.io/tools/icons.
+   * @uxpinpropname  Icon
+   */
   children: PropTypes.node,
 
   /**

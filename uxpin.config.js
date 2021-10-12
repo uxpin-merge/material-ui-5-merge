@@ -1,3 +1,5 @@
+const { Feedback } = require("@mui/icons-material");
+
 module.exports = {
     components: {
       categories: [
@@ -8,9 +10,12 @@ module.exports = {
             'src/components/Button/Button.js',
             'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
+            'src/components/IconButton/IconButton.js',
+            'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
+            // 'src/components/Slider/Slider.js',
             'src/components/Switch/Switch.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
@@ -27,9 +32,9 @@ module.exports = {
         { 
           name: 'Data Dispaly',
           include: [
-            'src/components/Icon/Icon.js',
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
+            'src/components/Divider/Divider.js',
             'src/components/Icon/Icon.js',
             'src/components/List/List.js',
             'src/components/ListItem/ListItem.js',
@@ -57,6 +62,14 @@ module.exports = {
           ]
         },
         {
+          name: 'Feedback',
+          include: [
+            'src/components/Alert/Alert.js',
+            'src/components/AlertTitle/AlertTitle.js',
+            'src/components/Snackbar/Snackbar.js',
+          ]
+        },
+        {
           name: 'Form',
           include: [
             'src/components/FormControl/FormControl.js',
@@ -80,6 +93,12 @@ module.exports = {
           name: 'Surfaces',
           include: [
             'src/components/AppBar/AppBar.js',
+            'src/components/Card/Card.js',
+            'src/components/CardActions/CardActions.js',
+            'src/components/CardActionArea/CardActionArea.js',
+            'src/components/CardContent/CardContent.js',
+            'src/components/CardHeader/CardHeader.js',
+            'src/components/CardMedia/CardMedia.js',
             'src/components/Paper/Paper.js',
           ]  
         },
