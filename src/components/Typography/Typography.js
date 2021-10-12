@@ -12,7 +12,7 @@ function Typography(props) {
 }
 
 Typography.propTypes = {
-    /**
+  /**
    * The typography style to apply.
    */
   variant: PropTypes.oneOf([
@@ -32,31 +32,34 @@ Typography.propTypes = {
     "inherit"
   ]),
 
-/**
+  /**
    * Alignment of text.
    */
- align: PropTypes.oneOf(["inherit", "left", "center", "right", "justify"]),
+  align: PropTypes.oneOf(["inherit", "left", "center", "right", "justify"]),
 
- /**
-  * Color of text
-  */
-
+  /**
+   * Color of text.
+   */
   color: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey.500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
-
+  
+  /**
+   * Color of the Background.
+   */
   bgcolor: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
- /**
-  *  Controls if typography is inline or block level.
-  */
- display: PropTypes.oneOf(["initial", "block", "inline"]),
+ 
+  /**
+   *  Controls if typography is inline or block level.
+   */
+  display: PropTypes.oneOf(["initial", "block", "inline"]),
 
- /**
-  * If `true`, the text will have a bottom margin.
-  */
- gutterBottom: PropTypes.bool,
+  /**
+   * If `true`, the text will have a bottom margin.
+   */
+  gutterBottom: PropTypes.bool,
 
- /**
-  * If `true`, the text will have a bottom margin.
-  */
+  /**
+   * If `true`, the text will have a bottom margin.
+   */
   paragraph: PropTypes.bool,
 
   /**
@@ -66,7 +69,6 @@ Typography.propTypes = {
 
   /**
    * Map typography to another html tag. 
-   * @uxpinignoreprop
    */
   component: PropTypes.string,
 
@@ -90,7 +92,7 @@ Typography.propTypes = {
    * All Padding.
    * In pixels
    */
-   padding: PropTypes.string,
+  padding: PropTypes.string,
 
    /**
     * Top Padding.

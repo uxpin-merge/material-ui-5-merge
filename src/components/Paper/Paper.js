@@ -8,8 +8,6 @@ function Paper(props) {
     )
 } 
 
-
-
 Paper.propTypes = {
   /**
    * The content of the component. Text or nested components.
