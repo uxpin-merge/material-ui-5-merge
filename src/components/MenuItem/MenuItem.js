@@ -1,10 +1,10 @@
 import * as React from 'react';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import MenuItemM from '@mui/material/MenuItem';
 
 function MenuItem(props) {
   return (
-    <MenuItemM {...props}/>
+    <MenuItemM {...props}>{props.children}</MenuItemM>
   )
 }
 
