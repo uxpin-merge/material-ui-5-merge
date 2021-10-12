@@ -3,7 +3,9 @@ import Rating from '../Rating';
 
 export default (
   <Rating
-    uxpId="radio-1" 
+    uxpId="rating-1" 
     defaultValue="3"
+    emptyIcon='home'
+    icon='people'
   />
 );
