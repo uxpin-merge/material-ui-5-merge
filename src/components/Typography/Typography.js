@@ -70,7 +70,7 @@ Typography.propTypes = {
   /**
    * Map typography to another html tag. 
    */
-  component: PropTypes.string,
+  component: PropTypes.node,
 
   /**
    * We are empirically mapping the variant property to a range of different DOM element types.

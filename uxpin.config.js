@@ -52,8 +52,12 @@ module.exports = {
           include: [
             'src/components/BottomNavigation/BottomNavigation.js',
             'src/components/BottomNavigationAction/BottomNavigationAction.js',
+            'src/components/Breadcrumbs/Breadcrumbs.js',
             // 'src/components/Menu/Menu.js',
+            'src/components/Link/Link.js',
             'src/components/MenuItem/MenuItem.js',
+            'src/components/Tab/Tab.js',
+            'src/components/Tabs/Tabs.js',
             'src/components/Toolbar/Toolbar.js',
           ]
         },
@@ -78,7 +82,11 @@ module.exports = {
         {
           name: 'Layout',
           include: [
-            'src/components/Box/Box.js'
+            'src/components/Box/Box.js',
+            'src/components/Grid/Grid.js',
+            'src/components/ImageList/ImageList.js',
+            'src/components/ImageListItem/ImageListItem.js',
+            'src/components/ImageListItemBar/ImageListItemBar.js',
           ]  
         },
         {
@@ -93,6 +101,12 @@ module.exports = {
             'src/components/CardMedia/CardMedia.js',
             'src/components/Paper/Paper.js',
           ]  
+        },
+        {
+          name: "HTML Wrappers and Spacing",
+          include: [
+            "src/components/Image/Image.js",
+          ]
         }
       ],
       wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
