@@ -97,6 +97,7 @@ Select.propTypes = {
   /**
    * Props applied to the Menu element.
    * @uxpinignoreprop
+
    */
   MenuProps: PropTypes.object,
 
