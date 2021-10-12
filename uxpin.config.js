@@ -69,7 +69,11 @@ module.exports = {
         {
           name: 'Layout',
           include: [
-            'src/components/Box/Box.js'
+            'src/components/Box/Box.js',
+            'src/components/Grid/Grid.js',
+            'src/components/ImageList/ImageList.js',
+            'src/components/ImageListItem/ImageListItem.js',
+            'src/components/ImageListItemBar/ImageListItemBar.js',
           ]  
         },
         {
@@ -78,6 +82,12 @@ module.exports = {
             'src/components/AppBar/AppBar.js',
             'src/components/Paper/Paper.js',
           ]  
+        },
+        {
+          name: "HTML Wrappers and Spacing",
+          include: [
+            "src/components/Image/Image.js",
+          ]
         }
       ],
       wrapper: 'src/components/UXPinWrapper/UXPinWrapper.js',
