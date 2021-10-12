@@ -68,6 +68,12 @@ Tooltip.propTypes = {
    * @uxpinpropname  Tooltip Text
    */
   title: PropTypes.string, 
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   * @uxpinignoreprop
+   */
+  sx: PropTypes.object,
 }
 
 export default Tooltip;

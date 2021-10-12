@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ButtonM from '@mui/material/Button';
 import Icon from '../Icon/Icon';
-import PropTypes from 'prop-types';
 
 function Button(props) {
   return (
@@ -18,7 +18,7 @@ function Button(props) {
 Button.propTypes ={
   /**
    * The label of the button.
-   * @uxpinpropname  Label
+   * @uxpinpropname Label
    * */
   children: PropTypes.string,
 
@@ -73,6 +73,12 @@ Button.propTypes ={
    * On click event to use with UXPin interactions.
    */
   onClick: PropTypes.func,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   * @uxpinignoreprop
+   */
+  sx: PropTypes.object,
 }
 
 export default Button;
