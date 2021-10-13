@@ -4,9 +4,11 @@ import ButtonM from '@mui/material/Button';
 import Icon from '../Icon/Icon';
 
 function Button(props) {
+  const { uxpinRef, ...other } = props;
   return (
     <ButtonM
-      {...props}
+      {...other}
+      ref={uxpinRef}
       startIcon={props.startIcon && <Icon>{props.startIcon}</Icon>}
       endIcon={props.endIcon && <Icon>{props.endIcon}</Icon>}
     >
