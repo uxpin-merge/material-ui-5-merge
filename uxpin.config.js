@@ -66,6 +66,7 @@ module.exports = {
           include: [
             'src/components/Alert/Alert.js',
             'src/components/AlertTitle/AlertTitle.js',
+            'src/components/Skeleton/Skeleton.js',
             'src/components/Snackbar/Snackbar.js',
           ]
         },
@@ -92,6 +93,10 @@ module.exports = {
         {
           name: 'Surfaces',
           include: [
+            'src/components/Accordion/Accordion.js',
+            // 'src/components/AccordionActions/AccordionActions.js',
+            'src/components/AccordionDetails/AccordionDetails.js',
+            'src/components/AccordionSummary/AccordionSummary.js',
             'src/components/AppBar/AppBar.js',
             'src/components/Card/Card.js',
             'src/components/CardActions/CardActions.js',
