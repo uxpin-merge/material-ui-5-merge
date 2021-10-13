@@ -10,6 +10,7 @@ module.exports = {
             'src/components/Button/Button.js',
             'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
+            'src/components/Collapse/Collapse.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/Radio/Radio.js',
@@ -22,7 +23,6 @@ module.exports = {
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
-            // 'src/components/Slider/Slider.js',
             'src/components/Switch/Switch.js',
             'src/components/TextField/TextField.js',
             'src/components/ToggleButton/ToggleButton.js',
@@ -44,6 +44,7 @@ module.exports = {
             'src/components/ListItemText/ListItemText.js',
             'src/components/ListSubheader/ListSubheader.js',
             'src/components/Tooltip/Tooltip.js',
+            'src/components/Typography/Typography.js',
             'src/components/Typography/Typography.js'
           ],
         },
@@ -66,6 +67,13 @@ module.exports = {
           include: [
             'src/components/Alert/Alert.js',
             'src/components/AlertTitle/AlertTitle.js',
+            // 'src/components/Dialog/Dialog.js',
+            "src/components/CircularProgress/CircularProgress.js",
+            'src/components/DialogActions/DialogActions.js',
+            'src/components/DialogContentText/DialogContentText.js',
+            'src/components/DialogTitle/DialogTitle.js',
+            'src/components/DialogContent/DialogContent.js',
+            "src/components/LinearProgress/LinearProgress.js",
             'src/components/Snackbar/Snackbar.js',
           ]
         },

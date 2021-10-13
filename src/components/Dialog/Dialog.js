@@ -1,11 +1,16 @@
-import DialogM from '@mui/material/Dialog';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import DialogM from "@mui/material/Dialog";
+
 
 function Dialog(props){
     const [open, setOpen] = React.useState(props.open);
 
     React.useEffect(() => setOpen(props.open), [props]);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
 
     const handleClose = () => {
       setOpen(false);
@@ -24,11 +29,7 @@ function Dialog(props){
     <DialogM      
     TransitionProps={uxpContainer ? { tabIndex: "null" } : null}
     open={open}
-    onClose={(reason) => {
-        if (reason !== 'backdropClick') {
-            handleClose();
-        }
-    }} 
+    onClose={handleClose} 
     container={drawerContainer}
     disableEnforceFocus
     keepMounted
@@ -45,11 +46,8 @@ function Dialog(props){
     /**
      * If `true`, the Dialog is open.
      */
-    open: PropTypes.bool.isRequired,
+    open: PropTypes.bool,
     
-    
-    
-  
     /**
      * Height of the dialog. This should equal the height of UXP canvas
      * @uxpinignoreprop
@@ -99,7 +97,7 @@ function Dialog(props){
     onExit: PropTypes.func,
   
     /**
-     * @uxpinignoreprop
+     *  @uxpinignoreprop
      */
     children: PropTypes.node,
 
@@ -121,7 +119,7 @@ function Dialog(props){
      * The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.
      */
     /** @uxpinignoreprop */
-    trainstionDuration: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    trainstionDuration: PropTypes.oneOf([PropTypes.number, PropTypes.object]),
     
     /**
      * Props applied to the transition element. By default, the element is based on this Transition component http://reactcommunity.org/react-transition-group/transition.
@@ -155,3 +153,6 @@ function Dialog(props){
     /** @uxpinignoreprop */
     sx: PropTypes.object,
   };
+
+
+  export default Dialog;
