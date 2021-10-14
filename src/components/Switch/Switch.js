@@ -68,7 +68,7 @@ Switch.propTypes = {
   /**
    * The size of the component.
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium']),
 
   /**
    * The value of the component
