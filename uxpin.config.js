@@ -13,6 +13,7 @@ module.exports = {
             'src/components/Collapse/Collapse.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
+            'src/components/LoadingButton/LoadingButton.js',
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
