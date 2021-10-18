@@ -5,7 +5,7 @@ import Divider from '@mui/material/Divider';
 
 function Stack(props) {
   return (
-    <StackM>
+    <StackM {...props}>
       {props.children}
     </StackM>
   ) 

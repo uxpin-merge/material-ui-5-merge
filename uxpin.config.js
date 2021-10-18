@@ -1,3 +1,5 @@
+const { Feedback } = require("@mui/icons-material");
+
 module.exports = {
     components: {
       categories: [
@@ -8,16 +10,20 @@ module.exports = {
             'src/components/Button/Button.js',
             'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
+            'src/components/Collapse/Collapse.js',
+            'src/components/IconButton/IconButton.js',
+            'src/components/FloatingActionButton/FloatingActionButton.js',
+            'src/components/LoadingButton/LoadingButton.js',
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
+            // 'src/components/Slider/Slider.js',
             'src/components/Switch/Switch.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/Radio/Radio.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
-            // 'src/components/Slider/Slider.js',
             'src/components/Switch/Switch.js',
             'src/components/TextField/TextField.js',
             'src/components/ToggleButton/ToggleButton.js',
@@ -27,9 +33,9 @@ module.exports = {
         { 
           name: 'Data Dispaly',
           include: [
-            'src/components/Icon/Icon.js',
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',
+            'src/components/Divider/Divider.js',
             'src/components/Icon/Icon.js',
             'src/components/List/List.js',
             'src/components/ListItem/ListItem.js',
@@ -39,6 +45,7 @@ module.exports = {
             'src/components/ListItemText/ListItemText.js',
             'src/components/ListSubheader/ListSubheader.js',
             'src/components/Tooltip/Tooltip.js',
+            'src/components/Typography/Typography.js',
             'src/components/Typography/Typography.js'
           ],
         },
@@ -54,6 +61,22 @@ module.exports = {
             'src/components/Tab/Tab.js',
             'src/components/Tabs/Tabs.js',
             'src/components/Toolbar/Toolbar.js',
+          ]
+        },
+        {
+          name: 'Feedback',
+          include: [
+            'src/components/Alert/Alert.js',
+            'src/components/AlertTitle/AlertTitle.js',
+            // 'src/components/Dialog/Dialog.js',
+            "src/components/CircularProgress/CircularProgress.js",
+            'src/components/DialogActions/DialogActions.js',
+            'src/components/DialogContentText/DialogContentText.js',
+            'src/components/DialogTitle/DialogTitle.js',
+            'src/components/DialogContent/DialogContent.js',
+            "src/components/LinearProgress/LinearProgress.js",
+            'src/components/Snackbar/Snackbar.js',
+            'src/components/Skeleton/Skeleton.js',
           ]
         },
         {
@@ -79,7 +102,17 @@ module.exports = {
         {
           name: 'Surfaces',
           include: [
+            'src/components/Accordion/Accordion.js',
+            // 'src/components/AccordionActions/AccordionActions.js',
+            'src/components/AccordionDetails/AccordionDetails.js',
+            'src/components/AccordionSummary/AccordionSummary.js',
             'src/components/AppBar/AppBar.js',
+            'src/components/Card/Card.js',
+            'src/components/CardActions/CardActions.js',
+            'src/components/CardActionArea/CardActionArea.js',
+            'src/components/CardContent/CardContent.js',
+            'src/components/CardHeader/CardHeader.js',
+            'src/components/CardMedia/CardMedia.js',
             'src/components/Paper/Paper.js',
           ]  
         },
