@@ -5,7 +5,7 @@ import Icon from '../../Icon/Icon';
 import IconButton from '../../IconButton/IconButton';
 
 const action = (
-    <Button uxpId='Button-1' color="primary" size="small" onClick={() => {}}>
+    <Button uxpId='Button-1' color="primary" size="small">
       UNDO
     </Button>
 );
