@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonM from '@mui/material/Button';
 import Icon from '../Icon/Icon';
+import { iconVariants } from '../Icon/icon-variants'
+
 
 function Button(props) {
   const { uxpinRef, ...other } = props;
@@ -63,13 +65,13 @@ Button.propTypes ={
    * If set, icon will display to the left.
    * Use the name of the icon from https://material.io/tools/icons.
    */
-  startIcon: PropTypes.oneOf(['home', 'add_circle', 'star', 'navigation']),
+  startIcon: PropTypes.oneOf(iconVariants),
 
   /**
    * If set, icon will display to the right.
    * Use the name of the icon from https://material.io/tools/icons.
    */
-  endIcon: PropTypes.node,
+  endIcon: PropTypes.oneOf(iconVariants),
 
   /**
    * On click event to use with UXPin interactions.

@@ -4,25 +4,28 @@ import SelectM from '@mui/material/Select';
 // Replaced package imports below with local component
 import FormControl from '@mui/material/FormControl';
 import InputLabel from "@mui/material/InputLabel";
-import OutlinedInput from "@mui/material/OutlinedInput";
 
 function Select(props) {
-  const [personName, setPersonName] = React.useState([]);
+  const [selectedValue, setSelectedValue] = React.useState(props.value);
+
+  React.useEffect(() => setSelectedValue(props.value), [props]);
 
   const handleChange = (e) => {
     console.log(e.target.value)
-    setPersonName(e.target.value);
+    setSelectedValue(e.target.value);
   };
 
   return (
-    <FormControl sx={{ width: props.width }}>
+    <FormControl variant={props.variant} fullWidth>
       <InputLabel id="demo-multiple-name-label">{props.label}</InputLabel>
       <SelectM
         labelId="demo-multiple-name-label"
         id="demo-multiple-name"
         onChange={(e) => handleChange(e)}
-        value={personName}
-        input={<OutlinedInput label="Name" />}
+        onOpen={props.onOpen}
+        onClose={props.onClose}
+        value={selectedValue}
+        label={props.label}
       >
         {props.children}
       </SelectM>
@@ -34,8 +37,9 @@ Select.propTypes = {
   /**
    * Replaced with width prop
    * If true, the width of the popover will automatically be set according to the items inside the menu, otherwise it will be at least the width of the select input.
-   */
-  // autoWidth: PropTypes.bool,
+  * @uxpinignoreprop
+   * */
+  autoWidth: PropTypes.bool,
 
   /**
    * @uxpinignoreprop
@@ -86,7 +90,7 @@ Select.propTypes = {
    * The value is used in InputLabel.
    * OutlineInput provides layout css to the label when a MenuItem is selected.
    */
-  label: PropTypes.node,
+  label: PropTypes.string,
 
   /**
    * @uxpinignoreprop
@@ -113,25 +117,7 @@ Select.propTypes = {
    */
   native: PropTypes.bool,
 
-  /**
-   * Callback fired when a menu item is selected.
-   */
-  onChange: PropTypes.func,
 
-  /**
-   * Callback fired when the component requests to be closed. Use in controlled mode (see open).
-   */
-  onClose: PropTypes.func,
-
-  /**
-   * Callback fired when the component requests to be opened. Use in controlled mode (see open).
-   */
-  onOpen: PropTypes.func,
-
-  /**
-   * If true, the component is shown. You can only use it when the native prop is false (default).
-   */
-  open: PropTypes.bool,
 
   /**
    * @uxpinignoreprop
@@ -146,6 +132,11 @@ Select.propTypes = {
   SelectDisplayProps: PropTypes.object,
 
   /**
+   * The varian to use.
+   */
+  variant: PropTypes.oneOf(['filled', 'outlined', 'standard']),
+
+  /**
    * The input value. 
    * Providing an empty string will select no options. Set to an empty string '' if you don't want any of the available options to be selected.
    * If the value is an object it must have reference equality with the option in order to be selected. 
@@ -153,18 +144,37 @@ Select.propTypes = {
    */
   value: PropTypes.string,
 
-  /**
-   * The varian to use.
-   */
-  variant: PropTypes.oneOf(['filled', 'outlined', 'standard']),
+
 
   /**
    * Custom Prop.
    * The width of the Select.
    * Can use px - 50px.
    * Can use % - 100%.
+   * @uxpinignoreprop
    */
   width: PropTypes.string,
+
+  /**
+ * Callback fired when a menu item is selected.
+ */
+  onChange: PropTypes.func,
+
+  /**
+   * Callback fired when the component requests to be closed. Use in controlled mode (see open).
+   */
+  onClose: PropTypes.func,
+
+  /**
+   * Callback fired when the component requests to be opened. Use in controlled mode (see open).
+   */
+  onOpen: PropTypes.func,
+
+  /**
+   * If true, the component is shown. You can only use it when the native prop is false (default).
+   * @uxpinignoreprop
+   */
+  open: PropTypes.bool,
 
   /**
    * @uxpinignoreprop
