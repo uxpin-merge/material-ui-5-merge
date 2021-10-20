@@ -1,23 +1,71 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CardHeaderM from '@mui/material/CardHeader';
+import Avatar from '../Avatar/Avatar';
+import Icon from '../Icon/Icon';
+import IconButton from '../IconButton/IconButton';
+import { iconVariants } from '../Icon/icon-variants'
+
+// avatar={
+    //   <Avatar uxpId="Avatar-1" sx={{ bgcolor: 'blue' }}>
+    //     R
+    //   </Avatar>
+    // }
 
 function CardHeader(props) {
     return (
-        <CardHeaderM {...props}>{props.children}</CardHeaderM>
+        <CardHeaderM 
+          {...props} 
+          avatar={props.avatar && <Avatar color={props.color}>{props.avatar}</Avatar>}
+          action={props.action && <IconButton onClick={props.IconOnClick}><Icon>{props.action}</Icon></IconButton>}
+        >
+          {props.children}
+        </CardHeaderM>
     )
 } 
 
 CardHeader.propTypes = {
   /**
    * The action to display in the card header.
+   * @uxpinpropname Icon Action
    */
-  action: PropTypes.node,
+  action: PropTypes.oneOf(iconVariants),
 
+  /**
+   * On click event to use with UXPin interactions.
+   */
+  onClick: PropTypes.func,
+
+  /**
+   * On click event to use with UXPin interactions.
+   */
+  IconOnClick: PropTypes.func,
   /**
    * The Avatar element to display.
    */
-  avatar: PropTypes.node,
+  avatar: PropTypes.string,
+
+  /**
+   * Color of the Avatar text.
+   * @uxpinpropname Avatar Bg Color
+   */
+  color: PropTypes.oneOf([
+    'red', 
+    'pink', 
+    'purple',  
+    'indigo', 
+    'blue', 
+    'lightBlue', 
+    'cyan', 
+    'teal', 
+    'green', 
+    'lightGreen', 
+    'lime', 
+    'yellow', 
+    'orange', 
+    'brown', 
+    'grey', 
+  ]),
 
   /**
    * Override or extend the styles applied to the component.
@@ -60,7 +108,6 @@ CardHeader.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 }

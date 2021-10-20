@@ -3,7 +3,7 @@ import Select from '../Select';
 import MenuItem from '../../MenuItem/MenuItem';
 
 export default (
-  <Select width="400px" uxpId="Select-1" label="label">
+  <Select uxpId="Select-1" label="label">
     <MenuItem uxpId="MenuItem-1" value="temp-value-1">
       Menu Item 1
     </MenuItem>
