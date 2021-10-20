@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import AccordionSummaryM from '@mui/material/AccordionSummary';
 import Icon from '../Icon/Icon';
+import { iconVariants } from '../Icon/icon-variants'
 
 function AccordionSummary(props) {
     return (
-        <AccordionSummaryM {...props} expandIcon={<Icon>{props.icon}</Icon>}>{props.children}</AccordionSummaryM>
+        <AccordionSummaryM {...props} expandIcon={<Icon>{props.expandIcon}</Icon>}>{props.children}</AccordionSummaryM>
     )
 } 
 
@@ -24,16 +25,9 @@ AccordionSummary.propTypes = {
 
   /**
    * The icon to display as the expand indicator.
-   * Icon prop is used to improve Merge usability.
-   * @uxpinignoreprop
+   * @uxpinpropname Icon
    */
-  expandedIcon: PropTypes.node,
-
-  /**
-   * Custome Prop.
-   * The icon to display as the expand indicator.
-   */
-  icon: PropTypes.string,
+  expandIcon: PropTypes.oneOf(iconVariants),
 
   /**
    * This prop can help identify which element has keyboard focus. The class name will be applied when the element gains the focus through keyboard interaction. 
@@ -42,7 +36,6 @@ AccordionSummary.propTypes = {
   
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 }

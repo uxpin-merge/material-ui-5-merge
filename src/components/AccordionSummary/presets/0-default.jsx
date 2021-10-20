@@ -3,7 +3,7 @@ import AccordionSummary from '../AccordionSummary';
 import Typography from '../../Typography/Typography';
 
 export default (
-  <AccordionSummary uxpId='Accordian-Summary-1' icon='expand more'>
+  <AccordionSummary uxpId='Accordian-Summary-1' expandIcon='expand more'>
     <Typography uxpId='Typography-1'>Accordion 1</Typography>
   </AccordionSummary>
 )
