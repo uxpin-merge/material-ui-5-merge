@@ -4,7 +4,7 @@ import PaperM from "@mui/material/Paper";
 
 function Paper(props) {
     return (
-        <PaperM {...props} sx={props.sx}>{props.children}</PaperM>
+        <PaperM {...props}>{props.children}</PaperM>
     )
 } 
 
