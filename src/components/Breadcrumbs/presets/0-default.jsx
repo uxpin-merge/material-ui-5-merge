@@ -5,20 +5,28 @@ import Link from '../../Link/Link';
 
 
 export default (
-    <div role="presentation" uxpId='div-1'>
-      <Breadcrumbs aria-label="breadcrumb" uxpId='breadcrumb-1'>
-        <Link underline="hover" color="inherit" href="/" uxpId='link-1'>
-          Merge1
-        </Link>
-        <Link
-          uxpId='link-2'  
-          underline="hover"
-          color="inherit"
-          href="/getting-started/installation/"
-        >
-          Merge2
-        </Link>
-        <Typography color="text.primary" uxpId='link-3'>Merge3</Typography>
-      </Breadcrumbs>
-    </div>
+  <Breadcrumbs aria-label="breadcrumb" uxpId='breadcrumb-1'>
+    <Link 
+      uxpId='link-1'
+      underline="hover" 
+      color="inherit" 
+      href="/" 
+    >
+      Merge1
+    </Link>
+    <Link
+      uxpId='link-2'  
+      underline="hover"
+      color="inherit"
+      href="/getting-started/installation/"
+    >
+      Merge2
+    </Link>
+    <Typography 
+      uxpId='link-3'
+      color="text.primary"
+    >
+      Merge3
+    </Typography>
+  </Breadcrumbs>
 )
