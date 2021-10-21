@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import IconM from '@mui/material/Icon';
 import { iconVariants } from './icon-variants'
 
+let icons = document.createElement('link');
+icons.setAttribute('href', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+icons.setAttribute('rel', 'stylesheet');
+document.head.appendChild(icons);
+
+
 function Icon (props) {
     return <IconM{...props}>{props.children}</IconM>
 }
@@ -36,7 +42,7 @@ Icon.propTypes = {
 
 
 Icon.defaultProps = {
-  fontSize: "large"
+  // fontSize: "large"
 }
 
 
