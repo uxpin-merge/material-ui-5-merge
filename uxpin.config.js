@@ -15,6 +15,8 @@ module.exports = {
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/LoadingButton/LoadingButton.js',
             'src/components/Radio/Radio.js',
+            'src/components/RadioGroup/RadioGroup.js',
+            // 'src/components/RadioWithLabel/RadioWithLabel.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
             // 'src/components/Slider/Slider.js',
@@ -31,7 +33,7 @@ module.exports = {
           ],
         },
         { 
-          name: 'Data Dispaly',
+          name: 'Data Display',
           include: [
             'src/components/Avatar/Avatar.js',
             'src/components/Badge/Badge.js',

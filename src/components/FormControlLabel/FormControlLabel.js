@@ -1,90 +1,92 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "@mui/material/FormControlLabel";
+import Radio from "@mui/material/Radio";
+import Switch from "@mui/material/Switch";
+import Checkbox from "@mui/material/Checkbox";
+
 
 function FormControlLabel(props) {
-    return <FormControlLabelM {...props}>{props.children}</FormControlLabelM>;
+  const { controlType, ...other } = props;
+  const id = `input-${other.value}`;
+
+  let controlComponent = "";
+
+  if (controlType == 'radio') {
+    controlComponent = <Radio id={id} inputProps={{ role: "radio", "aria-checked": other.checked }} />
+  }
+  else if (controlType == 'checkbox') {
+    controlComponent = <Checkbox id={id} inputProps={{ role: "checkbox", "aria-checked": other.checked }} />
+  }
+  else if (controlType == 'switch') {
+    controlComponent = <Switch id={id} inputProps={{ role: "switch", "aria-checked": other.checked }} />
   }
 
+  return (
+    <div>
+    <FormControlLabelM
+      {...other}
+      htmlFor={id}
+      control={controlComponent}
+      label={other.label}
+    />
+    </div>
+  );
+}
+
 FormControlLabel.propTypes = {
-    /**
-   * If `true`, the component appears selected.
+  /**
+* A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
+*/
+  controlType: PropTypes.oneOf(['radio', 'switch', 'checkbox']),
+  /**
+   * The label text.
    */
-  checked: PropTypes.bool,
+  label: PropTypes.string,
 
   /**
-   * @uxpinignoreprop 
-   * Override or extend the styles applied to the component.
-   * See [CSS API](#css-api) below for more details.
-   */
-  classes: PropTypes.object,
-
-  /**
-   * A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
-   */
-  control: PropTypes.element,
-
-  /**
-   * If `true`, the control will be disabled.
-   */
-  disabled: PropTypes.bool,
-
-  /**
-   * If 'true', the label is rendered as it is passed without an additional typography node.
-   */
-  disableTypography: PropTypes.bool,
-
-
-
-  /**
-   * @uxpinignoreprop 
-   * Use that property to pass a ref callback to the native input component.
-   */
-  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-
-  /**
-   * The text to be used in an enclosing label element.
-   */
-  label: PropTypes.node,
-
-  /**
-   * The position of the label.
-   */
-  labelPlacement: PropTypes.oneOf(['end', 'start', 'top', 'bottom']),
-
-  /**
-   * @uxpinignoreprop 
-   * @ignore
-   */
-  muiFormControl: PropTypes.object,
-
-  /*
-   * @ignore
-   */
-  name: PropTypes.string,
-
-  /**
-   * Callback fired when the state is changed.
-   *
-   * @param {object} event The event source of the callback.
-   * You can pull out the new value by accessing `event.target.checked`.
-   * @param {boolean} checked The `checked` value of the switch
-   */
-  onChange: PropTypes.func,
-
-  /**
-   * @uxpinignoreprop 
    * The value of the component.
    */
   value: PropTypes.string,
 
+  name: PropTypes.string,
+  
   /**
-   * The system prop that allows defining system overrides as well as additional CSS styles. See the `sx` page for more details.
-   * https://mui.com/system/the-sx-prop/
+   * The position of the label.
    */
-  /** @uxpinignoreprop */
-  sx: PropTypes.object,
+  labelPlacement: PropTypes.oneOf(["end", "start", "top", "bottom"]),
+
+  /**
+   * If `true`, the checkbox appears selected.
+   * @uxpinbind onChange 1
+   */
+  checked: PropTypes.bool,
+
+  /**
+   * If `true`, the checkbox will be disabled.
+   */
+  disabled: PropTypes.bool,
+
+
+  /**
+   * A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
+   * @uxpinignoreprop
+   */
+  control: PropTypes.element,
+
+
+
+  /**
+ * Change event to use with UXPin interactions.
+ */
+  onChange: PropTypes.func,
 };
 
-export default FormControlLabel;
-  
+FormControlLabel.defaultProps = {
+  // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
+  // see: https://fb.me/react-controlled-components
+  checked: false,
+  onChange: () => undefined,
+};
+
+export { FormControlLabel as default };
