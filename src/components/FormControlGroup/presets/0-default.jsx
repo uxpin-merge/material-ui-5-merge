@@ -1,11 +1,10 @@
 import * as React from "react";
-import RadioGroup from "../RadioGroup";
-import Radio from "../../Radio/Radio";
+import FormControlGroup from "../FormControlGroup";
 import FormControlLabel from "../../FormControlLabel/FormControlLabel";
 
 
 export default (
-  <RadioGroup uxpId="3" value="yellow" name= "radio-group" grouplabel= "Favorite Color">
+  <FormControlGroup uxpId="3" value="yellow" name= "radio-group" controlType="radio" grouplabel= "Favorite Color">
     <FormControlLabel
       value="red"
       controlType="radio"
@@ -31,5 +30,5 @@ export default (
       label="(Disabled option)"
       uxpId="FormControlLabel4"
     />
-  </RadioGroup>
+  </FormControlGroup>
 );

@@ -1,12 +1,13 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Radio from '@mui/material/Radio';
 import RadioGroupM from '@mui/material/RadioGroup';
 import FormControlLabel from '../FormControlLabel/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 
-export default function RadioGroup(props) {
+export default function FormControlGroup(props) {
+  const { controlType, ...other } = props;
+  
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">{props.grouplabel}</FormLabel>
@@ -19,7 +20,7 @@ export default function RadioGroup(props) {
             <FormControlLabel
               value={child.props.value}
               checked={child.props.checked}
-              controlType={child.props.controlType}
+              controlType={props.controlType}
               htmlFor={id}
               label={child.props.label}
               labelPlacement={props.labelPlacement}
@@ -32,7 +33,21 @@ export default function RadioGroup(props) {
   );
 }
 
-RadioGroup.propTypes = {
+FormControlGroup.propTypes = {
+
+    /**
+* A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
+*/
+controlType: PropTypes.oneOf(['radio', 'switch', 'checkbox']),
+  /**
+   * Display text over the radio group.
+   */
+   grouplabel: PropTypes.string,
+
+   /**
+* The position of the label.
+*/
+    labelPlacement: PropTypes.oneOf(["end", "start", "top", "bottom"]),
   /**
    * The value of the initially selected radio button.
    * @uxpinbind onChange 1
@@ -58,11 +73,6 @@ RadioGroup.propTypes = {
   onKeyDown: PropTypes.func,
 
   /**
-   * Display text over the radio group.
-   */
-  grouplabel: PropTypes.string,
-
-  /**
    * display selection controls in a single row.
    */
   row: PropTypes.bool,
@@ -72,13 +82,10 @@ RadioGroup.propTypes = {
    */
   onChange: PropTypes.func,
 
-    /**
-   * The position of the label.
-   */
-  labelPlacement: PropTypes.oneOf(["end", "start", "top", "bottom"]),
+
 
 };
 
-RadioGroup.defaultProps = {
+FormControlGroup.defaultProps = {
   onChange: () => undefined,
 };
