@@ -9,11 +9,16 @@ function Link(props) {
 }
 
 Link.propTypes = {
-   /**
+    /**
      * The content of the component.
      */
-    /** @uxpinignoreprop */
+    /** @uxpinpropname Text */
     children: PropTypes.node,
+
+    /**
+     * href for the component
+     */
+    href: PropTypes.string,
 
     /**
      * Override or extend the styles applied to the component. See CSS API https://mui.com/api/link/#css for more details.
@@ -32,13 +37,6 @@ Link.propTypes = {
      */
     /** @uxpinignoreprop */
     component: PropTypes.node,
-
-    /**
-     * The system prop that allows defining system overrides as well as additional CSS styles. 
-     * See the `sx` page for more details. https://mui.com/system/the-sx-prop/
-     */
-    /**@uxpinignoreprop */
-    sx: PropTypes.object,
 
     /**
      * classes prop applied to the Typography element.
@@ -69,7 +67,18 @@ Link.propTypes = {
         'overline',
         'subtitle1',
         'subtitle2',
-    ]) 
+    ]),
+    
+    /**
+     * The system prop that allows defining system overrides as well as additional CSS styles. 
+     * See the `sx` page for more details. https://mui.com/system/the-sx-prop/
+     */
+    sx: PropTypes.object,
+
+    /**
+     * On click event to use with UXPin interactions.
+     */
+    onClick: PropTypes.func,
    
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import BottomNavigationActionM from "@mui/material/BottomNavigationAction";
+import { iconVariants } from '../Icon/icon-variants'
 
 function BottomNavigationAction(props) {
   return <BottomNavigationActionM {...props} />;
@@ -12,23 +13,27 @@ BottomNavigationAction.propTypes = {
      * Override or extend the styles applied to the component.
      */
     classes: PropTypes.object,
+
     /**
      * The icon element.
      */
-    icon: PropTypes.node,
+    icon: PropTypes.oneOf(iconVariants),
+
     /**
      * The label element.
      */
-    label: PropTypes.node,
-    onChange: PropTypes.func,
-    onClick: PropTypes.func,
-    selected: PropTypes.bool,
+    label: PropTypes.string,
+
     /**
      * If `true`, the `BottomNavigationAction` will show its label.
      * By default, only the selected `BottomNavigationAction`
      * inside `BottomNavigation` will show its label.
      */
     showLabel: PropTypes.bool,
+    
+    /**
+     * You can provide your own value. Otherwise, we fallback to the child position index.
+     */
     value: PropTypes.string,
     
     /**

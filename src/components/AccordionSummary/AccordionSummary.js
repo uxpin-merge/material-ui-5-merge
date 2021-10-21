@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import AccordionSummaryM from '@mui/material/AccordionSummary';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
+
 function AccordionSummary(props) {
     return (
         <AccordionSummaryM {...props} expandIcon={<Icon>{props.expandedIcon}</Icon>}>{props.children}</AccordionSummaryM>
@@ -37,7 +38,6 @@ AccordionSummary.propTypes = {
   
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 }
