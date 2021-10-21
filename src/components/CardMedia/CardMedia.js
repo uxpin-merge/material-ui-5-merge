@@ -12,27 +12,37 @@ CardMedia.propTypes = {
    * @uxpinignoreprop
    */
   classes: PropTypes.object,
+
+  /**
+   * The component used for the root node.
+   */
   component: PropTypes.oneOf(["img", "video", "audio"]),
+
+  /**
+   * The height of the media
+   */
+  height: PropTypes.number,
+
   /**
    * Image to be displayed as a background image.
-   * Either `image` or `src` prop must be specified.
+   * Either `image` or `src` prop must be specified. Specifying both may causes the media not to load.
    * Note that caller must specify height otherwise the image will not be visible.
+   * @uxpinpropname Img src
    */
   image: PropTypes.string,
+
   /**
    * An alias for `image` property.
    * Available only with media components.
    * Media components: `video`, `audio`, `picture`, `iframe`, `img`.
+   * @uxpinpropname Video/ Audio src
    */
   src: PropTypes.string,
+
   /**
- * @uxpinignoreprop
- */
+   * @uxpinignoreprop
+   */
   style: PropTypes.object,
-  /**
-The height of the media
- */
-  height: PropTypes.number
 };
 
 CardMedia.defaultProps = {

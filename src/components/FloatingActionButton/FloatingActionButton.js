@@ -2,16 +2,20 @@ import * as React from 'React';
 import PropTypes from 'prop-types';
 import FabM from '@mui/material/Fab';
 import Icon from '../Icon/Icon';
+import { iconVariants } from '../Icon/icon-variants'
 
 function FloatingActionButton(props) {
+  let hasIcon = null;
+
+  if (props.startIcon) {
+    hasIcon = <Icon>{props.icon}</Icon>
+  }
+
  return (
-   <FabM 
-    {...props}
-  >
-     {props.startIcon && <Icon>{props.startIcon}</Icon>}
-     {props.label}
-     {props.endIcon && <Icon>{props.endIcon}</Icon>}
-   </FabM>
+  <FabM {...props}>
+    {hasIcon}
+    {props.label}
+  </FabM>
  )
 }
 
@@ -28,14 +32,7 @@ FloatingActionButton.propTypes = {
    * Use this Prop to just have a single Icon in the Button.
    * Use the name of the icon from https://material.io/tools/icons.
    */
-  startIcon: PropTypes.oneOf(['home', 'add_circle', 'star', 'navigation']),
-
-  /**
-   * Custom Prop to replace children.
-   * If set, icon will display to the right.
-   * Use the name of the icon from https://material.io/tools/icons.
-   */
-  endIcon: PropTypes.node,
+  icon: PropTypes.oneOf(iconVariants),
 
   /**
    * @uxpinignoreprop

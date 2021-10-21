@@ -2,9 +2,15 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import ToggleButtonM from '@mui/material/ToggleButton';
 import Icon from '../Icon/Icon';
+import { iconVariants } from '../Icon/icon-variants'
+
 
 function ToggleButton(props) {
   const [selected, setSelected] = React.useState(false);
+
+  React.useEffect(() => {
+    setSelected(props.selected)
+  }, [props.selected]); // Only re-run the effect if value prop changes
 
   return (
     <ToggleButtonM
@@ -29,19 +35,25 @@ ToggleButton.propTypes = {
   children: PropTypes.string,
 
   /**
+   * Custom Prop.
+   * The text of the button.
+   */
+  label: PropTypes.string,
+
+  /**
    * Custom Prop to replace children.
    * If set, icon will display to the left.
    * Use this Prop to just have a single Icon in the Button.
    * Use the name of the icon from https://material.io/tools/icons.
    */
-  startIcon: PropTypes.oneOf(['home', 'add_circle', 'star', 'navigation']),
+  startIcon: PropTypes.oneOf(iconVariants),
 
   /**
    * Custom Prop to replace children.
    * If set, icon will display to the right.
    * Use the name of the icon from https://material.io/tools/icons.
    */
-  endIcon: PropTypes.node,
+  endIcon: PropTypes.oneOf(iconVariants),
 
   /**
    * Override or extend the styles applied to the component.
@@ -53,12 +65,6 @@ ToggleButton.propTypes = {
    * The color of the button whhen it is in an active state.
    */
   color: PropTypes.oneOf(['standard', 'primary', 'secondary', 'success', 'error', 'info', 'warning']),
-
-  /**
-   * If true, the component is disabled.
-   * @uxpincontroltype
-   */
-  disabled: PropTypes.bool,
 
   /**
    * If true, the keyboard focus ripple is disabled.
@@ -74,32 +80,30 @@ ToggleButton.propTypes = {
   disabledRipple: PropTypes.bool,
 
   /**
+   * The size of the button.
+   */
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+
+  /**
    * If `true`, the button will take up the full width of its container.
    */
   fullWidth: PropTypes.bool,
 
   /**
-   * Custom Prop.
-   * The text of the button.
+   * If true, the component is disabled.
    */
-  label: PropTypes.string,
+  disabled: PropTypes.bool,
 
   /**
    * If true, the button is rendered in an active state.
-   * NEED TO CREATE LOGIC FOR THIS
-   * @uxpinignoreprop
+   * @uxpinbind onChange 1
    */
   selected: PropTypes.bool,
-
-  /**
-   * The size of the button.
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
   
   /**
    * The value to associate with the button when selected in a ToggleButtonGroup.
    */
-  value: PropTypes.node,
+  value: PropTypes.string,
 
   /**
    * Custom Prop
