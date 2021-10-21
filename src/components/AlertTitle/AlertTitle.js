@@ -11,7 +11,7 @@ function AlertTitle(props) {
 AlertTitle.propTypes = {
   /**
    * The content of the component.
-   * @uxpinignoreprop
+   * @uxpinpropname Text
    */
   children: PropTypes.node,
 
@@ -23,7 +23,6 @@ AlertTitle.propTypes = {
   
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 }
