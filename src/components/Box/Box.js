@@ -13,42 +13,38 @@ const Root = styled('div')({
  * @uxpinwrappers
  * SkipContainerWrapper
  */
-function Box (props) {
+function Box(props) {
   const sx = Root;
   const { uxpinRef, ...other } = props;
   return (
-  <BoxM
-          {...other}
-        >
-          {!props.children ? (
-              <span>
-                <center>
-                  <p>Drag components into this wrapper</p>
-                </center>
-              </span>
-            ) : (
-              props.children
-            )}
-           
-        </BoxM>
+    <BoxM
+      {...other}
+    >
+      {!props.children ? (
+        <span>
+          <center>
+            <p>Drag components into this wrapper</p>
+          </center>
+        </span>
+      ) : (
+        props.children
+      )}
+
+    </BoxM>
   );
 }
 
 
 Box.propTypes = {
-    /**
-     * Accepts all system properties, as well as any valid CSS properties.
-     */
-    /** @uxpinignoreprop */
-  sx: PropTypes.object,
 
-    /**
-   * The content of the box.
-   */
+
+  /**
+ * The content of the box.
+ */
   /** @uxpinignoreprop */
   children: PropTypes.node,
-  
- 
+
+  /** @uxpinignoreprop */
   clone: PropTypes.bool,
 
   /**
@@ -91,7 +87,7 @@ Box.propTypes = {
    * All Margin.
    * In pixels
    */
-   margin: PropTypes.string,
+  margin: PropTypes.string,
   /**
    * Top margin.
    * In pixels
@@ -144,15 +140,31 @@ Box.propTypes = {
   borderLeft: PropTypes.number,
 
   borderColor: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey500', 'primary.main', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
-  
+
   borderRadius: PropTypes.string,
 
   boxShadow: PropTypes.number,
 
   textAlign: PropTypes.oneOf(["left", "center", "right"]),
   // textOverflow: PropTypes.oneOf(["clip", "ellipsis"]),
-  
+  /**
+ * Accepts all system properties, as well as any valid CSS properties.
+ */
+  sx: PropTypes.object,
 };
-
+Box.defaultProps = {
+  sx:{
+  "padding":"",
+  "padding-top":"",
+  "padding-right":"",
+  "padding-bottom":"",
+  "padding-left":"",
+  "margin":"",
+  "margin-top":"",
+  "margin-right":"",
+  "margin-bottom":"",
+  "margin-left":"",
+}
+}
 
 export default Box;

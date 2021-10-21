@@ -14,6 +14,11 @@ function Typography(props) {
 Typography.propTypes = {
   /**
    * The typography style to apply.
+   * @uxpinpropname  Text
+   */
+  children: PropTypes.node,
+  /*
+   * The typography style to apply.
    */
   variant: PropTypes.oneOf([
     "h1",
@@ -69,6 +74,7 @@ Typography.propTypes = {
 
   /**
    * Map typography to another html tag. 
+   * @uxpinignoreprop
    */
   component: PropTypes.node,
 

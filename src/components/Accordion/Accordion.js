@@ -3,8 +3,17 @@ import PropTypes from "prop-types";
 import AccordionM from '@mui/material/Accordion';
 
 function Accordion(props) {
+
+  const [expanded, setExpanded] = React.useState('');
+
+
+  React.useEffect(() => {
+    setExpanded(props.expanded)
+  }, [props.expanded]); // Only re-run the effect if value prop changes
+
+
     return (
-        <AccordionM {...props}>{props.children}</AccordionM>
+        <AccordionM expanded={expanded} {...props}>{props.children}</AccordionM>
     )
 } 
 
@@ -39,6 +48,7 @@ Accordion.propTypes = {
 
   /**
    * If true, expands the accordion, otherwise collapse it. Setting this prop enables control over the accordion.
+   * @uxpinbind onChange 1
    */
   expanded: PropTypes.bool,
 
@@ -68,5 +78,11 @@ Accordion.propTypes = {
    */
   sx: PropTypes.object
 }
+
+Accordion.defaultProps = {
+  // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
+  // see: https://fb.me/react-controlled-components
+  expanded: false,
+};
 
 export default Accordion;

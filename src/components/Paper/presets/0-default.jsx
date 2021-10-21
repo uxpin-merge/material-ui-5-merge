@@ -1,14 +1,12 @@
 import React from 'react';
 import Paper from '../Paper';
-import Box from '../../Box/Box';
+import Typography from '../../Typography/Typography';
 
 
 export default (
-  <Box uxpId='box' sx={{
-      width: 128,
-      height: 128,
-    }}
-  >
-    <Paper uxpId="paper" elevation={3} />
-  </Box>
-  );
+  <Paper uxpId="paper" elevation={3}>
+    <Typography uxpId="paper.default" padding="20px">
+      Paper can be used to build surface or other elements for your layout.
+    </Typography>
+  </Paper>
+);
