@@ -3,7 +3,7 @@ import Grid from "../Grid";
 import Button from "../../Button/Button";
 
 export default (
-  <Grid container spacing={24} uxpId="1">
+  <Grid container spacing={8} uxpId="1">
     <Grid item xs={3} uxpId="1.1">
       <Button
         uxpId="1.1.1"

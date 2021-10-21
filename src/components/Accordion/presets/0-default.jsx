@@ -6,7 +6,7 @@ import Typography from '../../Typography/Typography';
 
 export default (
   <Accordion uxpId='Accordian-1'>
-    <AccordionSummary uxpId='Accordian-Summary-1' icon='expanded more'>
+    <AccordionSummary uxpId='Accordian-Summary-1' expandedIcon='expand_more'>
       <Typography uxpId='Typography-1'>Accordion 1</Typography>
     </AccordionSummary>
     <AccordionDetails uxpId='Accordian-Details-1'>

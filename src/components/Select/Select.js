@@ -6,9 +6,12 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from "@mui/material/InputLabel";
 
 function Select(props) {
-  const [selectedValue, setSelectedValue] = React.useState(props.value);
+  const [selectedValue, setSelectedValue] = React.useState('');
 
-  React.useEffect(() => setSelectedValue(props.value), [props]);
+
+  React.useEffect(() => {
+    setSelectedValue(props.value)
+  }, [props.value]); // Only re-run the effect if value prop changes
 
   const handleChange = (e) => {
     console.log(e.target.value)

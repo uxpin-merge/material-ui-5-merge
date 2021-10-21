@@ -9,12 +9,12 @@ function Divider(props) {
 Divider.propTypes = {
   /**
    * Absolutely position the element.
+    * @uxpinignoreprop
    */
   absolute: PropTypes.bool,
 
   /**
    * The content of the component.
-   * @uxpinpropname Text
    */
   children: PropTypes.node,
 
@@ -32,16 +32,19 @@ Divider.propTypes = {
   /**
    * If true, a vertical divider will have the correct height when used in flex container. 
    * (By default, a vertical divider will have a calculated height of 0px if it is the child of a flex container.)
+  * @uxpinignoreprop
    */
   flexItem: PropTypes.bool,
 
   /**
    * If true, the divider will have a lighter color.
+   * @uxpinignoreprop
    */
   light: PropTypes.bool,
 
   /**
    * The component orientation.
+   * @uxpinignoreprop
    */
   orientation: PropTypes.oneOf(['horizontal', ' vertical']),
 
