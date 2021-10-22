@@ -14,9 +14,8 @@ export default (
   <Snackbar 
     uxpId='Snackbar-1' 
     open={true}
-    autoHideDuration={6000}
-    onClose={() => {}}
-    message="Note archived"
-    action={action}
+    // autoHideDuration={6000}
+    // onClose={() => {}}
+    // message="Note archived"
   />
 );

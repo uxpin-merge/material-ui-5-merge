@@ -1,17 +1,58 @@
-import React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import Button from '@mui/material/Button';
 import SnackbarM from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import PropTypes from 'prop-types';
 
-/**
- * @uxpinwrappers
- * SkipContainerWrapper
- */
- function Snackbar(props) {
-  const { uxpinRef, ...other } = props;
-    return (
-        <SnackbarM {...other} ref={uxpinRef}>{props.children}</SnackbarM>
-    )
-} 
+export default function Snackbar(props) {
+
+  const [open, setOpen] = React.useState('');
+
+
+  React.useEffect(() => {
+    setOpen(props.open)
+  }, [props.open]); // Only re-run the effect if value prop changes
+
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <Button color="secondary" size="small" onClick={handleClose}>
+        UNDO
+      </Button>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
+  return (
+    <div>
+      <SnackbarM
+      {...props}
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message="Note archived"
+        action={action}
+      />
+    </div>
+  );
+}
+
 
 Snackbar.propTypes = {
   /**
@@ -109,5 +150,3 @@ Snackbar.propTypes = {
    */
   sx: PropTypes.object
 }
-
-export default Snackbar;
