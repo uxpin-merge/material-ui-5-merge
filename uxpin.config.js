@@ -11,6 +11,7 @@ module.exports = {
             'src/components/ButtonGroup/ButtonGroup.js',
             'src/components/Checkbox/Checkbox.js',
             'src/components/CheckboxWithLabel/CheckboxWithLabel.js',
+            'src/components/CheckboxGroup/CheckboxGroup.js',
             'src/components/Collapse/Collapse.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
