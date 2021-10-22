@@ -4,22 +4,9 @@ import ToggleButtonM from '@mui/material/ToggleButton';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
-
 function ToggleButton(props) {
-  const [selected, setSelected] = React.useState(false);
-
-  React.useEffect(() => {
-    setSelected(props.selected)
-  }, [props.selected]); // Only re-run the effect if value prop changes
-
   return (
-    <ToggleButtonM
-      {...props}
-      selected={selected}
-      onChange={() => {
-        setSelected(!selected);
-      }}
-    >
+    <ToggleButtonM {...props}>
       {props.startIcon && <Icon>{props.startIcon}</Icon>}
       {props.label}
       {props.endIcon && <Icon>{props.endIcon}</Icon>}
@@ -85,6 +72,11 @@ ToggleButton.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
 
   /**
+   * The value to associate with the button when selected in a ToggleButtonGroup.
+   */
+  value: PropTypes.string,
+
+  /**
    * If `true`, the button will take up the full width of its container.
    */
   fullWidth: PropTypes.bool,
@@ -99,11 +91,6 @@ ToggleButton.propTypes = {
    * @uxpinbind onChange 1
    */
   selected: PropTypes.bool,
-  
-  /**
-   * The value to associate with the button when selected in a ToggleButtonGroup.
-   */
-  value: PropTypes.string,
 
   /**
    * Custom Prop

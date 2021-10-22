@@ -1,13 +1,31 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import ToggleButtonGroupM from '@mui/material/ToggleButtonGroup';
+import PropTypes from 'prop-types';
 
-function ToggleButtonGroup(props) {
+export default function ToggleButtonGroup(props) {
+
+  const [toggleValue, setToggleValue] = React.useState([props.value]);
+
+  React.useEffect(() => {
+    setToggleValue([props.value])
+  }, [props.value]); // Only re-run the effect if value prop changes
+
+  const handleChange = (event, newAlignment) => {
+    setToggleValue(newAlignment);
+  };
+
   return (
-    <ToggleButtonGroupM {...props}>
+    <ToggleButtonGroupM
+      {...props}
+      value={toggleValue}
+      onChange={handleChange}
+      aria-label="toggle button"
+    >
       {props.children}
     </ToggleButtonGroupM>
-  )
+
+
+  );
 }
 
 ToggleButtonGroup.propTypes = {
@@ -23,26 +41,7 @@ ToggleButtonGroup.propTypes = {
    */
   classes: PropTypes.object,
 
-  /**
-   * The color of the button whhen it is in an active state.
-   */
-  color: PropTypes.oneOf(['standard', 'primary', 'secondary', 'success', 'error', 'info', 'warning']),
 
-  /**
-   * If true, the component is disabled.
-   * @uxpincontroltype
-   */
-  disabled: PropTypes.bool,
-
-  /**
-   * If true, only allow one of the child ToggleButton values to be selected.
-   */
-  exclusive: PropTypes.bool,
-
-  /**
-   * If true, the button group will take up the full width of its container.
-   */
-  fullWidth: PropTypes.bool,
 
   /**
    * @uxpinignoreprop
@@ -60,9 +59,30 @@ ToggleButtonGroup.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
 
   /**
+ * The color of the button whhen it is in an active state.
+ */
+  color: PropTypes.oneOf(['standard', 'primary', 'secondary', 'success', 'error', 'info', 'warning']),
+
+  /**
    * The value to associate with the button when selected in a ToggleButtonGroup.
    */
-  value: PropTypes.node,
+  value: PropTypes.string,
+
+  /**
+ * If true, only allow one of the child ToggleButton values to be selected.
+ */
+  exclusive: PropTypes.bool,
+
+  /**
+ * If true, the component is disabled.
+ * @uxpincontroltype
+ */
+  disabled: PropTypes.bool,
+
+  /**
+   * If true, the button group will take up the full width of its container.
+   */
+  fullWidth: PropTypes.bool,
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
@@ -70,5 +90,3 @@ ToggleButtonGroup.propTypes = {
    */
   sx: PropTypes.object,
 }
-
-export default ToggleButtonGroup;
