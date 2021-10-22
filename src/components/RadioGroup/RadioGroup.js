@@ -1,9 +1,9 @@
 import React from "react";
-import Radio from "@mui/material/Radio";
+import Radio from "../Radio/Radio";
 import RadioGroupM from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+import FormControlLabel from "../FormControlLabel/FormControlLabel";
+import FormControl from "../FormControl/FormControl";
+import FormLabel from "../FormLabel/FormLabel";
 import PropTypes from "prop-types";
 
 export default function RadioGroup(props) {
@@ -12,23 +12,22 @@ export default function RadioGroup(props) {
       <FormLabel component="legend">{props.grouplabel}</FormLabel>
       <RadioGroupM {...props}>
         {React.Children.map(props.children, (child, index) => {
-          // Unique Id created by lodash
-          let id = _.uniqueId("radio-with-label-");
-          
+   
+
           return (
             <FormControlLabel
               value={child.props.value}
               checked={child.props.checked}
               control={
                 <Radio
-                  id={id}
+                  id="radio-group"
                   inputProps={{
                     role: "radio",
                     "aria-checked": props.checked,
                   }}
                 />
               }
-              htmlFor={id}
+              htmlFor="radio-group"
               label={child.props.label}
               labelPlacement={props.labelPlacement}
               disabled={child.props.disabled}
@@ -41,6 +40,17 @@ export default function RadioGroup(props) {
 }
 
 RadioGroup.propTypes = {
+
+  /**
+ * Display text over the radio group.
+ */
+  grouplabel: PropTypes.string,
+
+  /**
+* The position of the label.
+*/
+  labelPlacement: PropTypes.oneOf(["end", "start", "top", "bottom"]),
+
   /**
    * The value of the initially selected radio button.
    * @uxpinbind onChange 1
@@ -66,11 +76,6 @@ RadioGroup.propTypes = {
   onKeyDown: PropTypes.func,
 
   /**
-   * Display text over the radio group.
-   */
-  grouplabel: PropTypes.string,
-
-  /**
    * display selection controls in a single row.
    */
   row: PropTypes.bool,
@@ -79,11 +84,6 @@ RadioGroup.propTypes = {
    * Change event to use with UXPin interactions.
    */
   onChange: PropTypes.func,
-
-    /**
-   * The position of the label.
-   */
-  labelPlacement: PropTypes.oneOf(["end", "start", "top", "bottom"]),
 
 };
 

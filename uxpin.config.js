@@ -15,7 +15,8 @@ module.exports = {
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/LoadingButton/LoadingButton.js',
             'src/components/Radio/Radio.js',
-            // 'src/components/RadioWithLabel/RadioWithLabel.js',
+            'src/components/RadioWithLabel/RadioWithLabel.js',
+            'src/components/RadioGroup/RadioGroup.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
             // 'src/components/Slider/Slider.js',
@@ -83,14 +84,11 @@ module.exports = {
         {
           name: 'Form',
           include: [
-            'src/components/RadioWithLabel/RadioWithLabel.js',
-            'src/components/RadioGroup/RadioGroup.js',
-            // 'src/components/FormControlGroup/FormControlGroup.js',
-            // 'src/components/FormControl/FormControl.js',
-            // 'src/components/FormControlLabel/FormControlLabel.js',
-            // 'src/components/FormGroup/FormGroup.js',
-            // 'src/components/FormHelperText/FormHelperText.js',
-            // 'src/components/FormLabel/FormLabel.js',
+            'src/components/FormControl/FormControl.js',
+            'src/components/FormControlLabel/FormControlLabel.js',
+            'src/components/FormGroup/FormGroup.js',
+            'src/components/FormHelperText/FormHelperText.js',
+            'src/components/FormLabel/FormLabel.js',
           ]  
         },
         {

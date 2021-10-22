@@ -1,6 +1,11 @@
-import * as React from "react";
-import FormControlLabel from "../FormControlLabel";
+import React from "react";
+import Checkbox from "../../Checkbox/Checkbox";
+import FormControlLabel from "../../FormControlLabel/FormControlLabel";
 
 export default (
-  <FormControlLabel label="Control Label" controlType="radio" uxpId="RadioLabel"/>
+  <FormControlLabel
+    uxpId="formcontrollabel-1"
+    control={<Checkbox uxpId="checkbox-1" defaultChecked value='gilad' />}
+    label="I'm a label"
+  />
 );
