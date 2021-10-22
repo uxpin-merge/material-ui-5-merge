@@ -1,34 +1,36 @@
 import React from "react";
-import Checkbox from "../Checkbox/Checkbox";
+import Switch from "../Switch/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "../FormControlLabel/FormControlLabel";
 import FormControl from "../FormControl/FormControl";
 import FormLabel from "../FormLabel/FormLabel";
 import PropTypes from "prop-types";
 
-export default function CheckboxGroup(props) {
+export default function SwitchGroup(props) {
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">{props.grouplabel}</FormLabel>
       <FormGroup {...props}>
         {React.Children.map(props.children, (child, index) => {
+   
+
           return (
             <FormControlLabel
               value={child.props.value}
-              // checked={child.props.checked}
+              checked={child.props.checked}
               control={
-                <Checkbox
-                  id="radio-group"
+                <Switch
+                  id="switch-group"
                   color={props.color}
                   size={props.size}
-                  checked={child.props.checked}
-                  // inputProps={{
-                  //   role: "switch",
-                  //   "aria-checked": props.checked,
-                  // }}
+                  // checked={false}
+                  inputProps={{
+                    role: "switch",
+                    "aria-checked": props.checked,
+                  }}
                 />
               }
-              htmlFor="radio-group"
+              htmlFor="switch-group"
               label={child.props.label}
               labelPlacement={props.labelPlacement}
               disabled={child.props.disabled}
@@ -40,7 +42,7 @@ export default function CheckboxGroup(props) {
   );
 }
 
-CheckboxGroup.propTypes = {
+SwitchGroup.propTypes = {
 
   /**
  * Display text over the radio group.
@@ -54,7 +56,8 @@ CheckboxGroup.propTypes = {
 
   /**
    * The value of the initially selected radio button.
-
+   * @uxpinbind onChange 1
+   * @uxpinpropname  Selected Value
    */
   value: PropTypes.string,
 
@@ -98,15 +101,9 @@ CheckboxGroup.propTypes = {
    * Change event to use with UXPin interactions.
    */
   onChange: PropTypes.func,
-    /**
-   * If `true`, the checkbox is checked.
-   * @uxpinbind onChange 1
-   */
-checked: PropTypes.bool,
 
 };
 
-CheckboxGroup.defaultProps = {
+SwitchGroup.defaultProps = {
   onChange: () => undefined,
-
 };

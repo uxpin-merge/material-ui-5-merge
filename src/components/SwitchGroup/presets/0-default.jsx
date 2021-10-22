@@ -1,31 +1,31 @@
 import * as React from "react";
-import CheckboxGroup from "../CheckboxGroup"
+import SwitchGroup from "../SwitchGroup"
 import Checkbox from "../../Checkbox/Checkbox";
 import CheckboxWithLabel from "../../CheckboxWithLabel/CheckboxWithLabel";
 
 
 export default (
-  <CheckboxGroup uxpId="3" name= "checkbox-group" grouplabel="Favorite Colors">
+  <SwitchGroup uxpId="3" name= "checkbox-group" grouplabel="Favorite Colors">
     <CheckboxWithLabel
       value="red"
-      control={<Checkbox uxpId="checkbox1" />}
+      control={<Checkbox uxpId="checkbox1"/>}
       label="Red"
       uxpId="FormControlLabel1"
-      
+      checked={false}
     />
     <CheckboxWithLabel
       value="blue"
       control={<Checkbox uxpId="checkbox2" />}
       label="Blue"
       uxpId="FormControlLabel2"
-      // checked={false}
+      checked={false}
     />
     <CheckboxWithLabel
       value="yellow"
       control={<Checkbox uxpId="checkbox3" />}
       label="Yellow"
       uxpId="FormControlLabel3"
-      // checked={false}
+      checked={false}
     />
     <CheckboxWithLabel
       value="disabled"
@@ -33,7 +33,7 @@ export default (
       control={<Checkbox uxpId="checkbox4" />}
       label="(Disabled option)"
       uxpId="FormControlLabel4"
-      // checked={false}
+      checked={false}
     />
-  </CheckboxGroup>
+  </SwitchGroup>
 );

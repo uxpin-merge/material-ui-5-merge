@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "../FormControlLabel/FormControlLabel";
-import Checkbox from "../Checkbox/Checkbox";
+import Switch from "../Switch/Switch";
 import { makeStyles } from '@mui/styles';
 import { v4 as uuidv4 } from 'uuid';
-
 
 
 const useStyles = makeStyles({
@@ -13,23 +12,20 @@ const useStyles = makeStyles({
   },
 });
 
-function CheckboxWithLabel(props) {
+function SwitchWithLabel(props) {
   const classes = useStyles();
-
-  // Unique Id 
-  const id = uuidv4();
-
+ // Unique Id 
+ const id = uuidv4();
   return (
     <FormControlLabelM
       {...props}
       htmlFor={id}
       control={
-        <Checkbox
+        <Switch
           id={id}
           inputProps={{ role: "switch", "aria-checked": props.checked }}
           size={props.size}
           color={props.color}
-          checked={props.checked}
         />
       }
       label={props.label}
@@ -38,7 +34,7 @@ function CheckboxWithLabel(props) {
   );
 }
 
-CheckboxWithLabel.propTypes = {
+SwitchWithLabel.propTypes = {
   /**
    * If `true`, the checkbox is checked.
    * @uxpinbind onChange 1
@@ -102,11 +98,11 @@ CheckboxWithLabel.propTypes = {
     ]),
 };
 
-CheckboxWithLabel.defaultProps = {
+SwitchWithLabel.defaultProps = {
   // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
   // see: https://fb.me/react-controlled-components
   checked: false,
   onChange: () => undefined,
 };
 
-export { CheckboxWithLabel as default };
+export { SwitchWithLabel as default };
