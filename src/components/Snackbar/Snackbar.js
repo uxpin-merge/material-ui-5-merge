@@ -6,7 +6,7 @@ import SnackbarM from '@mui/material/Snackbar';
  * @uxpinwrappers
  * SkipContainerWrapper
  */
-function Snackbar(props) {
+ function Snackbar(props) {
   const { uxpinRef, ...other } = props;
     return (
         <SnackbarM {...other} ref={uxpinRef}>{props.children}</SnackbarM>

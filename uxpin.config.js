@@ -93,12 +93,14 @@ module.exports = {
         {
           name: 'Form',
           include: [
-            'src/components/FormControlGroup/FormControlGroup.js',
-            'src/components/FormControl/FormControl.js',
-            'src/components/FormControlLabel/FormControlLabel.js',
-            'src/components/FormGroup/FormGroup.js',
-            'src/components/FormHelperText/FormHelperText.js',
-            'src/components/FormLabel/FormLabel.js',
+            'src/components/RadioWithLabel/RadioWithLabel.js',
+            'src/components/RadioGroup/RadioGroup.js',
+            // 'src/components/FormControlGroup/FormControlGroup.js',
+            // 'src/components/FormControl/FormControl.js',
+            // 'src/components/FormControlLabel/FormControlLabel.js',
+            // 'src/components/FormGroup/FormGroup.js',
+            // 'src/components/FormHelperText/FormHelperText.js',
+            // 'src/components/FormLabel/FormLabel.js',
           ]  
         },
         {

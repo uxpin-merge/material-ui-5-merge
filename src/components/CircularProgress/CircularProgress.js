@@ -2,8 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import CircularProgressM from "@mui/material/CircularProgress";
 
+
 function CircularProgress(props) {
-  return <CircularProgressM {...props} />;
+  return (
+    <CircularProgressM {...props} />
+  )
 }
 
 CircularProgress.propTypes = {

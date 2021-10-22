@@ -1,36 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBarM from '@mui/material/AppBar';
-import Box from '../Box/Box';
-import Toolbar from "../Toolbar/Toolbar";
-import Typography from "../Typography/Typography";
-import Button from "../Button/Button";
-import IconButton from "../IconButton/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-
 
 function AppBar(props) {
     return (
-      <Box sx={{ flexGrow: 1 }}>
-      <AppBarM {...props}>
-        {props.children}
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBarM>
-    </Box>
+      <AppBarM {...props} sx={props.sx}>
+      {props.children}
+    </AppBarM>
     );
   }
 
