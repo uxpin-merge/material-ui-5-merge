@@ -21,6 +21,8 @@ function RadioWithLabel(props) {
         <Radio
           id="radioWithLabel"
           inputProps={{ role: "radio", "aria-checked": props.checked }}
+          color={props.color}
+          size={props.size}
         />
       }
       label={props.label}
@@ -50,7 +52,20 @@ RadioWithLabel.propTypes = {
    * The value of the component.
    */
   value: PropTypes.string,
+    /**
+   * The size of the component. small is equivalent to the dense checkbox styling.
+   */
+     size: PropTypes.oneOf(['small', 'medium', 'large']),
 
+
+  color: PropTypes.oneOf([
+    'default',
+    'primary',
+    'secondary',
+    'error',
+    'success',
+    'warning',
+  ]),
   /**
    * The position of the label.
    */

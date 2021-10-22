@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FormControlLabelM from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import { makeStyles } from "@material-ui/styles";
+import FormControlLabelM from "../FormControlLabel/FormControlLabel";
+import Checkbox from "../Checkbox/Checkbox";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   root: {
@@ -19,11 +19,13 @@ function CheckboxWithLabel(props) {
   return (
     <FormControlLabelM
       {...props}
-      htmlFor={id}
+      htmlFor="checkboxWithLabel"
       control={
         <Checkbox
-          id={id}
+          id="checkboxWithLabel"
           inputProps={{ role: "switch", "aria-checked": props.checked }}
+          size={props.size}
+          color={props.color}
         />
       }
       label={props.label}
@@ -53,7 +55,20 @@ CheckboxWithLabel.propTypes = {
    * The value of the component.
    */
   value: PropTypes.string,
+    /**
+   * The size of the component. small is equivalent to the dense checkbox styling.
+   */
+     size: PropTypes.oneOf(['small', 'medium', 'large']),
 
+
+  color: PropTypes.oneOf([
+    'default',
+    'primary',
+    'secondary',
+    'error',
+    'success',
+    'warning',
+  ]),
   /**
    * Change event to use with UXPin interactions.
    */
@@ -69,6 +84,18 @@ CheckboxWithLabel.propTypes = {
    * @uxpinignoreprop
    */
   control: PropTypes.element,
+
+    /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */
+     color: PropTypes.oneOf([
+      'default',
+      'primary',
+      'secondary',
+      'error',
+      'success',
+      'warning',
+    ]),
 };
 
 CheckboxWithLabel.defaultProps = {

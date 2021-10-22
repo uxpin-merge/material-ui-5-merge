@@ -21,6 +21,8 @@ export default function RadioGroup(props) {
               control={
                 <Radio
                   id="radio-group"
+                  color={props.color}
+                  size={props.size}
                   inputProps={{
                     role: "radio",
                     "aria-checked": props.checked,
@@ -64,6 +66,20 @@ RadioGroup.propTypes = {
    */
   children: PropTypes.node,
 
+    /**
+   * The size of the component. small is equivalent to the dense checkbox styling.
+   */
+     size: PropTypes.oneOf(['small', 'medium', 'large']),
+
+
+  color: PropTypes.oneOf([
+    'default',
+    'primary',
+    'secondary',
+    'error',
+    'success',
+    'warning',
+  ]),
   /**
    * The name used to reference the value of the control.
    * @uxpinignoreprop
