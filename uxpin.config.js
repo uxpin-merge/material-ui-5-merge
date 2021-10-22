@@ -81,6 +81,16 @@ module.exports = {
           ]
         },
         {
+          name: 'Table',
+          include: [
+            'src/components/Table/Table.js',
+            'src/components/TableCell/TableCell.js',
+            'src/components/TableBody/TableBody.js',
+            'src/components/TableHead/TableHead.js',
+            'src/components/TableRow/TableRow.js',
+          ]
+        },
+        {
           name: 'Form',
           include: [
             'src/components/FormControlGroup/FormControlGroup.js',
