@@ -9,11 +9,17 @@ function TableCell(props) {
 }
 
 TableCell.propTypes = {
+<<<<<<< HEAD
+=======
+  align: PropTypes.oneOf(['center', 'inherit', 'justify', 'left', 'right']),
+
+>>>>>>> 23886ac99e49ea235e3131eabf0d95f38e8d7115
   /**
    * The content of the TableCell, normally TableCellHead and TableCellBody.
    * @uxpinpropname Cell Data
    * */
   children: PropTypes.node,
+<<<<<<< HEAD
   
   /**
    * Set the text-align on the table cell content. M
@@ -65,6 +71,23 @@ TableCell.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles. 
    * See the `sx` page for more details.
    */
+=======
+
+  classes: PropTypes.object,
+
+  component: PropTypes.elementType,
+
+  padding: PropTypes.oneOf('checkbox', 'none', 'normal'),
+
+  scope: PropTypes.string,
+
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+
+  sortDirection: PropTypes.oneOf(['asc', 'desc', 'false']),
+
+  variant: PropTypes.oneOf(['body', 'footer', 'head']),
+
+>>>>>>> 23886ac99e49ea235e3131eabf0d95f38e8d7115
   sx: PropTypes.object,
 }
 
