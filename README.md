@@ -15,9 +15,9 @@ It means that components are going to look and, function (interactions, data) id
 ## How to use this boilerplate?
 
 1. Fork this repository and clone it to your computer.
-2. Install dependencies with `npm install`
+2. Install dependencies with `yarn install`
 3. Log in to your UXPin account
-4. Start Merge dev environment with `npm start`
+4. Start Merge dev environment with `yarn run start`
 
 ## Supported components
 
