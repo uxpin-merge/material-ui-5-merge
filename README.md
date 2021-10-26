@@ -26,7 +26,7 @@ It means that components are going to look and, function (interactions, data) id
 | Accordian                | ✓ Completed    |
 | Accordion Details        | ✓ Completed    |
 | Accordion Summary        | ⚑ Experimental |
-| Alert                    | ⚑ Experimental |
+| Alert                    | ✓ Completed    |
 | Alert Title              | ✓ Completed    |
 | App Bar                  | ✓ Completed    |
 | Auto Complete            | ✎ In Progress  |
@@ -110,7 +110,7 @@ It means that components are going to look and, function (interactions, data) id
 | Table Row                | ✓ Completed    |
 | Tabs                     | ✓ Completed    |
 | Textfield                | ✓ Completed    |
-| Toggle Button            | ⚑ Experimental |
+| Toggle Button            | ✓ Completed    |
 | Toggle Button Group      | ✓ Completed    |
 | Tool Bar                 | ✓ Completed    |
 | Tooltip                  | ✓ Completed    |
