@@ -30,7 +30,7 @@ Icon.propTypes = {
    * The fontSize applied to the icon. Defaults to 24px, but can be configure to inherit font size.
    * @uxpinpropname Size
    */
-  fontSize: PropTypes.oneOf(['large', 'medium', 'small']),
+  fontSize: PropTypes.oneOf(['large', 'medium', 'small', 'inherit']),
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
