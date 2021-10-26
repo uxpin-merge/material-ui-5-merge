@@ -97,10 +97,10 @@ It means that components are going to look and, function (interactions, data) id
 | Snackbar                 | ✓ Completed    |
 | Speed Dial               | ✎ In Progress  |
 | Split Button             | ✎ In Progress  |
-| Stack                    | ✎ In Progress  |
+| Stack                    | ✓ Completed    |
 | Stepper                  | ✎ In Progress  |
 | Switch                   | ✓ Completed    |
-| Switch with Label        | ⚑ Experimental |
+| Switch with Label        | ✓ Completed    |
 | Tab                      | ✓ Completed    |
 | Table                    | ✓ Completed    |
 | Table Body               | ✓ Completed    |

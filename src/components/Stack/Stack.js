@@ -4,11 +4,25 @@ import StackM from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 
 function Stack(props) {
+  let dividerOrientation = '';
+
+  if (props.direction === "row" || props.direction === "row-reverse") {
+    dividerOrientation = "vertical"
+  }
+  else {
+    dividerOrientation = "horizontal"
+  }
+
+  const { hasDivider, ...otherProps } = props;
+
   return (
-    <StackM {...props}>
+    <StackM
+      {...otherProps}
+      divider={hasDivider && <Divider orientation={dividerOrientation} flexItem />}
+    >
       {props.children}
     </StackM>
-  ) 
+  )
 }
 
 Stack.propTypes = {
@@ -26,22 +40,25 @@ Stack.propTypes = {
     'column',
     'row-reverse',
     'row',
-    'column-reverse',
-    'column',
-    'row-reverse',
-    'row',
   ]),
+
+  /**
+ * Defines the space between immediate children in px
+ */
+  spacing: PropTypes.number,
 
   /**
    * Add an element between each child.
    * This needs improving
+   * @uxpinignoreprop 
    */
   divider: PropTypes.node,
-
   /**
-   * Defines the space between immediate children in px
+   * Add an element between each child.
+   * This needs improving
+   * 
    */
-  spacing: PropTypes.number,
+  hasDivider: PropTypes.bool,
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
