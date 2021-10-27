@@ -84,7 +84,7 @@ Select.propTypes = {
 
   /**
    * @uxpinignoreprop
-   * An Input element; does not have to be a material-ui specific Input.
+   * An Input element; does not have to be a MUI specific Input.
    */
   inputProps: PropTypes.object,
 
