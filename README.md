@@ -1,10 +1,10 @@
-# Material UI + UXPin Merge
-Integration of [Material UI](https://material-ui.com/) with UXPin Merge Technology.
+# MUI + UXPin Merge
+Integration of [MUI](https://material-ui.com/) with UXPin Merge Technology.
 
-## About Material UI
+## About MUI
 
-Material UI is an implementation of Google's Material Design in React.js, created and maintained by Olivier Tassinari.
-To support Material UI please consider donation: https://www.patreon.com/oliviertassinari 
+MUI is an implementation of Google's Material Design in React.js, created and maintained by Olivier Tassinari.
+To support MUI please consider donation: https://www.patreon.com/oliviertassinari 
 
 ## About UXPin Merge
 

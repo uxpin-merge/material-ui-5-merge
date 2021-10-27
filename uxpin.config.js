@@ -1,5 +1,3 @@
-const { Feedback } = require("@mui/icons-material");
-
 module.exports = {
     components: {
       categories: [

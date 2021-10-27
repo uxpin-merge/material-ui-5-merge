@@ -18,7 +18,6 @@ function ListItemIcon(props) {
 ListItemIcon.propTypes = {
   /**
    * The content of the component, normally `Icon`, `SvgIcon`,
-   * or a `@material-ui/icons` SVG icon element.
    * @uxpinpropname  Icon
    * Use the name of the icon from https://material.io/tools/icons.
    */
