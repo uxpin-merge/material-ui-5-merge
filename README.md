@@ -1,10 +1,10 @@
 # MUI + UXPin Merge
-Integration of [MUI](https://material-ui.com/) with UXPin Merge Technology.
+
+Integration of [MUI](https://mui.com/) with UXPin Merge Technology.
 
 ## About MUI
 
-MUI is an implementation of Google's Material Design in React.js, created and maintained by Olivier Tassinari.
-To support MUI please consider donation: https://www.patreon.com/oliviertassinari 
+MUI (formerly Material-UI) is the React UI library you always wanted. You can implement your own design system, or start with Material Design.
 
 ## About UXPin Merge
 
