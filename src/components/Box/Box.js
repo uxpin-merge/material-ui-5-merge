@@ -5,16 +5,11 @@ import { styled } from '@mui/material/styles';
 
 
 
-const Root = styled('div')({
-  width: "100%", display: "table"
-})
-
 /**
  * @uxpinwrappers
  * SkipContainerWrapper
  */
 function Box(props) {
-  const sx = Root;
   const { uxpinRef, ...other } = props;
   return (
     <BoxM
@@ -44,16 +39,15 @@ Box.propTypes = {
   /** @uxpinignoreprop */
   children: PropTypes.node,
 
-  /** @uxpinignoreprop */
   clone: PropTypes.bool,
 
   /**
    * Color of text
    */
 
-  color: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey.500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
+  color: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey.500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'secondary.light', 'secondary.dark', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
 
-  bgcolor: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
+  bgcolor: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey500', 'primary.main', 'primary.light', 'primary.dark', 'secondary.main', 'secondary.light', 'secondary.dark', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
 
 
 
