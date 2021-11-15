@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import PaperM from "@mui/material/Paper";
 
+
+/**
+ * @uxpdocurl https://google.com
+ */
 function Paper(props) {
     return (
         <PaperM {...props}>{props.children}</PaperM>

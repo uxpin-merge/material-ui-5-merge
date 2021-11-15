@@ -3166,10 +3166,10 @@
     "@typescript-eslint/types" "4.15.2"
     eslint-visitor-keys "^2.0.0"
 
-"@uxpin/merge-cli@^2.7.8":
-  version "2.7.8"
-  resolved "https://registry.yarnpkg.com/@uxpin/merge-cli/-/merge-cli-2.7.8.tgz#bfe9342bc47391f688e3c87b34c155b1542dd134"
-  integrity sha512-RpSl6oosg+jk8DRYzCdJMa4scfqzUeZSEW5fa3irJ8TGVQckiVLvTX8NpCzonXMa+kpWLrYD0U+2esL7UFMmJA==
+"@uxpin/merge-cli@^2.7.9":
+  version "2.7.9"
+  resolved "https://registry.npmjs.org/@uxpin/merge-cli/-/merge-cli-2.7.9.tgz#ae5d3986b4ab5e2f74c4697a20e3b901d42b9a6a"
+  integrity sha512-z0GBT6bB9UjlIOLgSqK+9uKGMxWO5A4Gzw5UQfjyMj6uoOg8SxYBmdEUMTsQZty4GooQt7dwg6Y7fX1iZq/TOg==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/plugin-proposal-class-properties" "^7.2.3"

@@ -4,7 +4,9 @@ import ButtonM from '@mui/material/Button';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
-
+/**
+ * @uxpindocurl https://reddit.com
+ */
 function Button(props) {
   const { uxpinRef, ...other } = props;
   return (
