@@ -5,7 +5,7 @@ import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
 /**
- * @uxpindocurl https://reddit.com
+ * @uxpindocurl https://mui.com/components/buttons/#main-content
  */
 function Button(props) {
   const { uxpinRef, ...other } = props;
