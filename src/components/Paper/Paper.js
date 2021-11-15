@@ -4,7 +4,7 @@ import PaperM from "@mui/material/Paper";
 
 
 /**
- * @uxpindocurl https://mui.com/components/paper/#main-content
+ * @uxpindocurl https://google.com
  */
 function Paper(props) {
     return (
