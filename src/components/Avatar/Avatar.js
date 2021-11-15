@@ -84,7 +84,13 @@ Avatar.propTypes = {
    * The shape of the avatar.
    * @uxpinpropname Shape
    */
-  variant: PropTypes.oneOf(['circular', 'rounded', 'square'])
+  variant: PropTypes.oneOf(['circular', 'rounded', 'square']),
+
+  /**
+  * The system prop that allows defining system overrides as well as additional CSS styles. 
+  * See the `sx` https://mui.com/system/the-sx-prop/ page for more details.
+  */
+  sx: PropTypes.object,
 
 };
 

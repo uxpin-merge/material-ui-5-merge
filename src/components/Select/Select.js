@@ -180,7 +180,6 @@ Select.propTypes = {
   open: PropTypes.bool,
 
   /**
-   * @uxpinignoreprop
    */
   sx: PropTypes.object,
 }

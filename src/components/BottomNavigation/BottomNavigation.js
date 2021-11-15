@@ -43,7 +43,7 @@ BottomNavigation.propTypes = {
      /**
       * The value of the currently selected BottomNavigationAction.
       */
-     value: PropTypes.string
+     value: PropTypes.string,
    };
    
    export default BottomNavigation;

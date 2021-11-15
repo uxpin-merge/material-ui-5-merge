@@ -177,7 +177,12 @@ Menu.propTypes = {
   /**
    * @uxpinignoreprop
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.object,
 };
 
 Menu.defaultProps = {

@@ -40,9 +40,9 @@ CardMedia.propTypes = {
   src: PropTypes.string,
 
   /**
-   * @uxpinignoreprop
+   * The system prop that allows defining system overrides as well as additional CSS styles.
    */
-  style: PropTypes.object,
+  sx: PropTypes.object,
 };
 
 CardMedia.defaultProps = {

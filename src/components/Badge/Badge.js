@@ -73,8 +73,12 @@ import { styled } from '@mui/material/styles';
     */
     /** @uxpinignoreprop */
     classes: PropTypes.object,
-  
-
+   
+   /**
+    * The system prop that allows defining system overrides as well as additional CSS styles. 
+    * See the `sx` page for more details. https://mui.com/api/badge/
+    */
+    sx: PropTypes.object,
 
   };
   

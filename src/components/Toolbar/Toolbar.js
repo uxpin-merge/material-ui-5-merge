@@ -37,7 +37,6 @@ Toolbar.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` https://mui.com/system/the-sx-prop/ page for more details.
      */
-    /** @uxpinignoreprop */
     sx: PropTypes.object,
   
     /**

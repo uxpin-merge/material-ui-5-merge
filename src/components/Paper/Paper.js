@@ -46,7 +46,6 @@ Paper.propTypes = {
 
   /**
    * Custom Style Object
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 };

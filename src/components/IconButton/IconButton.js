@@ -53,5 +53,10 @@ IconButton.propTypes = {
 
   onClick: PropTypes.func,
 
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+   sx: PropTypes.object,
+
 }
 export default IconButton;

@@ -24,7 +24,7 @@ DialogActions.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles. 
    * See the `sx` page for more details.
    */
-  /** @uxpinignoreprop */
+  /** */
   sx: PropTypes.object,
 
 };

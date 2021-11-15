@@ -98,7 +98,6 @@ Rating.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object,
 
@@ -109,7 +108,6 @@ Rating.propTypes = {
 
   /**
    * Callback function that is fired when the hover state changes.
-  //  * @uxpinignoreprop
    */
   onChangeActive: PropTypes.func
 }

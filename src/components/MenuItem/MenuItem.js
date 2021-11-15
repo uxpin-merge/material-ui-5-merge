@@ -36,7 +36,6 @@ MenuItem.propTypes = {
   focusVisibleClassName: PropTypes.string,
 
   /**
-   * @uxpinignoreprop
    * Override or extend the styles applied to the component.
    */
   sx: PropTypes.object,
