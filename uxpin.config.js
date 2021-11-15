@@ -5,7 +5,6 @@ module.exports = {
           name: 'Inputs',
           include: [
             // //'src/components/Autocomplete/Autocomplete.js',
-            
             'src/components/Button/Button.js',
             // 'src/components/ButtonGroup/ButtonGroup.js',
             // 'src/components/Checkbox/Checkbox.js',
@@ -49,7 +48,7 @@ module.exports = {
             // 'src/components/ListItemText/ListItemText.js',
             // 'src/components/ListSubheader/ListSubheader.js',
             // 'src/components/Tooltip/Tooltip.js',
-            // 'src/components/Typography/Typography.js',
+             'src/components/Typography/Typography.js',
             // 'src/components/Typography/Typography.js'
           ],
         },
@@ -128,7 +127,7 @@ module.exports = {
             // 'src/components/CardContent/CardContent.js',
             // 'src/components/CardHeader/CardHeader.js',
             // 'src/components/CardMedia/CardMedia.js',
-             'src/components/Paper/Paper.js',
+              'src/components/Paper/Paper.js',
           ]  
         },
         {
