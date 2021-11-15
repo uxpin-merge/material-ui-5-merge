@@ -4,7 +4,7 @@ import PaperM from "@mui/material/Paper";
 
 
 /**
- * @uxpindocurl https://google.com
+ * @uxpindocurl https://reactnative.dev/docs/button
  */
 function Paper(props) {
     return (
