@@ -38,6 +38,7 @@ module.exports = {
           include: [
             // 'src/components/Avatar/Avatar.js',
             // 'src/components/Badge/Badge.js',
+            // 'src/components/Chip/Chip.js',
             // 'src/components/Divider/Divider.js',
             // 'src/components/Icon/Icon.js',
             // 'src/components/List/List.js',
