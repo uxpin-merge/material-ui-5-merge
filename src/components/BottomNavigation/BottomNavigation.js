@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import BottomNavigationM from "@mui/material/BottomNavigation";
 
+
+/**
+  * @uxpindocurl https://mui.com/api/bottom-navigation/
+  */
 function BottomNavigation(props) {
   return <BottomNavigationM {...props}>{props.children}</BottomNavigationM>;
 }

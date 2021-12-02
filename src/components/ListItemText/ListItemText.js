@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import ListItemTextM from '@mui/material/ListItemText';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/list-item-text/
+ */
 function ListItemText(props) {
   return <ListItemTextM {...props} />;
 }

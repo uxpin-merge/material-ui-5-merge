@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableHeadM from '@mui/material/TableHead';
 
+/**
+ * @uxpindocurl https://mui.com/api/table-head/#main-content
+ */
 function TableHead(props) {
   return (
     <TableHeadM {...props}>{props.children}</TableHeadM>

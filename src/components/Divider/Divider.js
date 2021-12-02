@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import DividerM from '@mui/material/Divider';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/divider/
+ */
 function Divider(props) {
   return <DividerM {...props} defaultChecked/>;
 }

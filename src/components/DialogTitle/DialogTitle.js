@@ -2,7 +2,9 @@ import React from "react";
 import DialogTitleM from "@mui/material/DialogTitle";
 import PropTypes from "prop-types";
 
-
+/**
+ * @uxpindocurl https://mui.com/api/dialog-title/
+ */
 function DialogTitle(props) {
   return <DialogTitleM {...props}>{props.children}</DialogTitleM>;
 }

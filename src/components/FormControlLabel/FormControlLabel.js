@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "@mui/material/FormControlLabel";
 
+/**
+ * @uxpindocurl https://mui.com/api/form-control-label/#main-content
+ */
 function FormControlLabel(props) {
     return <FormControlLabelM {...props}>{props.children}</FormControlLabelM>;
   }

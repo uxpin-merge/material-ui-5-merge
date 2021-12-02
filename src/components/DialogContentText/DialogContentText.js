@@ -2,7 +2,9 @@ import React from "react";
 import DialogContentTextM from "@mui/material/DialogContentText";
 import PropTypes from "prop-types";
 
-
+/**
+ * @uxpindocurl https://mui.com/api/dialog-content-text/
+ */
 function DialogContentText(props) {
   return <DialogContentTextM {...props}>{props.children}</DialogContentTextM>;
 }

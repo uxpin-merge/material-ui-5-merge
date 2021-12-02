@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CollapseM from "@mui/material/Collapse";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/collapse/#main-content
+ */
 function Collapse(props) {
   return <CollapseM {...props}>{props.children}</CollapseM>;
 }

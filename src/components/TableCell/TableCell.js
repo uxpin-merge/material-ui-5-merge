@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableCellM from '@mui/material/TableCell';
 
+/**
+ * @uxpindocurl https://mui.com/api/table-cell/#main-content
+ */
 function TableCell(props) {
   return (
     <TableCellM {...props}>{props.children}</TableCellM>

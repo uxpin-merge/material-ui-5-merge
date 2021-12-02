@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormGroupM from '@mui/material/FormGroup';
 
-
+/**
+ * @uxpindocurl https://mui.com/api/form-group/#main-content
+ */
 function FormGroup(props) {
     return (
         <FormGroupM {...props}>{props.children}</FormGroupM>

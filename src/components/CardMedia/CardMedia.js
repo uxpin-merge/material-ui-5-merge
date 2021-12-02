@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardMediaM from "@mui/material/CardMedia";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/card-media/
+ */
 function CardMedia(props) {
   return <CardMediaM controls {...props} />;
 }

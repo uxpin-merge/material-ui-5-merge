@@ -4,6 +4,9 @@ import TypographyM from '@mui/material/Typography';
 import ReactHtmlParser from "react-html-parser";
 //import BoxM from "../Box/Box";
 
+/**
+ * @uxpindocurl https://mui.com/api/typography/
+ */
 function Typography(props) {
   //const { uxpinRef, ...other } = props;
     return (

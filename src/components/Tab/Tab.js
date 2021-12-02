@@ -2,6 +2,9 @@ import TabM from '@mui/material/Tab';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+/**
+ * @uxpindocurl https://mui.com/api/tab/
+ */
 function Tab(props) {
     return (
         <TabM {...props}>{props.children}</TabM>

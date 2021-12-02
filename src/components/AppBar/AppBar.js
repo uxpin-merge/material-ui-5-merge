@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AppBarM from '@mui/material/AppBar';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/app-bar/
+ */
 function AppBar(props) {
     return (
       <AppBarM {...props} sx={props.sx}>

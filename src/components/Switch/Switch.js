@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SwitchM from '@mui/material/Switch';
 
+/**
+ * @uxpindocurl https://mui.com/components/switches/#main-content
+ */
 function Switch(props) {
   return <SwitchM {...props} />;
 }

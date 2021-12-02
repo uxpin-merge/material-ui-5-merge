@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import ButtonGroupM from '@mui/material/ButtonGroup';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/button-group/
+ */
 function ButtonGroup(props) {
     return (
         <ButtonGroupM {...props}>{props.children}</ButtonGroupM>

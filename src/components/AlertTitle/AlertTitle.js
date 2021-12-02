@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import AlertTitleM from '@mui/material/AlertTitle';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/alert-title/
+ */
 function AlertTitle(props) {
     return (
         <AlertTitleM {...props}>{props.children}</AlertTitleM>

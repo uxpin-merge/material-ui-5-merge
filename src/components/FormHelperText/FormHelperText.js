@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormHelperTextM from "@mui/material/FormHelperText";
 
+/**
+ * @uxpindocurl https://mui.com/api/form-helper-text/
+ */
 function FormHelperText(props) {
   return <FormHelperTextM {...props}>{props.children}</FormHelperTextM>;
 }

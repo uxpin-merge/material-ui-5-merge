@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ToolbarM from '@mui/material/Toolbar';
 
+/**
+ * @uxpindocurl https://mui.com/api/toolbar/
+ */
 function Toolbar(props) {
     return (
         <ToolbarM {...props} sx={{"justifyContent": props.justifyContent}}>{props.children}</ToolbarM>

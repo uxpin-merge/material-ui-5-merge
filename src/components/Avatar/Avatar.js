@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import AvatarM from '@mui/material/Avatar';
 import Icon from '../Icon/Icon';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/avatar/
+ */
 function Avatar(props) {
     return (
         <AvatarM {...props} sx={{ bgcolor: props.color}}>

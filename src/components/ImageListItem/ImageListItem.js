@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImageListItemM from '@mui/material/ImageListItem';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/image-list-item/#main-content
+ */
 function ImageListItem(props) {
     return (
         <ImageListItemM {...props}>{props.children}</ImageListItemM>

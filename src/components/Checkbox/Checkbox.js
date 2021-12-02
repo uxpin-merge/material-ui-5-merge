@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CheckboxM from '@mui/material/Checkbox';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/checkbox/
+ */
 function Checkbox(props) {
   return <CheckboxM {...props} defaultChecked/>;
 }

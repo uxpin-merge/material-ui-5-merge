@@ -4,6 +4,10 @@ import FabM from '@mui/material/Fab';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+
+/**
+ * @uxpindocurl https://mui.com/api/fab/
+ */
 function FloatingActionButton(props) {
   let hasIcon = null;
 

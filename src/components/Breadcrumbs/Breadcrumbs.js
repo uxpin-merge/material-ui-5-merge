@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import BreadcrumbsM from '@mui/material/Breadcrumbs';
 
+
+/**
+  * @uxpindocurl https://mui.com/api/breadcrumbs/#main-content
+  */
 function Breadcrumbs(props) {
     return (
         <BreadcrumbsM {...props}>{props.children}</BreadcrumbsM>

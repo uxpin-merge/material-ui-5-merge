@@ -4,6 +4,10 @@ import AccordionSummaryM from '@mui/material/AccordionSummary';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+
+/**
+ * @upxindocurl https://mui.com/api/accordion-summary/
+ */
 function AccordionSummary(props) {
     return (
         <AccordionSummaryM {...props} expandIcon={<Icon>{props.expandedIcon}</Icon>}>{props.children}</AccordionSummaryM>

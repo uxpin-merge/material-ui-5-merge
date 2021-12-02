@@ -4,6 +4,9 @@ import LoadingButtonM from '@mui/lab/LoadingButton';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+/**
+ * @uxpindocurl https://mui.com/api/loading-button/
+ */
 function LoadingButton(props) {
     const { uxpinRef, ...other } = props;
 

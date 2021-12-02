@@ -5,7 +5,9 @@ import Icon from '../Icon/Icon';
 import Avatar from '../Avatar/Avatar';
 import { iconVariants } from '../Icon/icon-variants';
 
-
+/**
+ * @uxpindocurl https://mui.com/components/chips/
+ */
 export default function Chip(props) {
   const [chipDeleted, setChipDeleted] = React.useState(false);
 

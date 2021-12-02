@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LinkM from '@mui/material/Link';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/link/
+ */
 function Link(props) {
     return (
         <LinkM {...props}>{props.children}</LinkM>

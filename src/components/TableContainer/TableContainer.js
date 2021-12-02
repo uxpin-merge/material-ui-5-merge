@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableContainerM from '@mui/material/TableContainer';
 
+/**
+ * @uxpindocurl https://mui.com/api/table-container/#main-content
+ */
 function TableContainer(props) {
   return (
     <TableContainerM {...props}>{props.children}</TableContainerM>

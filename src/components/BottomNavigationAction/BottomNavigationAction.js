@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import BottomNavigationActionM from "@mui/material/BottomNavigationAction";
 import { iconVariants } from '../Icon/icon-variants'
 
+
+/**
+  * @uxpindocurl https://mui.com/api/bottom-navigation-action/
+  */
 function BottomNavigationAction(props) {
   return <BottomNavigationActionM {...props} />;
 }

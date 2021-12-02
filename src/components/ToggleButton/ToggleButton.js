@@ -4,6 +4,9 @@ import ToggleButtonM from '@mui/material/ToggleButton';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+/**
+ * @uxpindocurl https://mui.com/api/toggle-button/
+ */
 function ToggleButton(props) {
   return (
     <ToggleButtonM {...props}>

@@ -8,7 +8,9 @@ import Button from '../Button/Button';
 import Typography from '../Typography/Typography';
 
 
-
+/**
+ * @uxpindocurl https://mui.com/components/steppers/#main-content
+ */
 function Stepper(props) {
 
   const steps = [

@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import AccordionDetailsM from '@mui/material/AccordionDetails';
 
+
+/**
+ * @upxindocurl https://mui.com/api/accordion-details/
+ */
 function AccordionDetails(props) {
     return (
         <AccordionDetailsM {...props}>{props.children}</AccordionDetailsM>

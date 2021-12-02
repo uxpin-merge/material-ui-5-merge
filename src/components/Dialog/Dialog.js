@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import DialogM from "@mui/material/Dialog";
 
 
+/**
+ * @uxpindocurl https://mui.com/api/dialog/#main-content
+ */
 function Dialog(props){
     const [open, setOpen] = React.useState(props.open);
 

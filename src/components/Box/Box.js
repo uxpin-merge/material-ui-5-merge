@@ -13,6 +13,9 @@ const Root = styled('div')({
  * @uxpinwrappers
  * SkipContainerWrapper
  */
+/**
+  * @uxpindocurl https://mui.com/components/box/#main-content
+  */
 function Box(props) {
   const sx = Root;
   const { uxpinRef, ...other } = props;

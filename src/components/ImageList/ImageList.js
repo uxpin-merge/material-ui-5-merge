@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ImageListM from '@mui/material/ImageList';
 
+/**
+ * @uxpindocurl https://mui.com/components/image-list/#main-content
+ */
 function ImageList(props) {
     return (
         <ImageListM {...props}>{props.children}</ImageListM>

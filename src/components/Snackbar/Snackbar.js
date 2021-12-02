@@ -5,6 +5,9 @@ import SnackbarM from '@mui/material/Snackbar';
 import IconButton from '../IconButton/IconButton';
 import Icon from '../Icon/Icon';
 
+/**
+ * @uxpindocurl https://mui.com/components/skeleton/#main-content
+ */
 export default function Snackbar(props) {
 
   const { uxpinRef, ...other } = props;

@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormControlM from '@mui/material/FormControl';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/form-control/#main-content
+ */
 function FormControl(props) {
     return (
         <FormControlM {...props}>{props.children}</FormControlM>

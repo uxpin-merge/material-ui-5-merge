@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import LinearProgressM from "@mui/material/LinearProgress";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/linear-progress/#main-content
+ */
 function LinearProgress(props) {
   return <LinearProgressM {...props} />;
 }

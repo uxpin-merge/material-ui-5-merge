@@ -4,6 +4,9 @@ import IconButtonM from '@mui/material/IconButton';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+/**
+ * @uxpindocurl https://mui.com/api/icon-button/#main-content
+ */
 function IconButton(props) {
   return <IconButtonM{...props}>
     <Icon fontSize={props.size}>{props.children}</Icon>

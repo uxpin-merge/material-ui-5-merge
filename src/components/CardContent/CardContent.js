@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardContentM from '@mui/material/CardContent';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/card-content/
+ */
 function CardContent(props) {
     return (
         <CardContentM {...props}>{props.children}</CardContentM>

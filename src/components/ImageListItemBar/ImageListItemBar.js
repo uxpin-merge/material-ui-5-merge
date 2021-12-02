@@ -2,6 +2,10 @@ import ImageListItemBarM from '@mui/material/ImageListItemBar';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/image-list-item-bar/
+ */
 function ImageListItemBar(props) {
     return (
         <ImageListItemBarM {...props}>{props.children}</ImageListItemBarM>

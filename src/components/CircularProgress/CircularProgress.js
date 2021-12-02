@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import CircularProgressM from "@mui/material/CircularProgress";
 
-
+/**
+ * @uxpindocurl https://mui.com/api/circular-progress/#main-content
+ */
 function CircularProgress(props) {
   return (
     <div style={{ width: "fit-content" }}>

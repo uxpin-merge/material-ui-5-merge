@@ -2,6 +2,9 @@ import DialogActionsM from "@mui/material/DialogActions";
 import PropTypes from "prop-types";
 import React from "react";
 
+/**
+ * @uxpindocurl https://mui.com/api/dialog-actions/
+ */
 function DialogActions(props) {
   return <DialogActionsM {...props}>{props.children}</DialogActionsM>;
 }

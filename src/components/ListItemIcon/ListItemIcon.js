@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import ListItemIconM from '@mui/material/ListItemIcon';
 import Icon from '../Icon/Icon';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/list-item-icon/
+ */
 function ListItemIcon(props) {
   return (
     <ListItemIconM 

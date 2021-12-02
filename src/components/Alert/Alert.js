@@ -7,6 +7,9 @@ import { iconVariants } from '../Icon/icon-variants'
 import Collapse from '@mui/material/Collapse';
 import AlertTitle from "../AlertTitle/AlertTitle";
 
+/**
+ * @uxpindocurl https://mui.com/api/alert/
+ */
 function Alert(props) {
 
   const [open, setOpen] = React.useState(props.isOpen);
