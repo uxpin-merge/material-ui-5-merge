@@ -1,4 +1,4 @@
-import * as React from 'React';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import FabM from '@mui/material/Fab';
 import Icon from '../Icon/Icon';
