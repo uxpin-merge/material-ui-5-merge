@@ -26,7 +26,7 @@ module.exports = {
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
             'src/components/Switch/Switch.js',
-            'src/components/SwitchWithlabel/SwitchWithlabel.js',
+            'src/components/SwitchWithLabel/SwitchWithLabel.js',
             // 'src/components/SwitchGroup/SwitchGroup.js',  <-- NOT CHANGING STATE IN PREVIEW
             'src/components/TextField/TextField.js',
             'src/components/ToggleButton/ToggleButton.js',
