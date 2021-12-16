@@ -1,15 +1,118 @@
-# Floriaan Instructions
+# MUI + UXPin Merge
 
-## 1. Setup
+Integration of [MUI](https://mui.com/) with UXPin Merge Technology.
 
-1. Clone this repo to your computer.
+## About MUI
+
+MUI (formerly Material-UI) is the React UI library you always wanted. You can implement your own design system, or start with Material Design.
+
+## About UXPin Merge
+
+Merge is a revolutionary technology that lets users import (and keep in sync) coded React.js components from GIT repositories to UXPin editor. 
+The imported components are 100% identical to components used by developers during the development process. 
+It means that components are going to look and, function (interactions, data) identical to the real product experienced by the users.
+
+## How to use this boilerplate?
+
+1. Fork this repository and clone it to your computer.
 2. Install dependencies with `yarn install`
 3. Log in to your UXPin account
 4. Start Merge dev environment with `yarn run start`
 
-## 2. Integrate [MUI Link](https://mui.com/components/links/#basic-links) component
+## Supported components
 
-1. Create component file with props importing [MUI Link component](https://mui.com/components/links/#basic-links)
-2. Create preset file
-3. Add component to uxpin.config.js
-4. Preview component in experimental mode: `npx uxpin-merge --disable-tunneling`
+| COMPONENT                | STATUS         |
+| ------------------------ | -------------- |
+| Accordian                | ✓ Completed    |
+| Accordion Details        | ✓ Completed    |
+| Accordion Summary        | ⚑ Experimental |
+| Alert                    | ✓ Completed    |
+| Alert Title              | ✓ Completed    |
+| App Bar                  | ✓ Completed    |
+| Auto Complete            | ✎ In Progress  |
+| Avatar                   | ✓ Completed    |
+| Backdrop                 | ✎ In Progress  |
+| Badge                    | ✓ Completed    |
+| Bottom Navigation        | ✓ Completed    |
+| Bottom Navigation Action | ⚑ Experimental |
+| Box                      | ✓ Completed    |
+| Breadcrumbs              | ✓ Completed    |
+| Button                   | ✓ Completed    |
+| Button Group             | ✓ Completed    |
+| Card                     | ✓ Completed    |
+| Card Actions             | ✓ Completed    |
+| Card Actions Area        | ✓ Completed    |
+| Card Content             | ✓ Completed    |
+| Card Header              | ⚑ Experimental |
+| Card Media               | ✓ Completed    |
+| Checkbox                 | ✓ Completed    |
+| Checkbox With Label      | ✓ Completed    |
+| Circular Progress        | ✓ Completed    |
+| Collapse                 | ⚑ Experimental |
+| Container                | ✎ In Progress  |
+| Date/Time (Input)        | ✎ In Progress  |
+| Dialog                   | ✎ In Progress  |
+| Dialog Action            | ✓ Completed    |
+| Dialog Content           | ✓ Completed    |
+| Dialog Content Text      | ✓ Completed    |
+| Dialog Title             | ✓ Completed    |
+| Divider                  | ✓ Completed    |
+| Divider: Vertical        | ✎ In Progress  |
+| Drawer                   | ✎ In Progress  |
+| Floating Action Icon     | ⚑ Experimental |
+| Form Control Label       | ✓ Completed    |
+| Form Group               | ✓ Completed    |
+| FormControl              | ✓ Completed    |
+| FormControlGroup         | ⚑ Experimental |
+| FormHelperText           | ✓ Completed    |
+| FormLabel                | ✓ Completed    |
+| Grid                     | ✓ Completed    |
+| Grid List/ImageList      | ✓ Completed    |
+| Icon                     | ✓ Completed    |
+| Icon Button              | ✓ Completed    |
+| Image                    | ✓ Completed    |
+| Image List               | ✓ Completed    |
+| Image List Item          | ✓ Completed    |
+| Input label              | ✎ In Progress  |
+| Linear Progress          | ✓ Completed    |
+| Link                     | ⚑ Experimental |
+| List                     | ✓ Completed    |
+| List Item                | ✓ Completed    |
+| List Item Avatar         | ✓ Completed    |
+| List Item Button         | ✓ Completed    |
+| List Item Icon           | ✓ Completed    |
+| List Item Text           | ✓ Completed    |
+| List Sub Header          | ✓ Completed    |
+| Loading Button           | ✓ Completed    |
+| Menu                     | ✎ In Progress  |
+| Menu Item                | ✓ Completed    |
+| Menu List                | ✎ In Progress  |
+| Pagination               | ✎ In Progress  |
+| Paper                    | ✓ Completed    |
+| Radio Button             | ✓ Completed    |
+| Rating                   | ⚑ Experimental |
+| Select                   | ✓ Completed    |
+| Skeleton                 | ✓ Completed    |
+| Slider                   | ✎ In Progress  |
+| Snackbar                 | ✓ Completed    |
+| Speed Dial               | ✎ In Progress  |
+| Split Button             | ✎ In Progress  |
+| Stack                    | ✓ Completed    |
+| Stepper                  | ✎ In Progress  |
+| Switch                   | ✓ Completed    |
+| Switch with Label        | ✓ Completed    |
+| Tab                      | ✓ Completed    |
+| Table                    | ✓ Completed    |
+| Table Body               | ✓ Completed    |
+| Table Cell               | ✓ Completed    |
+| Table Container          | ✎ In Progress  |
+| Table Header             | ✓ Completed    |
+| Table Row                | ✓ Completed    |
+| Tabs                     | ✓ Completed    |
+| Textfield                | ✓ Completed    |
+| Toggle Button            | ✓ Completed    |
+| Toggle Button Group      | ✓ Completed    |
+| Tool Bar                 | ✓ Completed    |
+| Tooltip                  | ✓ Completed    |
+| Transfer List            | ✎ In Progress  |
+| Typography               | ✓ Completed    |
