@@ -19,7 +19,8 @@ module.exports = {
             'src/components/RadioGroup/RadioGroup.js',
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
-            // 'src/components/Slider/Slider.js',
+            'src/components/Slider/Slider.js',
+            'src/components/SliderVertical/SliderVertical.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/Radio/Radio.js',
@@ -60,6 +61,7 @@ module.exports = {
             'src/components/Menu/Menu.js',
             'src/components/Link/Link.js',
             'src/components/MenuItem/MenuItem.js',
+            'src/components/Stepper/Stepper.js',
             'src/components/Tab/Tab.js',
             'src/components/Tabs/Tabs.js',
             'src/components/Toolbar/Toolbar.js',
@@ -126,7 +128,7 @@ module.exports = {
             'src/components/CardContent/CardContent.js',
             'src/components/CardHeader/CardHeader.js',
             'src/components/CardMedia/CardMedia.js',
-              'src/components/Paper/Paper.js',
+            'src/components/Paper/Paper.js',
           ]  
         },
         {
