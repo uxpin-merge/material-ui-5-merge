@@ -20,7 +20,6 @@ module.exports = {
             'src/components/Rating/Rating.js',
             'src/components/Select/Select.js',
             'src/components/Slider/Slider.js',
-            'src/components/SliderVertical/SliderVertical.js',
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/Radio/Radio.js',

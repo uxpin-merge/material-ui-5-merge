@@ -15,7 +15,7 @@ function CardHeader(props) {
         <CardHeaderM 
           {...props} 
           avatar={props.avatar && <Avatar color={props.color}>{props.avatar}</Avatar>}
-          action={props.action && <IconButton onClick={props.IconOnClick}><Icon>{props.action}</Icon></IconButton>}
+          action={props.action && <IconButton onClick={props.iconOnClick}><Icon>{props.action}</Icon></IconButton>}
         >
           {props.children}
         </CardHeaderM>
@@ -29,15 +29,6 @@ CardHeader.propTypes = {
    */
   action: PropTypes.oneOf(iconVariants),
 
-  /**
-   * On click event to use with UXPin interactions.
-   */
-  onClick: PropTypes.func,
-
-  /**
-   * On click event to use with UXPin interactions.
-   */
-  IconOnClick: PropTypes.func,
   /**
    * The Avatar element to display.
    */
@@ -74,7 +65,7 @@ CardHeader.propTypes = {
   /**
    * The component used for the root node. Either a string to use a HTML element or a component.
    */
-  component: PropTypes.elementType,
+  component: PropTypes.string,
 
   /**
    * If true, subheader and title won't be wrapped by a Typography component. 
@@ -107,7 +98,18 @@ CardHeader.propTypes = {
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
-  sx: PropTypes.object
+  sx: PropTypes.object,
+
+  /**
+   * On click event to use with UXPin interactions.
+   * This interferes with iconOnClick as it runs when clicking icon.
+   */
+  // onClick: PropTypes.func,
+
+  /**
+   * On click event to use with UXPin interactions.
+   */
+  iconOnClick: PropTypes.func,
 }
 
 export default CardHeader;
