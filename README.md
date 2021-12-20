@@ -43,7 +43,7 @@ It means that components are going to look and, function (interactions, data) id
 | Card Actions             | ✓ Completed    |
 | Card Actions Area        | ✓ Completed    |
 | Card Content             | ✓ Completed    |
-| Card Header              | ⚑ Experimental |
+| Card Header              | ✓ Completed    |
 | Card Media               | ✓ Completed    |
 | Checkbox                 | ✓ Completed    |
 | Checkbox With Label      | ✓ Completed    |
@@ -87,13 +87,13 @@ It means that components are going to look and, function (interactions, data) id
 | Menu                     | ✎ In Progress  |
 | Menu Item                | ✓ Completed    |
 | Menu List                | ✎ In Progress  |
-| Pagination               | ✎ In Progress  |
+| Pagination               | ⚑ Experimental |
 | Paper                    | ✓ Completed    |
 | Radio Button             | ✓ Completed    |
 | Rating                   | ⚑ Experimental |
 | Select                   | ✓ Completed    |
 | Skeleton                 | ✓ Completed    |
-| Slider                   | ✎ In Progress  |
+| Slider                   | ⚑ Experimental |
 | Snackbar                 | ✓ Completed    |
 | Speed Dial               | ✎ In Progress  |
 | Split Button             | ✎ In Progress  |
