@@ -72,6 +72,7 @@ module.exports = {
           include: [
             'src/components/Alert/Alert.js',
             'src/components/AlertTitle/AlertTitle.js',
+            'src/components/Backdrop/Backdrop.js',
             'src/components/Dialog/Dialog.js',
             "src/components/CircularProgress/CircularProgress.js",
             'src/components/DialogActions/DialogActions.js',
