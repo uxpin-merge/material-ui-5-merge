@@ -62,6 +62,7 @@ module.exports = {
             'src/components/MenuItem/MenuItem.js',
             'src/components/Pagination/Pagination.js',
             'src/components/Stepper/Stepper.js',
+            'src/components/SpeedDial/SpeedDial.js',
             'src/components/Tab/Tab.js',
             'src/components/Tabs/Tabs.js',
             'src/components/Toolbar/Toolbar.js',
