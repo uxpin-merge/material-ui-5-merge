@@ -5,33 +5,24 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePickerM from '@mui/lab/DatePicker';
 
-
-const VIEWS_LIST = [
-  { label: "year", value: ["year"] },
-  { label: "day", value: ["day"] },
-  { label: "month year", value: ["month", "year"] },
-];
-
-const viewsList = [
-  ['year'],
-  ['year', 'month'],
-  ['year', 'month', 'day'],
-  ['day', 'month', 'year'],
-  ['day']
-]
-
 function DatePicker(props) {
-  const [date, setDate] = React.useState(null);
+  const [date, setDate] = React.useState(new Date());
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePickerM 
         {...props}
+        openTo="day"
+        orientation="landscape"
         value={date}
         onChange={(newDate) => {
           setDate(newDate);
         }}
-        renderInput={(params) => <TextField {...params} />}
+        renderInput={(params) => (
+          <TextField 
+            {...params} 
+            helperText={props.helperText} />
+        )}
       />
     </LocalizationProvider>
   );
@@ -44,15 +35,55 @@ DatePicker.propTypes = {
   label: PropTypes.string,
 
   /**
-   * Array of views to show.
+   * The helper text of the input.
+   */
+  helperText: PropTypes.node,
+
+  /**
+   * The value of the picker.
    * @uxpinignoreprop
+   */
+  value: PropTypes.node,
+
+  // maxDate: PropTypes.node,
+  // minDate: PropTypes.node,
+  // mask: PropTypes.string,
+
+  /**
+   * If true, show the toolbar even in desktop mode.
+   */
+  showToolbar: PropTypes.bool,
+  
+  /**
+   * Mobile picker title, displaying in the toolbar.
+   */
+  toolbarTitle: PropTypes.node,
+
+  /**
+   * Mobile picker date value placeholder, displaying if value === null.
+   * don't need if using 'new Date()' in state.
+   */
+  // toolbarPlaceholder: PropTypes.node,
+
+  /**
+   * Array of views to show.
+   * Examples:
+   * ["day"]
+   * ["year"]
+   * ["month"]
+   * ["month", "year"]
    */
   views: PropTypes.object,
 
   /**
+   * Control the popup or dialog open state.
+   */
+  open: PropTypes.bool,
+
+  /**
    * why do PropTypes.oneOf not show up in merge sometimes?
    */
-  orientation: PropTypes.oneOf('landscape', 'portrait'),
+  // orientation: PropTypes.oneOf('landscape', 'portrait'),
 
   /**
    * If true, the picker and text field are disabled.
@@ -77,61 +108,25 @@ DatePicker.propTypes = {
    * @uxpinignoreprop
    */
   onChange: PropTypes.func,
+
+  /**
+   * Callback fired when date is accepted @DateIOType.
+   * @uxpinignoreprop
+   */
+  onAccept: PropTypes.func,
+
+  /**
+   * Callback that fired when input value or new value prop validation returns new validation error (or value is valid after error). 
+   * To implement follow guide below:
+   * https://next.material-ui-pickers.dev/guides/forms
+   */
+  // onError: PropTypes.func,
+
+  /**
+   * Callback fired when the popup requests to be opened. Use in controlled mode (see open).
+   * @uxpinignoreprop
+   */
+  onOpen: PropTypes.func,
 }
 
 export default DatePicker;
-
-// acceptRegex	
-// allowSameDateSelection
-// valuecancelText
-// className
-// clearable	
-// clearText
-// components	
-// componentsProps
-// defaultCalendarMonth
-// desktopModeMediaQuery
-// DialogProps
-// disableCloseOnSelect
-// disableHighlightToday
-// disableMaskedInput
-// disableOpenPicker
-// getOpenDialogAriaText
-// getViewSwitchingButtonText
-// InputAdornmentProps
-// inputFormat
-// inputRef
-// leftArrowButtonText
-// loading
-// mask
-// maxDate
-// minDate
-// okText
-// onAccept
-// onClose
-// onError
-// onMonthChange
-// onOpen
-// onViewChange
-// open	
-// OpenPickerButtonProps
-// openTo
-// orientation
-// PaperProps
-// PopperProps
-// reduceAnimations
-// renderLoading
-// rifmFormatter	
-// rightArrowButtonText
-// shouldDisableDate
-// shouldDisableYear
-// showDaysOutsideCurrentMonth
-// showTodayButton
-// showToolbar
-// todayText
-// ToolbarComponent
-// toolbarFormat	
-// toolbarPlaceholder	
-// toolbarTitle
-// TransitionComponent
-// value
