@@ -185,7 +185,7 @@ module.exports = {
             'src/components/Skeleton/Skeleton.js',
             'src/components/Slider/Slider.js',
             'src/components/Snackbar/Snackbar.js',
-            'src/components/Toolbar/Toolbar.',
+            'src/components/Toolbar/Toolbar.js',
           ],
         },
       ],
