@@ -19,13 +19,13 @@ IconButton.propTypes = {
    * The icon element.
    * @uxpinpropname  Icon
    */
-   children: PropTypes.oneOf(iconVariants),
+  children: PropTypes.oneOf(iconVariants),
 
   /**
    * The size of the button.
    * `small` is equivalent to the dense button styling.
    */
-     size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 
   /**
   * If given, uses a negative margin to counteract the padding on one
@@ -34,21 +34,22 @@ IconButton.propTypes = {
   * size and shape).
   */
   edge: PropTypes.oneOf(['start', 'end', false]),
+
   /**
-  * The color of the component. It supports those theme colors that make sense for this component.
+   * The color of the component. It supports those theme colors that make sense for this component.
    */
   color: PropTypes.oneOf(["default", "inherit", "primary", "secondary", "error", "info", "success", "warning"]),
 
-    /**
-  * Aria tag for accessibility
-  */
-     ariaLabel: PropTypes.string,
-
-     
+  /**
+   * Aria tag for accessibility
+   */
+  ariaLabel: PropTypes.string,
+ 
   /**
    * If `true`, the button will be disabled.
    */
   disabled: PropTypes.bool,
+  
   /**
    * If `true`, the ripple will be disabled.
    */

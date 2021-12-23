@@ -4,7 +4,7 @@ import Rating from '../Rating';
 export default (
   <Rating
     uxpId="rating-1" 
-    emptyIcon='home'
-    icon='people'
+    emptyIcon='star'
+    icon='star_border'
   />
 );

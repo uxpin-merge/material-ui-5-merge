@@ -51,6 +51,7 @@ It means that components are going to look and, function (interactions, data) id
 | Collapse                 | ⚑ Experimental |
 | Container                | ✎ In Progress  |
 | Date/Time (Input)        | ✎ In Progress  |
+| DatePicker (Input)       | ⚑ Experimental |
 | Dialog                   | ✎ In Progress  |
 | Dialog Action            | ✓ Completed    |
 | Dialog Content           | ✓ Completed    |
