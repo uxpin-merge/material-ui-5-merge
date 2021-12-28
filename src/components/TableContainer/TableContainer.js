@@ -20,7 +20,7 @@ TableContainer.propTypes = {
 
   classes: PropTypes.object,
 
-  component: PropTypes.elementType,
+  component: PropTypes.string,
 
   sx: PropTypes.object,
 }

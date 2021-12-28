@@ -19,6 +19,7 @@ Divider.propTypes = {
 
   /**
    * The content of the component.
+   * @uxpinignoreprop
    */
   children: PropTypes.node,
 

@@ -25,7 +25,7 @@ It means that components are going to look and, function (interactions, data) id
 | ------------------------ | -------------- |
 | Accordian                | ✓ Completed    |
 | Accordion Details        | ✓ Completed    |
-| Accordion Summary        | ⚑ Experimental |
+| Accordion Summary        | ✓ Completed    |
 | Alert                    | ✓ Completed    |
 | Alert Title              | ✓ Completed    |
 | App Bar                  | ✓ Completed    |
@@ -52,7 +52,7 @@ It means that components are going to look and, function (interactions, data) id
 | Container                | ✎ In Progress  |
 | Date/Time (Input)        | ✎ In Progress  |
 | DatePicker (Input)       | ⚑ Experimental |
-| Dialog                   | ✎ In Progress  |
+| Dialog                   | ⚑ Experimental |
 | Dialog Action            | ✓ Completed    |
 | Dialog Content           | ✓ Completed    |
 | Dialog Content Text      | ✓ Completed    |
@@ -74,9 +74,9 @@ It means that components are going to look and, function (interactions, data) id
 | Image                    | ✓ Completed    |
 | Image List               | ✓ Completed    |
 | Image List Item          | ✓ Completed    |
-| Input label              | ✎ In Progress  |
+| Input label              | ✓ Completed    |
 | Linear Progress          | ✓ Completed    |
-| Link                     | ⚑ Experimental |
+| Link                     | ✓ Completed    |
 | List                     | ✓ Completed    |
 | List Item                | ✓ Completed    |
 | List Item Avatar         | ✓ Completed    |
@@ -85,13 +85,13 @@ It means that components are going to look and, function (interactions, data) id
 | List Item Text           | ✓ Completed    |
 | List Sub Header          | ✓ Completed    |
 | Loading Button           | ✓ Completed    |
-| Menu                     | ✎ In Progress  |
+| Menu                     | ⚑ Experimental |
 | Menu Item                | ✓ Completed    |
 | Menu List                | ✎ In Progress  |
 | Pagination               | ⚑ Experimental |
 | Paper                    | ✓ Completed    |
 | Radio Button             | ✓ Completed    |
-| Rating                   | ⚑ Experimental |
+| Rating                   | ✓ Completed    |
 | Select                   | ✓ Completed    |
 | Skeleton                 | ✓ Completed    |
 | Slider                   | ⚑ Experimental |
@@ -106,7 +106,7 @@ It means that components are going to look and, function (interactions, data) id
 | Table                    | ✓ Completed    |
 | Table Body               | ✓ Completed    |
 | Table Cell               | ✓ Completed    |
-| Table Container          | ✎ In Progress  |
+| Table Container          | ✓ Completed    |
 | Table Header             | ✓ Completed    |
 | Table Row                | ✓ Completed    |
 | Tabs                     | ✓ Completed    |

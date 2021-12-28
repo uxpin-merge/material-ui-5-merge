@@ -12,7 +12,7 @@ export default (
       color="inherit" 
       href="/" 
     >
-      Merge1
+      Files
     </Link>
     <Link
       uxpId='link-2'  
@@ -20,13 +20,13 @@ export default (
       color="inherit"
       href="/getting-started/installation/"
     >
-      Merge2
+      Documents
     </Link>
     <Typography 
       uxpId='link-3'
       color="text.primary"
     >
-      Merge3
+      Analysis
     </Typography>
   </Breadcrumbs>
 )

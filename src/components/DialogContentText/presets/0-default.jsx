@@ -3,10 +3,6 @@ import DialogContentText from "../DialogContentText";
 
 export default (
     <DialogContentText uxpId="dialog-content-text-1">
-        Lorem ipsum dolor sit amet, 
-        consectetur adipiscing elit. 
-        Praesent eleifend viverra urna non lacinia. 
-        Curabitur sed euismod tortor.
-        Vestibulum ultricies enim at quam finibus ultricies ut non lorem.
+        Are you sure you want to proceed? Before moving on double check if you understood terms of agreement.
     </DialogContentText>
 );
