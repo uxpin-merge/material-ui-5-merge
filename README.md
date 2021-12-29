@@ -34,7 +34,7 @@ It means that components are going to look and, function (interactions, data) id
 | Backdrop                 | ✎ In Progress  |
 | Badge                    | ✓ Completed    |
 | Bottom Navigation        | ✓ Completed    |
-| Bottom Navigation Action | ⚑ Experimental |
+| Bottom Navigation Action | ✓ Completed    |
 | Box                      | ✓ Completed    |
 | Breadcrumbs              | ✓ Completed    |
 | Button                   | ✓ Completed    |
@@ -48,8 +48,8 @@ It means that components are going to look and, function (interactions, data) id
 | Checkbox                 | ✓ Completed    |
 | Checkbox With Label      | ✓ Completed    |
 | Circular Progress        | ✓ Completed    |
-| Collapse                 | ⚑ Experimental |
-| Container                | ✎ In Progress  |
+| Collapse                 | ✓ Completed    |
+| Container                | ✓ Completed    |
 | Date/Time (Input)        | ✎ In Progress  |
 | DatePicker (Input)       | ⚑ Experimental |
 | Dialog                   | ⚑ Experimental |

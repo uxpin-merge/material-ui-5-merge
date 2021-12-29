@@ -5,6 +5,9 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePickerM from '@mui/lab/DatePicker';
 
+/**
+ * @uxpindocurl https://mui.com/api/date-picker/
+ */
 function DatePicker(props) {
   const [date, setDate] = React.useState(new Date());
 

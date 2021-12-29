@@ -164,6 +164,7 @@ module.exports = {
           name: 'Layout',
           include: [
             'src/components/Box/Box.js',
+            'src/components/Container/Container.js',
             'src/components/Grid/Grid.js',
             'src/components/ImageList/ImageList.js',
             'src/components/ImageListItem/ImageListItem.js',
