@@ -31,7 +31,7 @@ It means that components are going to look and, function (interactions, data) id
 | App Bar                  | ✓ Completed    |
 | Auto Complete            | ✎ In Progress  |
 | Avatar                   | ✓ Completed    |
-| Backdrop                 | ✎ In Progress  |
+| Backdrop                 | ✓ Completed    |
 | Badge                    | ✓ Completed    |
 | Bottom Navigation        | ✓ Completed    |
 | Bottom Navigation Action | ✓ Completed    |
