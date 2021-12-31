@@ -60,7 +60,7 @@ It means that components are going to look and, function (interactions, data) id
 | Divider                  | ✓ Completed    |
 | Divider: Vertical        | ✎ In Progress  |
 | Drawer                   | ✎ In Progress  |
-| Floating Action Icon     | ⚑ Experimental |
+| Floating Action Button   | ✓ Completed    |
 | Form Control Label       | ✓ Completed    |
 | Form Group               | ✓ Completed    |
 | FormControl              | ✓ Completed    |
@@ -96,7 +96,7 @@ It means that components are going to look and, function (interactions, data) id
 | Skeleton                 | ✓ Completed    |
 | Slider                   | ⚑ Experimental |
 | Snackbar                 | ✓ Completed    |
-| Speed Dial               | ✎ In Progress  |
+| Speed Dial               | ✎☏ In Progress |
 | Split Button             | ✎ In Progress  |
 | Stack                    | ✓ Completed    |
 | Stepper                  | ✎ In Progress  |
@@ -115,5 +115,5 @@ It means that components are going to look and, function (interactions, data) id
 | Toggle Button Group      | ✓ Completed    |
 | Tool Bar                 | ✓ Completed    |
 | Tooltip                  | ✓ Completed    |
-| Transfer List            | ✎ In Progress  |
+| Transfer List            | ✎☏ In Progress |
 | Typography               | ✓ Completed    |

@@ -4,15 +4,18 @@ import FabM from '@mui/material/Fab';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
-
 /**
  * @uxpindocurl https://mui.com/api/fab/
  */
 function FloatingActionButton(props) {
   let hasIcon = null;
 
-  if (props.startIcon) {
-    hasIcon = <Icon>{props.icon}</Icon>
+  if (props.icon) {
+    if (props.label) {
+      hasIcon = <Icon sx={{ mr: 1 }}>{props.icon}</Icon>
+    } else {
+      hasIcon = <Icon>{props.icon}</Icon>
+    }
   }
 
  return (

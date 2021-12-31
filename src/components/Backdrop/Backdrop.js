@@ -79,7 +79,7 @@ Backdrop.propTypes = {
    * Set to "auto" to automatically calculate transition time based on height. "" must be used instead of '' or ``.
    * When using number simple write the number with no quotes. Example: 3000.
    */
-  transitionDuration: PropTypes.number | PropTypes.string,  
+  transitionDuration: PropTypes.number, 
   // transitionDuration: PropTypes.oneOfType([
   //   PropTypes.number,
   //   PropTypes.shape({
