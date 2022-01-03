@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 import Icon from "../Icon/Icon";
 import IconButton from "../IconButton/IconButton";
 import Typography from "../Typography/Typography";
+import { iconVariants } from '../Icon/icon-variants'
 
 const useStyles = makeStyles(theme => ({
   root: {

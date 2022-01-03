@@ -7,7 +7,6 @@ import PaginationM  from '@mui/material/Pagination';
  */
 function Pagination(props) {
     return (
-        // <PaginationM {...props} />
         <PaginationM {...props} />
     )
 } 
