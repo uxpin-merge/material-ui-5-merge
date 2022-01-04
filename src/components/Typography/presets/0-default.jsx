@@ -3,6 +3,6 @@ import Typography from '../Typography';
 
 export default (
   <Typography uxpId="1" variant="h4">
-    Merge
+    Roboto
   </Typography>
 );

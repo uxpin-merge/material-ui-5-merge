@@ -14,6 +14,7 @@ function FormGroup(props) {
 FormGroup.propTypes = {
     /**
      * The content of this component.
+     * @uxpinignoreprop
      */
 
     children: PropTypes.node,

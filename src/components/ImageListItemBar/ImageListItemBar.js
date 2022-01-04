@@ -16,7 +16,7 @@ ImageListItemBar.propTypes = {
     /**
      * An IconButton element to be used as secondary action target (primary action target is the item itself).
      */
-    /** @uxpinignoreprop */
+    // /** @uxpinignoreprop */
     actionIcon: PropTypes.node,
 
     /**

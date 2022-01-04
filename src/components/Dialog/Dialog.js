@@ -28,21 +28,20 @@ function Dialog(props){
       drawerContainer = document.querySelector("[data-id='canvas']");
     }
 
-  return(
-    <DialogM      
-    TransitionProps={uxpContainer ? { tabIndex: "null" } : null}
-    open={open}
-    onClose={handleClose} 
-    container={drawerContainer}
-    disableEnforceFocus
-    keepMounted
-    disablePortal={false}
-    {...props}
-  >
-    {props.children}
-  </DialogM>
-
-  )
+    return(
+      <DialogM      
+        TransitionProps={uxpContainer ? { tabIndex: "null" } : null}
+        open={open}
+        onClose={handleClose} 
+        container={drawerContainer}
+        disableEnforceFocus
+        keepMounted
+        disablePortal={false}
+        {...props}
+      >
+      {props.children}
+    </DialogM>
+    )
   }
 
   Dialog.propTypes = {

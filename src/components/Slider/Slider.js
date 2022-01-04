@@ -158,5 +158,5 @@ Slider.propTypes = {
   /**
    * Custom Style Object
    */
-  sx: PropTypes.object
+  sx: PropTypes.object,
 }

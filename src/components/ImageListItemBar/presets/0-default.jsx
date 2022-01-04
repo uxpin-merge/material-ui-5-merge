@@ -1,13 +1,13 @@
 import React from 'react';
 import ImageListItemBar from '../ImageListItemBar';
-import Icon from '../../Icon/Icon';
+import IconButton from '../../IconButton/IconButton';
 
 export default (
-    <ImageListItemBar
-    title="Gdynia"
+  <ImageListItemBar
+    uxpId="1.1.2"
+    title="Trends"
     titlePosition="top"
-    actionIcon={<Icon uxpId="1.1">star_border</Icon>}
-    actionPosition="left"
-    uxpId="1"
+    actionIcon={<IconButton uxpId="Icon-Button-1" color="inherit" ariaLabel="Trends icon button">star_border</IconButton>}
+    postion="left"
   />
 )

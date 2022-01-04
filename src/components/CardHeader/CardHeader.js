@@ -15,7 +15,7 @@ function CardHeader(props) {
         <CardHeaderM 
           {...props} 
           avatar={props.avatar && <Avatar color={props.color}>{props.avatar}</Avatar>}
-          action={props.action && <IconButton onClick={props.iconOnClick}><Icon>{props.action}</Icon></IconButton>}
+          action={props.action && <IconButton aria-label={props.ariaLabel} onClick={props.iconOnClick}><Icon>{props.action}</Icon></IconButton>}
         >
           {props.children}
         </CardHeaderM>
@@ -88,6 +88,11 @@ CardHeader.propTypes = {
    * The content of the component.
    */
   title: PropTypes.node,
+
+  /**
+   * Aria tag for accessibility
+   */
+  ariaLabel: PropTypes.string,
 
   /**
    * These props will be forwarded to the title (as long as disableTypography is not true).
