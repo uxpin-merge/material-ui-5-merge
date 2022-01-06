@@ -16,6 +16,9 @@ import ListItemText from '../ListItemText/ListItemText';
  * @uxpinwrappers
  * SkipContainerWrapper
  */
+/**
+ * @uxpindocurl https://mui.com/components/drawers/#main-content
+ */
 function Drawer(props) {
   const [state, setState] = React.useState({
     top: props.open,
