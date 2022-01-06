@@ -1,23 +1,27 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
 import DrawerM from '@mui/material/Drawer';
+import PropTypes from 'prop-types';
+import * as React from 'react';
+import Box from '../Box/Box';
 import Button from '../Button/Button';
-import List from '../List/List';
 import Divider from '../Divider/Divider';
+import Icon from '../Icon/Icon';
+import List from '../List/List';
 import ListItem from '../ListItem/ListItem';
-// import Icon from '../Icon/Icon';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import ListItemIcon from '../ListItemIcon/ListItemIcon';
+import ListItemText from '../ListItemText/ListItemText';
 
 
+
+/**
+ * @uxpinwrappers
+ * SkipContainerWrapper
+ */
 function Drawer(props) {
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,    
+    top: props.open,
+    left: props.open,
+    bottom: props.open,
+    right: props.open,    
   });
   
   const toggleDrawer = (anchor, open) => (event) => {
@@ -27,6 +31,7 @@ function Drawer(props) {
 
     setState({ ...state, [anchor]: open });
   };
+
 
   const list = (anchor) => (
     <Box
@@ -39,7 +44,7 @@ function Drawer(props) {
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? <Icon>inbox</Icon> : <Icon>mail</Icon>}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -50,7 +55,7 @@ function Drawer(props) {
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {index % 2 === 0 ? <Icon>inbox</Icon> : <Icon>mail</Icon>}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -61,13 +66,14 @@ function Drawer(props) {
 
   return (
     <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
+      {[props.anchor].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <DrawerM {...props}
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
+            variant={props.variant}
           >
             {list(anchor)}
           </DrawerM>
@@ -75,6 +81,77 @@ function Drawer(props) {
       ))}
     </div>
   );
+}
+
+Drawer.propTypes = {
+  /**
+   * Side from which the drawer will appear. */
+  anchor: PropTypes.oneOf(['bottom', 'left', 'right', 'top']),
+
+  /**
+   * The content of the component.
+   */
+  /** @uxpinignoreprop */
+  children: PropTypes.node,
+
+  /**
+   * Override or extend the styles applied to the component. See CSS API https://mui.com/api/drawer/#css for more details.
+   */
+  /** @uxpinignoreprop */
+  classes: PropTypes.object,
+
+  /**
+   * The variant to use.
+   */
+   variant: PropTypes.oneOf(['permanent', 'persistent', 'temporary']),
+
+  /** The duration for the transition, in milliseconds. 
+   * You may specify a single timeout for all transitions, 
+   * or individually with an object. */
+   transitionDuration: PropTypes.number,
+
+  /**
+   * The elevation of the drawer.
+   */
+  elevation: PropTypes.number,
+
+  /**If true, the backdrop is not rendered. */
+  hideBackdrop: PropTypes.bool,
+
+  /**
+   * If true, the component is shown.
+   */
+   open: PropTypes.bool,
+
+  /**Props applied to the Modal element. */
+  /** @uxpinignoreprop */
+  ModalProps: PropTypes.object,
+
+  /**
+   *Callback fired when the component requests to be closed.
+    Signature:
+    function(event: object) => void
+    event: The event source of the callback.
+  */
+  onClose: PropTypes.func,
+
+  /**
+   * Props applied to the Paper element.
+   */
+  /** @uxpinignoreprop */
+  PaperProps: PropTypes.object,
+
+  /**
+   * Props applied to the Slide element.
+   */
+  /** @uxpinignoreprop */
+  SlideProps: PropTypes.object,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional 
+   * CSS styles. See the `sx` page for more details.
+   */
+  sx: PropTypes.object,
 }
 
 export default Drawer;
