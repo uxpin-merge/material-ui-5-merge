@@ -9,6 +9,7 @@ module.exports = {
             'src/components/IconButton/IconButton.js',
             'src/components/FloatingActionButton/FloatingActionButton.js',
             'src/components/LoadingButton/LoadingButton.js',
+            // 'src/components/SplitButton/SplitButton.js', --> no props
             'src/components/ToggleButton/ToggleButton.js',
             'src/components/ToggleButtonGroup/ToggleButtonGroup.js',
           ]
