@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TabsM from '@mui/material/Tabs';
 
+/**
+ * @uxpindocurl https://mui.com/api/tabs/#main-content
+ */
 function Tabs(props) {
     return (
         <TabsM {...props}>{props.children}</TabsM>
@@ -153,7 +156,6 @@ Tabs.propTypes = {
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles. See the `sx` page for more details https://mui.com/system/the-sx-prop/.
    */
-  /** @uxpinignoreprop */
   sx: PropTypes.object,
 
   /**

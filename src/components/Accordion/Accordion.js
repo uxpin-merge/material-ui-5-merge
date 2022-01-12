@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import AccordionM from '@mui/material/Accordion';
 
+
+/**
+ * @upxindocurl https://mui.com/api/accordion/
+ */
 function Accordion(props) {
 
   const [expanded, setExpanded] = React.useState('');
@@ -74,7 +78,7 @@ Accordion.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
+   * 
    */
   sx: PropTypes.object
 }

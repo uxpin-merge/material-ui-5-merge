@@ -2,6 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import MenuItemM from '@mui/material/MenuItem';
 
+/**
+ * @uxpindocurl https://mui.com/api/menu-item/
+ */
 function MenuItem(props) {
   return (
     <MenuItemM {...props}>{props.children}</MenuItemM>
@@ -36,7 +39,6 @@ MenuItem.propTypes = {
   focusVisibleClassName: PropTypes.string,
 
   /**
-   * @uxpinignoreprop
    * Override or extend the styles applied to the component.
    */
   sx: PropTypes.object,

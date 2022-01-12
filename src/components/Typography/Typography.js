@@ -4,6 +4,9 @@ import TypographyM from '@mui/material/Typography';
 import ReactHtmlParser from "react-html-parser";
 //import BoxM from "../Box/Box";
 
+/**
+ * @uxpindocurl https://mui.com/api/typography/
+ */
 function Typography(props) {
   //const { uxpinRef, ...other } = props;
     return (
@@ -179,6 +182,11 @@ Typography.propTypes = {
      borderColor: PropTypes.oneOf(['white', 'grey.100', 'grey.200', 'grey.300', 'grey.400', 'grey500', 'primary.main', 'secondary.main', 'error.main', 'warning.main', 'info.main', 'success.main', 'text.primary', 'text.secondary', 'text.disabled']),
      
      borderRadius: PropTypes.string,
+
+     /**
+      * The system prop that allows defining system overrides as well as additional CSS styles.
+      */
+     sx: PropTypes.object,
 
 }
 

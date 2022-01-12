@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import GridM from "@mui/material/Grid";
  
+/**
+ * @uxpindocurl https://mui.com/api/grid/
+ */
 function Grid(props) {
   // const space = Number(props.spacing);
   return (
@@ -151,7 +154,7 @@ Grid.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details https://mui.com/system/the-sx-prop/.
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
   };
 

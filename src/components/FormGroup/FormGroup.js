@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormGroupM from '@mui/material/FormGroup';
 
-
+/**
+ * @uxpindocurl https://mui.com/api/form-group/#main-content
+ */
 function FormGroup(props) {
     return (
         <FormGroupM {...props}>{props.children}</FormGroupM>
@@ -12,6 +14,7 @@ function FormGroup(props) {
 FormGroup.propTypes = {
     /**
      * The content of this component.
+     * @uxpinignoreprop
      */
 
     children: PropTypes.node,
@@ -30,7 +33,7 @@ FormGroup.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details https://mui.com/system/the-sx-prop/.
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
 }
 

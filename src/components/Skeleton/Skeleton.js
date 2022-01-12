@@ -2,6 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import SkeletonM from '@mui/material/Skeleton';
 
+/**
+ * @uxpindocurl https://mui.com/api/skeleton/#main-content
+ */
 function Skeleton(props) {
   return (
     <SkeletonM {...props}>{props.children}</SkeletonM>

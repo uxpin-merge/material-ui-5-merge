@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import ListItemAvatarM from '@mui/material/ListItemAvatar';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/list-item-avatar/
+ */
 function ListItemAvatar(props) {
   return (
     <ListItemAvatarM {...props}>

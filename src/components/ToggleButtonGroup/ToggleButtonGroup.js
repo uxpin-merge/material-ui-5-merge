@@ -2,6 +2,9 @@ import * as React from 'react';
 import ToggleButtonGroupM from '@mui/material/ToggleButtonGroup';
 import PropTypes from 'prop-types';
 
+/**
+ * @uxpindocurl https://mui.com/api/toggle-button-group/
+ */
 export default function ToggleButtonGroup(props) {
 
   const [toggleValue, setToggleValue] = React.useState([props.value]);

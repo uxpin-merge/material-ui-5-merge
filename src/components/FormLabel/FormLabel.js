@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormLabelM from '@mui/material/FormLabel';
 
+/**
+ * @uxpindocurl https://mui.com/api/form-label/
+ */
 function FormLabel(props) {
     return (
         <FormLabelM {...props}>{props.children}</FormLabelM>
@@ -63,7 +66,7 @@ FormLabel.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details https://mui.com/system/the-sx-prop/.
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
 }
 

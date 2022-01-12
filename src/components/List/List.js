@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import ListM from '@mui/material/List';
 // import ListSubheader from "../ListSubheader/ListSubheader";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/list/
+ */
 function List(props) {
   return (
     <ListM {...props}>
@@ -49,7 +53,6 @@ List.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 

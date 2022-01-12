@@ -5,6 +5,10 @@ import Icon from '../Icon/Icon';
 import ListItemIcon from '../ListItemIcon/ListItemIcon';
 import ListItemText from '../ListItemText/ListItemText';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/list-item/
+ */
 function ListItem(props) {
   return (
     <ListItemM {...props}>
@@ -70,7 +74,6 @@ ListItem.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 }

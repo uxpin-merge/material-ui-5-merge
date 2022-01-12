@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormControlM from '@mui/material/FormControl';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/form-control/#main-content
+ */
 function FormControl(props) {
     return (
         <FormControlM {...props}>{props.children}</FormControlM>
@@ -63,7 +67,7 @@ FormControl.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details https://mui.com/system/the-sx-prop/.
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
 }
 

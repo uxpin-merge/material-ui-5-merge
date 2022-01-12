@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import StackM from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 
+/**
+ * @uxpindocurl https://mui.com/components/stack/#main-content
+ */
 function Stack(props) {
   let dividerOrientation = '';
 

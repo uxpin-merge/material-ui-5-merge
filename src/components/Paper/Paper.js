@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import PaperM from "@mui/material/Paper";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/paper/
+ */
 function Paper(props) {
     return (
         <PaperM {...props}>{props.children}</PaperM>
@@ -46,7 +50,6 @@ Paper.propTypes = {
 
   /**
    * Custom Style Object
-   * @uxpinignoreprop
    */
   sx: PropTypes.object
 };

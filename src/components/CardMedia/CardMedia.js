@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardMediaM from "@mui/material/CardMedia";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/card-media/
+ */
 function CardMedia(props) {
   return <CardMediaM controls {...props} />;
 }
@@ -40,15 +44,15 @@ CardMedia.propTypes = {
   src: PropTypes.string,
 
   /**
-   * @uxpinignoreprop
+   * The system prop that allows defining system overrides as well as additional CSS styles.
    */
-  style: PropTypes.object,
+  sx: PropTypes.object,
 };
 
 CardMedia.defaultProps = {
   component: "img",
   height: 120,
-  image: "https://www.platingsandpairings.com/wp-content/uploads/2016/01/Paella-1-Square.jpg"
+  image: "https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 };
 
 export { CardMedia as default };

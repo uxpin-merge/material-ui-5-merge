@@ -4,6 +4,9 @@ import RatingM from '@mui/material/Rating';
 import Icon from '../Icon/Icon';
 import { iconVariants } from '../Icon/icon-variants'
 
+/**
+ * @uxpindocurl https://mui.com/api/rating/#main-content
+ */
 function Rating(props) {
   return (
     <RatingM 
@@ -108,7 +111,6 @@ Rating.propTypes = {
 
   /**
    * Callback function that is fired when the hover state changes.
-  //  * @uxpinignoreprop
    */
   onChangeActive: PropTypes.func
 }

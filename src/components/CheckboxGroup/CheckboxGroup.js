@@ -1,34 +1,37 @@
 import React from "react";
 import Checkbox from "../Checkbox/Checkbox";
-import FormGroup from "@mui/material/FormGroup";
+import FormGroup from "../FormGroup/FormGroup";
 import FormControlLabel from "../FormControlLabel/FormControlLabel";
 import FormControl from "../FormControl/FormControl";
 import FormLabel from "../FormLabel/FormLabel";
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function CheckboxGroup(props) {
+  let id = uuidv4();
+  const [state, setState] = React.useState(props.checkbox);
+
+  const handleChange = (e) => {
+    setState(e.target.checked);
+  }
+
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">{props.grouplabel}</FormLabel>
       <FormGroup {...props}>
-        {React.Children.map(props.children, (child, index) => {
+        {React.Children.map(props.children,(child) => {
           return (
             <FormControlLabel
               value={child.props.value}
-              // checked={child.props.checked}
               control={
                 <Checkbox
-                  id="radio-group"
+                  id={id}
                   color={props.color}
                   size={props.size}
-                  checked={child.props.checked}
-                  // inputProps={{
-                  //   role: "switch",
-                  //   "aria-checked": props.checked,
-                  // }}
+                  checked={props.checked ? props.checked : state}
+                  onChange={handleChange}
                 />
               }
-              htmlFor="radio-group"
               label={child.props.label}
               labelPlacement={props.labelPlacement}
               disabled={child.props.disabled}
@@ -102,7 +105,7 @@ CheckboxGroup.propTypes = {
    * If `true`, the checkbox is checked.
    * @uxpinbind onChange 1
    */
-checked: PropTypes.bool,
+  checked: PropTypes.bool,
 
 };
 

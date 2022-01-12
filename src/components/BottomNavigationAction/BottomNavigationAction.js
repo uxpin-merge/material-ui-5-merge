@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import BottomNavigationActionM from "@mui/material/BottomNavigationAction";
+import Icon from "../Icon/Icon";
 import { iconVariants } from '../Icon/icon-variants'
 
+
+/**
+  * @uxpindocurl https://mui.com/api/bottom-navigation-action/
+  */
 function BottomNavigationAction(props) {
-  return <BottomNavigationActionM {...props} />;
+  return <BottomNavigationActionM {...props} icon={<Icon >{props.icon}</Icon>}/>;
 }
 
 BottomNavigationAction.propTypes = {

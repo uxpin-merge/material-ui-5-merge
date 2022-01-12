@@ -2,6 +2,9 @@ import DialogActionsM from "@mui/material/DialogActions";
 import PropTypes from "prop-types";
 import React from "react";
 
+/**
+ * @uxpindocurl https://mui.com/api/dialog-actions/
+ */
 function DialogActions(props) {
   return <DialogActionsM {...props}>{props.children}</DialogActionsM>;
 }
@@ -9,6 +12,7 @@ function DialogActions(props) {
 DialogActions.propTypes = {
   /**
    * The content of the component.
+   * @uxpinignoreprop
    */
   children: PropTypes.node,
   /**
@@ -24,7 +28,7 @@ DialogActions.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles. 
    * See the `sx` page for more details.
    */
-  /** @uxpinignoreprop */
+  /** */
   sx: PropTypes.object,
 
 };

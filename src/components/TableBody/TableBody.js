@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableBodyM from '@mui/material/TableBody';
 
+/**
+ * @uxpindocurl https://mui.com/api/table-body/#main-content
+ */
 function TableBody(props) {
   return (
     <TableBodyM {...props}>{props.children}</TableBodyM>

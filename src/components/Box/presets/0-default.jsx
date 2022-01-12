@@ -6,6 +6,6 @@ import Box from "../Box";
 export default (
   <Box 
     uxpId="box1"
-  ><Typography uxpId="box2" variant="h3" >test</Typography>
+  ><Typography uxpId="box2" variant="h3" >Your ideas</Typography>
   </Box>
 );

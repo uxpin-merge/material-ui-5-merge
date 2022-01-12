@@ -2,6 +2,9 @@ import * as React from 'react';
 import PropTypes from "prop-types";
 import TooltipM from '@mui/material/Tooltip';
 
+/**
+ * @uxpindocurl https://mui.com/api/tooltip/
+ */
 function Tooltip(props) {
   return (
       <TooltipM {...props} PopperProps={{ keepMounted: true, disablePortal: true }}>

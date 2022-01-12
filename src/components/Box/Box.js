@@ -9,6 +9,9 @@ import { styled } from '@mui/material/styles';
  * @uxpinwrappers
  * SkipContainerWrapper
  */
+/**
+  * @uxpindocurl https://mui.com/components/box/#main-content
+  */
 function Box(props) {
   const { uxpinRef, ...other } = props;
   return (

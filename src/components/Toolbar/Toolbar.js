@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ToolbarM from '@mui/material/Toolbar';
 
+/**
+ * @uxpindocurl https://mui.com/api/toolbar/
+ */
 function Toolbar(props) {
     return (
         <ToolbarM {...props} sx={{"justifyContent": props.justifyContent}}>{props.children}</ToolbarM>
@@ -37,7 +40,6 @@ Toolbar.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` https://mui.com/system/the-sx-prop/ page for more details.
      */
-    /** @uxpinignoreprop */
     sx: PropTypes.object,
   
     /**

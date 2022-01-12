@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import DialogM from "@mui/material/Dialog";
 
 
+/**
+ * @uxpindocurl https://mui.com/api/dialog/#main-content
+ */
 function Dialog(props){
     const [open, setOpen] = React.useState(props.open);
 
@@ -25,21 +28,20 @@ function Dialog(props){
       drawerContainer = document.querySelector("[data-id='canvas']");
     }
 
-  return(
-    <DialogM      
-    TransitionProps={uxpContainer ? { tabIndex: "null" } : null}
-    open={open}
-    onClose={handleClose} 
-    container={drawerContainer}
-    disableEnforceFocus
-    keepMounted
-    disablePortal={false}
-    {...props}
-  >
-    {props.children}
-  </DialogM>
-
-  )
+    return(
+      <DialogM      
+        TransitionProps={uxpContainer ? { tabIndex: "null" } : null}
+        open={open}
+        onClose={handleClose} 
+        container={drawerContainer}
+        disableEnforceFocus
+        keepMounted
+        disablePortal={false}
+        {...props}
+      >
+      {props.children}
+    </DialogM>
+    )
   }
 
   Dialog.propTypes = {
@@ -150,7 +152,7 @@ function Dialog(props){
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details. https://mui.com/system/the-sx-prop/
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
   };
 

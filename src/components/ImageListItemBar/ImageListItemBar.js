@@ -2,6 +2,10 @@ import ImageListItemBarM from '@mui/material/ImageListItemBar';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/image-list-item-bar/
+ */
 function ImageListItemBar(props) {
     return (
         <ImageListItemBarM {...props}>{props.children}</ImageListItemBarM>
@@ -12,7 +16,7 @@ ImageListItemBar.propTypes = {
     /**
      * An IconButton element to be used as secondary action target (primary action target is the item itself).
      */
-    /** @uxpinignoreprop */
+    // /** @uxpinignoreprop */
     actionIcon: PropTypes.node,
 
     /**
@@ -41,7 +45,7 @@ ImageListItemBar.propTypes = {
      * The system prop that allows defining system overrides as well as additional CSS styles. 
      * See the `sx` page for more details. https://mui.com/system/the-sx-prop/
      */
-    /** @uxpinignoreprop */
+    /** */
     sx: PropTypes.object,
 
     /**

@@ -2,6 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormHelperTextM from "@mui/material/FormHelperText";
 
+/**
+ * @uxpindocurl https://mui.com/api/form-helper-text/
+ */
 function FormHelperText(props) {
   return <FormHelperTextM {...props}>{props.children}</FormHelperTextM>;
 }
@@ -66,7 +69,7 @@ FormHelperText.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles. 
    * See the `sx` page for more details https://mui.com/system/the-sx-prop/.
    */
-  /** @uxpinignoreprop */
+  /** */
   sx: PropTypes.object,
   
 

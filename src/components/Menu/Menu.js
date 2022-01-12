@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import Button from "../Button/Button";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
@@ -8,9 +8,10 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import { makeStyles } from "@mui/styles";
 import PropTypes from "prop-types";
-import Icon from "@mui/material/Icon";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
+import Icon from "../Icon/Icon";
+import IconButton from "../IconButton/IconButton";
+import Typography from "../Typography/Typography";
+import { iconVariants } from '../Icon/icon-variants'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,13 +26,16 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+/**
+ * @uxpindocurl https://mui.com/api/menu/
+ */
 export default function Menu(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
+    setOpen(true);
   };
 
   const handleClose = event => {
@@ -52,7 +56,7 @@ export default function Menu(props) {
   // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
+    if (prevOpen.current === true && open === true) {
       anchorRef.current.focus();
     }
     prevOpen.current = open;
@@ -166,7 +170,6 @@ Menu.propTypes = {
    * The color of the button or icon.
    */
    color: PropTypes.oneOf([
-    'default',
     'primary',
     'secondary',
     'error',
@@ -177,7 +180,12 @@ Menu.propTypes = {
   /**
    * @uxpinignoreprop
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.object,
 };
 
 Menu.defaultProps = {

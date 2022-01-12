@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableM from '@mui/material/Table';
 
+/**
+ * @uxpindocurl https://mui.com/components/tables/#main-content
+ */
 function Table(props) {
   return (
     <TableM {...props}>

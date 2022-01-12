@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CollapseM from "@mui/material/Collapse";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/collapse/#main-content
+ */
 function Collapse(props) {
   return <CollapseM {...props}>{props.children}</CollapseM>;
 }
@@ -37,14 +41,16 @@ Collapse.propTypes = {
 
   /**
    * The width (horizontal) or height (vertical) of the container when collapsed.
+   * Use px, for example - 30px
    */
   collapsedSize: PropTypes.string,
 
   /**
    * The component used for the root node.
    * Either a string to use a DOM element or a component.
+   * Example: span, div
    */
-  component: PropTypes.node,
+  component: PropTypes.string,
 
   /**
    * If `true`, the component will transition in.
@@ -61,13 +67,15 @@ Collapse.propTypes = {
    * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
    *
-   * Set to 'auto' to automatically calculate transition time based on height.
+   * Set to "auto" to automatically calculate transition time based on height. "" must be used instead of '' or ``.
+   * When using number simple write the number with no quotes. Example: 3000.
    */
-  timeout: PropTypes.oneOfType([
-    PropTypes.number, 
-    PropTypes.shape({enter: PropTypes.number, exit: PropTypes.number}), 
-    PropTypes.oneOf(['auto'])
-  ]),
+  timeout: PropTypes.number | PropTypes.string,
+  // timeout: PropTypes.oneOfType([
+  //   PropTypes.number, 
+  //   PropTypes.shape({enter: PropTypes.number, exit: PropTypes.number}), 
+  //   PropTypes.oneOf(['auto'])
+  // ]),
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles. 

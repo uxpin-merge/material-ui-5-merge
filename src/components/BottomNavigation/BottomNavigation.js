@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import BottomNavigationM from "@mui/material/BottomNavigation";
 
+
+/**
+  * @uxpindocurl https://mui.com/api/bottom-navigation/
+  */
 function BottomNavigation(props) {
   return <BottomNavigationM {...props}>{props.children}</BottomNavigationM>;
 }
@@ -43,7 +47,7 @@ BottomNavigation.propTypes = {
      /**
       * The value of the currently selected BottomNavigationAction.
       */
-     value: PropTypes.string
+     value: PropTypes.string,
    };
    
    export default BottomNavigation;

@@ -8,7 +8,9 @@ icons.setAttribute('href', 'https://fonts.googleapis.com/icon?family=Material+Ic
 icons.setAttribute('rel', 'stylesheet');
 document.head.appendChild(icons);
 
-
+/**
+ * @uxpindocurl https://mui.com/api/icon/
+ */
 function Icon (props) {
     return <IconM{...props}>{props.children}</IconM>
 }

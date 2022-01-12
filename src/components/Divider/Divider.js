@@ -2,8 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import DividerM from '@mui/material/Divider';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/divider/
+ */
 function Divider(props) {
-  return <DividerM {...props} defaultChecked/>;
+  return <DividerM {...props} />;
 }
 
 Divider.propTypes = {
@@ -15,6 +19,7 @@ Divider.propTypes = {
 
   /**
    * The content of the component.
+   * @uxpinignoreprop
    */
   children: PropTypes.node,
 
@@ -32,7 +37,6 @@ Divider.propTypes = {
   /**
    * If true, a vertical divider will have the correct height when used in flex container. 
    * (By default, a vertical divider will have a calculated height of 0px if it is the child of a flex container.)
-  * @uxpinignoreprop
    */
   flexItem: PropTypes.bool,
 
@@ -44,9 +48,8 @@ Divider.propTypes = {
 
   /**
    * The component orientation.
-   * @uxpinignoreprop
    */
-  orientation: PropTypes.oneOf(['horizontal', ' vertical']),
+  orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 
   /**
    * The text alignment.
@@ -65,3 +68,5 @@ Divider.propTypes = {
 }
 
 export default Divider;
+
+

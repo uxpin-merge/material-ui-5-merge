@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableRowM from '@mui/material/TableRow';
 
+/**
+ * @uxpindocurl https://mui.com/api/table-row/#main-content
+ */
 function TableRow(props) {
   return (
     <TableRowM {...props}>{props.children}</TableRowM>

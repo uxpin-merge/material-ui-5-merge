@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import CardM from '@mui/material/Card';
 
+
+/**
+ * @uxpindocurl https://mui.com/api/card/
+ */
 function Card(props) {
     return (
         <CardM {...props}>{props.children}</CardM>
@@ -28,7 +32,6 @@ Card.propTypes = {
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
-  //  * @uxpinignoreprop
    */
   sx: PropTypes.object
 }

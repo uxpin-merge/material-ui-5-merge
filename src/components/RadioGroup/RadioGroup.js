@@ -6,6 +6,9 @@ import FormControl from "../FormControl/FormControl";
 import FormLabel from "../FormLabel/FormLabel";
 import PropTypes from "prop-types";
 
+/**
+ * @uxpindocurl https://mui.com/api/radio-group/
+ */
 export default function RadioGroup(props) {
   return (
     <FormControl component="fieldset">

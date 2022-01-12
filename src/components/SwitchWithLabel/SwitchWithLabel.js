@@ -60,15 +60,6 @@ SwitchWithLabel.propTypes = {
    */
      size: PropTypes.oneOf(['small', 'medium', 'large']),
 
-
-  color: PropTypes.oneOf([
-    'default',
-    'primary',
-    'secondary',
-    'error',
-    'success',
-    'warning',
-  ]),
   /**
    * Change event to use with UXPin interactions.
    */

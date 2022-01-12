@@ -25,16 +25,16 @@ It means that components are going to look and, function (interactions, data) id
 | ------------------------ | -------------- |
 | Accordian                | ✓ Completed    |
 | Accordion Details        | ✓ Completed    |
-| Accordion Summary        | ⚑ Experimental |
+| Accordion Summary        | ✓ Completed    |
 | Alert                    | ✓ Completed    |
 | Alert Title              | ✓ Completed    |
 | App Bar                  | ✓ Completed    |
 | Auto Complete            | ✎ In Progress  |
 | Avatar                   | ✓ Completed    |
-| Backdrop                 | ✎ In Progress  |
+| Backdrop                 | ✓ Completed    |
 | Badge                    | ✓ Completed    |
 | Bottom Navigation        | ✓ Completed    |
-| Bottom Navigation Action | ⚑ Experimental |
+| Bottom Navigation Action | ✓ Completed    |
 | Box                      | ✓ Completed    |
 | Breadcrumbs              | ✓ Completed    |
 | Button                   | ✓ Completed    |
@@ -43,15 +43,16 @@ It means that components are going to look and, function (interactions, data) id
 | Card Actions             | ✓ Completed    |
 | Card Actions Area        | ✓ Completed    |
 | Card Content             | ✓ Completed    |
-| Card Header              | ⚑ Experimental |
+| Card Header              | ✓ Completed    |
 | Card Media               | ✓ Completed    |
 | Checkbox                 | ✓ Completed    |
 | Checkbox With Label      | ✓ Completed    |
 | Circular Progress        | ✓ Completed    |
-| Collapse                 | ⚑ Experimental |
-| Container                | ✎ In Progress  |
+| Collapse                 | ✓ Completed    |
+| Container                | ✓ Completed    |
 | Date/Time (Input)        | ✎ In Progress  |
-| Dialog                   | ✎ In Progress  |
+| DatePicker (Input)       | ⚑ Experimental |
+| Dialog                   | ⚑ Experimental |
 | Dialog Action            | ✓ Completed    |
 | Dialog Content           | ✓ Completed    |
 | Dialog Content Text      | ✓ Completed    |
@@ -59,7 +60,7 @@ It means that components are going to look and, function (interactions, data) id
 | Divider                  | ✓ Completed    |
 | Divider: Vertical        | ✎ In Progress  |
 | Drawer                   | ✎ In Progress  |
-| Floating Action Icon     | ⚑ Experimental |
+| Floating Action Button   | ✓ Completed    |
 | Form Control Label       | ✓ Completed    |
 | Form Group               | ✓ Completed    |
 | FormControl              | ✓ Completed    |
@@ -73,9 +74,9 @@ It means that components are going to look and, function (interactions, data) id
 | Image                    | ✓ Completed    |
 | Image List               | ✓ Completed    |
 | Image List Item          | ✓ Completed    |
-| Input label              | ✎ In Progress  |
+| Input label              | ✓ Completed    |
 | Linear Progress          | ✓ Completed    |
-| Link                     | ⚑ Experimental |
+| Link                     | ✓ Completed    |
 | List                     | ✓ Completed    |
 | List Item                | ✓ Completed    |
 | List Item Avatar         | ✓ Completed    |
@@ -84,18 +85,18 @@ It means that components are going to look and, function (interactions, data) id
 | List Item Text           | ✓ Completed    |
 | List Sub Header          | ✓ Completed    |
 | Loading Button           | ✓ Completed    |
-| Menu                     | ✎ In Progress  |
+| Menu                     | ⚑ Experimental |
 | Menu Item                | ✓ Completed    |
 | Menu List                | ✎ In Progress  |
-| Pagination               | ✎ In Progress  |
+| Pagination               | ⚑ Experimental |
 | Paper                    | ✓ Completed    |
 | Radio Button             | ✓ Completed    |
-| Rating                   | ⚑ Experimental |
+| Rating                   | ✓ Completed    |
 | Select                   | ✓ Completed    |
 | Skeleton                 | ✓ Completed    |
-| Slider                   | ✎ In Progress  |
+| Slider                   | ⚑ Experimental |
 | Snackbar                 | ✓ Completed    |
-| Speed Dial               | ✎ In Progress  |
+| Speed Dial               | ✎☏ In Progress |
 | Split Button             | ✎ In Progress  |
 | Stack                    | ✓ Completed    |
 | Stepper                  | ✎ In Progress  |
@@ -105,7 +106,7 @@ It means that components are going to look and, function (interactions, data) id
 | Table                    | ✓ Completed    |
 | Table Body               | ✓ Completed    |
 | Table Cell               | ✓ Completed    |
-| Table Container          | ✎ In Progress  |
+| Table Container          | ✓ Completed    |
 | Table Header             | ✓ Completed    |
 | Table Row                | ✓ Completed    |
 | Tabs                     | ✓ Completed    |
@@ -114,5 +115,5 @@ It means that components are going to look and, function (interactions, data) id
 | Toggle Button Group      | ✓ Completed    |
 | Tool Bar                 | ✓ Completed    |
 | Tooltip                  | ✓ Completed    |
-| Transfer List            | ✎ In Progress  |
+| Transfer List            | ✎☏ In Progress |
 | Typography               | ✓ Completed    |

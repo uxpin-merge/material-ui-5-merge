@@ -5,6 +5,9 @@ import SnackbarM from '@mui/material/Snackbar';
 import IconButton from '../IconButton/IconButton';
 import Icon from '../Icon/Icon';
 
+/**
+ * @uxpindocurl https://mui.com/components/skeleton/#main-content
+ */
 export default function Snackbar(props) {
 
   const { uxpinRef, ...other } = props;
@@ -172,11 +175,4 @@ Snackbar.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
   sx: PropTypes.object,
-
-  /**
- * Callback fired when the component requests to be closed. Typically onClose is used to set state in the parent component, which is used to control the Snackbar open prop. 
- * The reason parameter can optionally be used to control the response to onClose, for example ignoring clickaway.
- */
-  onClose: PropTypes.func,
-
 }

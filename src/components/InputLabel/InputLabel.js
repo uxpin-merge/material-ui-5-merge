@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import InputLabelM from "@mui/material/InputLabel";
 
+
+/**
+ * @uxpindocurl https://mui.com/api/input-label/#main-content
+ */
 function InputLabel(props) {
   return <InputLabelM {...props}>{props.children}</InputLabelM>;
 }
