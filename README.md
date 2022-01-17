@@ -58,7 +58,7 @@ It means that components are going to look and, function (interactions, data) id
 | Dialog Content Text      | ✓ Completed    |
 | Dialog Title             | ✓ Completed    |
 | Divider                  | ✓ Completed    |
-| Divider: Vertical        | ✎ In Progress  |
+| Divider: Vertical        | ✓ Completed    |
 | Drawer                   | ✎ In Progress  |
 | Floating Action Button   | ✓ Completed    |
 | Form Control Label       | ✓ Completed    |

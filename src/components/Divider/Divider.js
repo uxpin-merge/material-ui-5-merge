@@ -48,6 +48,7 @@ Divider.propTypes = {
 
   /**
    * The component orientation.
+   * If using "vertical" items and divider must reside within a Stack or Grid container
    */
   orientation: PropTypes.oneOf(['horizontal', 'vertical']),
 
