@@ -97,7 +97,7 @@ It means that components are going to look and, function (interactions, data) id
 | Slider                   | ⚑ Experimental |
 | Snackbar                 | ✓ Completed    |
 | Speed Dial               | ✎☏ In Progress |
-| Split Button             | ✎ In Progress  |
+| Split Button             | ✓ Completed    |
 | Stack                    | ✓ Completed    |
 | Stepper                  | ✎ In Progress  |
 | Switch                   | ✓ Completed    |
