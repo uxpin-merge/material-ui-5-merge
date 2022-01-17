@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DialogM from "@mui/material/Dialog";
-import Box from "../Box/Box"
 
 
 /**

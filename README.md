@@ -52,14 +52,14 @@ It means that components are going to look and, function (interactions, data) id
 | Container                | ✓ Completed    |
 | Date/Time (Input)        | ✎ In Progress  |
 | DatePicker (Input)       | ⚑ Experimental |
-| Dialog                   | ⚑ Experimental |
+| Dialog                   | ✓ Completed    |
 | Dialog Action            | ✓ Completed    |
 | Dialog Content           | ✓ Completed    |
 | Dialog Content Text      | ✓ Completed    |
 | Dialog Title             | ✓ Completed    |
 | Divider                  | ✓ Completed    |
 | Divider: Vertical        | ✓ Completed    |
-| Drawer                   | ✎ In Progress  |
+| Drawer                   | ✓ Completed    |
 | Floating Action Button   | ✓ Completed    |
 | Form Control Label       | ✓ Completed    |
 | Form Group               | ✓ Completed    |
