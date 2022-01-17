@@ -26,7 +26,7 @@ Button.propTypes ={
    * The label of the button.
    * @uxpinpropname Label
    * */
-  children: PropTypes.string,
+  children: PropTypes.node,
 
   /**
    * The color of the button.
