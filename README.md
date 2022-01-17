@@ -85,7 +85,7 @@ It means that components are going to look and, function (interactions, data) id
 | List Item Text           | ✓ Completed    |
 | List Sub Header          | ✓ Completed    |
 | Loading Button           | ✓ Completed    |
-| Menu                     | ⚑ Experimental |
+| Menu                     | ✓ Completed    |
 | Menu Item                | ✓ Completed    |
 | Menu List                | ✎ In Progress  |
 | Pagination               | ⚑ Experimental |
@@ -94,7 +94,7 @@ It means that components are going to look and, function (interactions, data) id
 | Rating                   | ✓ Completed    |
 | Select                   | ✓ Completed    |
 | Skeleton                 | ✓ Completed    |
-| Slider                   | ⚑ Experimental |
+| Slider                   | ✓ Completed    |
 | Snackbar                 | ✓ Completed    |
 | Speed Dial               | ✎☏ In Progress |
 | Split Button             | ✓ Completed    |
