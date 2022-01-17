@@ -97,7 +97,7 @@ Backdrop.propTypes = {
 Backdrop.defaultProps = {
   // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
   // see: https://fb.me/react-controlled-components
-  isOpen: true,
+  open: true,
 };
 
 export { Backdrop as default };

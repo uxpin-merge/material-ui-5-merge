@@ -132,6 +132,8 @@ Alert.propTypes = {
    */
   onClose: PropTypes.func,
 
+  onChange: PropTypes.func,
+
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */

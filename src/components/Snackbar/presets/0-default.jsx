@@ -5,7 +5,6 @@ export default (
   <Snackbar 
     uxpId='Snackbar-1' 
     open={true}
-    onClose={() => {}}
     message="Note archived"
   />
 );
