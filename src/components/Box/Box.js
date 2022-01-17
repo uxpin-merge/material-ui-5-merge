@@ -15,7 +15,7 @@ import { styled } from '@mui/material/styles';
 function Box(props) {
   const { uxpinRef, ...other } = props;
   return (
-    <BoxM
+    <BoxM ref={uxpinRef}
       {...other}
     >
       {!props.children ? (

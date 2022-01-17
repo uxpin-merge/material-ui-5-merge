@@ -5,9 +5,14 @@ import SkeletonM from '@mui/material/Skeleton';
 /**
  * @uxpindocurl https://mui.com/api/skeleton/#main-content
  */
+/**
+ * @uxpinwrappers
+ * SkipContainerWrapper
+ */
 function Skeleton(props) {
+  const { uxpinRef, ...other } = props;
   return (
-    <SkeletonM {...props}>{props.children}</SkeletonM>
+    <SkeletonM {...other}>{props.children}</SkeletonM>
   )
 }
 
