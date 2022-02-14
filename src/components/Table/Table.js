@@ -36,7 +36,7 @@ Table.propTypes ={
   /**
    * Allows TableCells to inherit padding of the Table.
    */
-  padding: PropTypes.oneOf('checkbox', 'none', 'normal'),
+  padding: PropTypes.oneOf(['checkbox', 'none', 'normal']),
 
   /**
    * Allows TableCells to inherit size of the Table.
