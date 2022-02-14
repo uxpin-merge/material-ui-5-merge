@@ -100,11 +100,6 @@ Rating.propTypes = {
   value: PropTypes.number,
 
   /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: PropTypes.object,
-
-  /**
    * On click event to use with UXPin interactions.
    */
   onChange: PropTypes.func,
@@ -112,7 +107,12 @@ Rating.propTypes = {
   /**
    * Callback function that is fired when the hover state changes.
    */
-  onChangeActive: PropTypes.func
+  onChangeActive: PropTypes.func,
+
+    /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+     sx: PropTypes.object,
 }
 
 export default Rating
