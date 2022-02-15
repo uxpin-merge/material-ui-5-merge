@@ -31,6 +31,7 @@ It means that components are going to look and, function (interactions, data) id
 | App Bar                  | ✓ Completed    |
 | Auto Complete            | ✎ In Progress  |
 | Avatar                   | ✓ Completed    |
+| AvatarGroup              | ✓ Completed    |
 | Backdrop                 | ✓ Completed    |
 | Badge                    | ✓ Completed    |
 | Bottom Navigation        | ✓ Completed    |
@@ -52,14 +53,14 @@ It means that components are going to look and, function (interactions, data) id
 | Container                | ✓ Completed    |
 | Date/Time (Input)        | ✎ In Progress  |
 | DatePicker (Input)       | ⚑ Experimental |
-| Dialog                   | ⚑ Experimental |
+| Dialog                   | ✓ Completed    |
 | Dialog Action            | ✓ Completed    |
 | Dialog Content           | ✓ Completed    |
 | Dialog Content Text      | ✓ Completed    |
 | Dialog Title             | ✓ Completed    |
 | Divider                  | ✓ Completed    |
-| Divider: Vertical        | ✎ In Progress  |
-| Drawer                   | ✎ In Progress  |
+| Divider: Vertical        | ✓ Completed    |
+| Drawer                   | ✓ Completed    |
 | Floating Action Button   | ✓ Completed    |
 | Form Control Label       | ✓ Completed    |
 | Form Group               | ✓ Completed    |
@@ -85,7 +86,7 @@ It means that components are going to look and, function (interactions, data) id
 | List Item Text           | ✓ Completed    |
 | List Sub Header          | ✓ Completed    |
 | Loading Button           | ✓ Completed    |
-| Menu                     | ⚑ Experimental |
+| Menu                     | ✓ Completed    |
 | Menu Item                | ✓ Completed    |
 | Menu List                | ✎ In Progress  |
 | Pagination               | ⚑ Experimental |
@@ -94,10 +95,10 @@ It means that components are going to look and, function (interactions, data) id
 | Rating                   | ✓ Completed    |
 | Select                   | ✓ Completed    |
 | Skeleton                 | ✓ Completed    |
-| Slider                   | ⚑ Experimental |
+| Slider                   | ✓ Completed    |
 | Snackbar                 | ✓ Completed    |
 | Speed Dial               | ✎☏ In Progress |
-| Split Button             | ✎ In Progress  |
+| Split Button             | ✓ Completed    |
 | Stack                    | ✓ Completed    |
 | Stepper                  | ✎ In Progress  |
 | Switch                   | ✓ Completed    |

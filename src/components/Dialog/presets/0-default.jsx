@@ -12,8 +12,9 @@ export default (
     uxpId="3" 
     aria-labelledby="alert-dialog-title"
     aria-describedby="alert-dialog-description"
+    open={true}
   >
-    <DialogTitle id="alert-dialog-title" uxpId="4">
+    <DialogTitle id="alert-dialog-title" close={true} uxpId="4">
       {"Use Google's location service?"}
     </DialogTitle>
     <DialogContent uxpId="5">
