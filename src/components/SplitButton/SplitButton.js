@@ -11,11 +11,15 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
 
-export default function SplitButton() {
-  const options = ['Create a merge commit', 'Squash and merge', 'Rebase and merge'];
+export default function SplitButton(props) {
+  const options = props.options;
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    setSelectedIndex(props.selected);
+  }, [props.selected]);
 
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);
@@ -46,7 +50,7 @@ export default function SplitButton() {
           size="small"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
-          aria-label="select merge strategy"
+          aria-label="hello"
           aria-haspopup="menu"
           onClick={handleToggle}
         >
@@ -74,7 +78,7 @@ export default function SplitButton() {
                   {options.map((option, index) => (
                     <MenuItem
                       key={option}
-                      disabled={index === 2}
+                      // disabled={index === 2}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
                     >
@@ -90,3 +94,12 @@ export default function SplitButton() {
     </React.Fragment>
   );
 }
+
+SplitButton.propTypes ={
+  options: PropTypes.array,
+  selected: PropTypes.number,
+}
+SplitButton.defaultProps = {
+  options: ['Option 1', 'Option 2', 'Option 3'],
+  selected: 0
+};

@@ -286,6 +286,11 @@ Autocomplete.propTypes = {
     /** @uxpinignoreprop */
     openOnFocus: PropTypes.bool,
 
+    /**
+     * If true, the component becomes readonly. It is also supported for multiple tags where the tag cannot be deleted.
+     */
+    readOnly: PropTypes.bool,
+
     /** Override the default text for the open popup icon button.
       * For localization purposes, you can use the provided translations https://mui.com/guides/localization/.
     */
