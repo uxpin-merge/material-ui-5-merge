@@ -81,6 +81,7 @@ Grid.propTypes = {
       "column-reverse"
     ]),
   
+    order: PropTypes.number,
     /**
      * If `true`, the component will have the flex *item* behavior.
      * You should be wrapping *items* with a *container*.
