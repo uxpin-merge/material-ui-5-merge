@@ -185,6 +185,8 @@ module.exports = {
           'src/components/Backdrop/Backdrop.js',
           'src/components/Collapse/Collapse.js',
           'src/components/DatePicker/DatePicker.js',
+          'src/components/DeviceViewer/DeviceViewer.js',
+          'src/components/IFrame/IFrame.js',
           "src/components/Image/Image.js",
           'src/components/InputLabel/InputLabel.js',   
           'src/components/Skeleton/Skeleton.js',
