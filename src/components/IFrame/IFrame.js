@@ -1,8 +1,9 @@
 import React from 'react';
 import { create } from 'jss';
 import { jssPreset } from '@mui/styles';
-import { styled } from '@mui/material/styles';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 import { StylesProvider } from '@mui/styles';
 import Frame, { FrameContextConsumer } from 'react-frame-component';
 import PropTypes from "prop-types";
@@ -75,7 +76,7 @@ function IFrame(props) {
                 sandbox="allow-same-origin allow-top-navigation allow-top-navigation-by-user-activation allow-scripts"
                 className={classes.iframe}
                 contentDidMount={props.contentDidMount}
-                contentDidUpdate={props.contentDidMount}
+                contentDidUpdate={props.contentDidUpdate}
             >
             <FrameContextConsumer>
                 {({ document, window }) => {
@@ -85,12 +86,20 @@ function IFrame(props) {
                     insertionPoint: document.head
                 });
 
+                const cache = createCache({
+                    key: 'css',
+                    prepend: true,
+                    container: document.head,
+                })
+
                 return (
                     <StylesProvider jss={jss}>
-                        <ThemeProvider theme={theme}>
-                        <CssBaseline />
-                        {props.children}
-                        </ThemeProvider>
+                        <CacheProvider value={cache}>
+                            <ThemeProvider theme={theme}>
+                            <CssBaseline />
+                                {props.children}
+                            </ThemeProvider>
+                        </CacheProvider>
                     </StylesProvider>
                 );
                 }}
@@ -113,6 +122,8 @@ IFrame.propTypes = {
     frameWidth: PropTypes.number,
     frameHeight: PropTypes.number,
     active: PropTypes.bool,
+    contentDidMount: PropTypes.func,
+    contentDidUpdate: PropTypes.func,
 };
 
 IFrame.defaultProps = {

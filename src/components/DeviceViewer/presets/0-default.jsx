@@ -4,3 +4,4 @@ import DeviceViewer from '../DeviceViewer';
 export default (
     <DeviceViewer uxpId="1" />
 );
+
