@@ -1,9 +1,9 @@
 import * as React from 'react';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import SelectM from '@mui/material/Select';
 // Replaced package imports below with local component
-import FormControl from '@mui/material/FormControl';
-import InputLabel from "@mui/material/InputLabel";
+import FormControl from '../FormControl/FormControl';
+import InputLabel from "../InputLabel/InputLabel";
 
 /**
  * @uxpindocurl https://mui.com/api/select/
@@ -17,7 +17,6 @@ function Select(props) {
   }, [props.value]); // Only re-run the effect if value prop changes
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     setSelectedValue(e.target.value);
   };
 
@@ -25,6 +24,7 @@ function Select(props) {
     <FormControl variant={props.variant} fullWidth>
       <InputLabel id="demo-multiple-name-label">{props.label}</InputLabel>
       <SelectM
+        {...props}
         labelId="demo-multiple-name-label"
         id="demo-multiple-name"
         onChange={(e) => handleChange(e)}

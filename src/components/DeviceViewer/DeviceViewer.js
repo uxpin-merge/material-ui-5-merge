@@ -4,7 +4,7 @@ import IFrame from "../IFrame/IFrame";
 import { makeStyles } from "@mui/styles";
 import Typography from "../Typography/Typography";
 import Grid from "../Grid/Grid";
-import Select from "../Select/Select";
+import Select from "@mui/material/Select";
 import MenuItem from "../MenuItem/MenuItem";
 import FormControl from "../FormControl/FormControl";
 import Box from "../Box/Box";
@@ -103,6 +103,7 @@ function DeviceViewer(props) {
             <Grid item>
             <FormControl className={classes.formControl} id="deviceSelector">
                 <Select
+                variant="standard"
                 value={deviceView}
                 onChange={handleChange}
                 framewidth={frameWidth}
