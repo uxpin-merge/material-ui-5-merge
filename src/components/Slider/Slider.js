@@ -1,34 +1,22 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import SliderM from '@mui/material/Slider';
-import Icon from '../Icon/Icon';
-// import { iconVariants } from '../Icon/icon-variants';
-
-import Stack from '@mui/material/Stack';
-
-// Features Missing:
-// 1. Custom Marks. Need to change props from just bool to array | bool -https://mui.com/components/slider/#minimum-distance
-// 2. Restricted Mark Values - https://mui.com/components/slider/#minimum-distance
-// 4. Range slider, with default props being able to take array of 2 values. eg. defaultValues={[20, 40]}
-// 5. Range slider minimum distance - https://mui.com/components/slider/#minimum-distance
-// 6. Slider with input field - https://mui.com/components/slider/#minimum-distance
-// 7. Scale prop
-
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Slider(props) {
-  const [value, setValue] = React.useState('');
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // Unique Id 
+  const id = uuidv4();
 
   return (
-    <SliderM value={value} onChange={handleChange} valueLabelDisplay={props.valueLabelDisplay} {...props} />
+    <SliderM
+      key={id}
+      {...props} />
   );
 }
 
 // Need to add support for Aria props
 Slider.propTypes = {
+  // value: PropTypes.number,
   /**
    * The size of the slider.
    */
@@ -47,7 +35,7 @@ Slider.propTypes = {
   /**
    * The default value. Use when the component is not controlled.
    */
-  defaultValue: PropTypes.arrayOf(PropTypes.number) | PropTypes.number,
+  defaultValue: PropTypes.number,
 
   /**
    * Controls when the value label is displayed:
@@ -57,7 +45,7 @@ Slider.propTypes = {
    */
   valueLabelDisplay: PropTypes.oneOf(['auto', 'off', 'on']),
 
-  
+
   /**
    * The format function the value label's value.
    * When a function is provided, it should have the following signature:
@@ -65,7 +53,7 @@ Slider.propTypes = {
    * @uxpinignoreprop
    */
   valueLabelFormat: PropTypes.func | PropTypes.string,
-  
+
   /**
    * The granularity with which the slider can step through values. 
    * (A "discrete" slider.) The min prop serves as the origin for the valid values. 
@@ -106,8 +94,8 @@ Slider.propTypes = {
   /**
      * The component used for the root node. Either a string to use a HTML element or a component.
      */
-  component: PropTypes.string,
-  
+  components: PropTypes.string,
+
   /**
    * Name attribute of the hidden input element.
    */
@@ -144,6 +132,12 @@ Slider.propTypes = {
   getAriaValueText: PropTypes.func,
 
   /**
+   * A transformation function, to change the scale of the slider.
+   * @uxpinignoreprop
+   */
+  scale: PropTypes.func,
+
+  /**
    * Indicates whether the theme context has rtl direction. It is set automatically.
    * @uxpinignoreprop
    */
@@ -159,4 +153,9 @@ Slider.propTypes = {
    * Custom Style Object
    */
   sx: PropTypes.object,
+  
+  /**
+  * Custom Style Object
+  */
+  onChange: PropTypes.func,
 }
