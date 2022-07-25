@@ -1,13 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextFieldM from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
+import Icon from '../Icon/Icon';
+import { iconVariants } from '../Icon/icon-variants'
+
 
 /**
  * @uxpindocurl https://mui.com/api/text-field/
  */
 function TextField(props) {
+  const { uxpinRef, startAdornment, endAdornment, ...other } = props;
+
   return (
-    <TextFieldM {...props} />
+    <TextFieldM {...other}
+      InputProps={{
+        startAdornment: (
+          props.startAdornment &&
+          <InputAdornment position="start">
+            <Icon>{startAdornment}</Icon>
+          </InputAdornment>
+
+        ),
+        endAdornment: (
+          props.endAdornment &&
+          <InputAdornment position="end">
+            <Icon>{endAdornment}</Icon>
+          </InputAdornment>
+        ),
+      }}
+    />
   )
 }
 
@@ -81,7 +103,10 @@ TextField.propTypes = {
 
   /** If 'true', the component is disabled.*/
   disabled: PropTypes.bool,
-
+  /**
+   * Type of the input element
+   */
+  type: PropTypes.oneOf(['text', 'number', 'password']),
   /**
  * If `true`, the label is displayed as required and the input will be required.
  */
@@ -141,6 +166,14 @@ TextField.propTypes = {
 
   /** @uxpinignoreprop */
   SelectProps: PropTypes.object,
+
+  /**
+  * If set, icon will display to the left.
+  * Use the name of the icon from https://material.io/tools/icons.
+  */
+  startAdornment: PropTypes.oneOf(iconVariants),
+
+  endAdornment: PropTypes.oneOf(iconVariants),
 
   /**
 * Callback fired when the value is changed.
