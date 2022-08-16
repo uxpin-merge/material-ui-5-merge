@@ -2,6 +2,12 @@ module.exports = {
   components: {
     categories: [
       {
+        name: 'Draggable Component',
+        include: [
+          'src/components/Draggable/Draggable.js'
+        ]
+      },
+      {
         name: 'Buttons',
         include: [
           'src/components/Button/Button.js',
