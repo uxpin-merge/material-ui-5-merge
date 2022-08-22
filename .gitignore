@@ -77,3 +77,6 @@ typings/
 # Docz
 
 .docz/cache
+
+#Parcel
+.parcel-cache
