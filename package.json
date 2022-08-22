@@ -1,7 +1,9 @@
 {
   "name": "material-ui-uxpin",
   "version": "1.0.0",
-  "private": true,
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -10,6 +12,7 @@
     "@mui/lab": "^5.0.0-alpha.86",
     "@mui/material": "^5.8.4",
     "@mui/styles": "^5.8.4",
+    "@swc/helpers": "^0.4.8",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -26,7 +29,8 @@
   "scripts": {
     "start": "npx uxpin-merge --disable-tunneling",
     "uxpin": "uxpin-merge --disable-tunneling --webpack-config ./uxpin.webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
-    "build": "react-scripts build",
+    "watch": "parcel watch",
+    "build": "parcel build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
   }
 }
