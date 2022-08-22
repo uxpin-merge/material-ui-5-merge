@@ -27,6 +27,7 @@ function Dialog(props) {
     <DialogM
       open={open}
       onClose={() => setOpen(false)}
+      TransitionProps={ {tabIndex: "null"} }
       // disableEnforceFocus
       // keepMounted
       disablePortal={true}

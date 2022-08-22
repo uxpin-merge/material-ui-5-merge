@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default function CheckboxGroup(props) {
   let id = uuidv4();
-  const [state, setState] = React.useState(props.checkbox);
+  const [state, setState] = React.useState(props.checked);
 
   const handleChange = (e) => {
     setState(e.target.checked);
