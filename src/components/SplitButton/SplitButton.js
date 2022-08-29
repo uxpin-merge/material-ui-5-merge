@@ -96,7 +96,7 @@ export default function SplitButton(props) {
 }
 
 SplitButton.propTypes ={
-  options: PropTypes.object,
+  options: PropTypes.array,
   selected: PropTypes.number,
 }
 SplitButton.defaultProps = {
