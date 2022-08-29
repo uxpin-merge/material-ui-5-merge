@@ -2,19 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "../FormControlLabel/FormControlLabel";
 import Checkbox from "../Checkbox/Checkbox";
-import { makeStyles } from '@mui/styles';
 import { v4 as uuidv4 } from 'uuid';
 
 
-
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-  },
-});
-
 function CheckboxWithLabel(props) {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   // Unique Id 
   const id = uuidv4();
@@ -33,7 +25,6 @@ function CheckboxWithLabel(props) {
         />
       }
       label={props.label}
-      className={classes.root}
     />
   );
 }

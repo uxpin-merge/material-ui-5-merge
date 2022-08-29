@@ -2,13 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "../FormControlLabel/FormControlLabel";
 import Radio from "../Radio/Radio";
-import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-  },
-});
+
 
 function RadioWithLabel(props) {
   const classes = useStyles();
@@ -26,7 +21,6 @@ function RadioWithLabel(props) {
         />
       }
       label={props.label}
-      className={classes.root}
     />
   );
 }

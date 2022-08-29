@@ -87,7 +87,6 @@ import Alert from './components/Alert/Alert';
 import AlertTitle from './components/AlertTitle/AlertTitle';
 import Backdrop from './components/Backdrop/Backdrop';
 import Collapse from './components/Collapse/Collapse';
-import DatePicker from './components/DatePicker/DatePicker';
 import Image from './components/Image/Image';
 import InputLabel from './components/InputLabel/InputLabel';
 import Skeleton from './components/Skeleton/Skeleton';
@@ -185,7 +184,6 @@ export {
   AlertTitle,
   Backdrop,
   Collapse,
-  DatePicker,
   Image,
   InputLabel,
   Skeleton,

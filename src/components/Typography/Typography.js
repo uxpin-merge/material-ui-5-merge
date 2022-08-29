@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TypographyM from '@mui/material/Typography';
-import ReactHtmlParser from "react-html-parser";
 //import BoxM from "../Box/Box";
 
 /**

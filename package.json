@@ -1,38 +1,24 @@
 {
   "name": "merge-material",
-  "version": "1.0.8",
+  "version": "1.0.13",
   "source": "src/index.js",
   "main": "dist/main.js",
   "module": "dist/module.js",
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@material-ui/lab": "^4.0.0-alpha.60",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/lab": "^5.0.0-alpha.86",
-    "@mui/material": "^5.8.4",
-    "@mui/styles": "^5.8.4",
-    "@swc/helpers": "^0.4.8",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@uxpin/merge-cli": "^2.8.0",
-    "date-fns": "^2.27.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
+    "@swc/helpers": "^0.4.11",
     "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-html-parser": "^2.0.2",
-    "react-scripts": "5.0.0",
-    "uuid": "^8.3.2",
-    "web-vitals": "^1.0.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^8.3.2"
   },
   "scripts": {
-    "start": "npx uxpin-merge --disable-tunneling",
-    "uxpin": "uxpin-merge --disable-tunneling --webpack-config ./uxpin.webpack.config.js --wrapper ./src/components/UXPinWrapper/UXPinWrapper.js",
     "watch": "parcel watch",
-    "build": "parcel build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "parcel build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,19 +26,8 @@
       "react-app/jest"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
+    "@uxpin/merge-cli": "^2.8.0",
     "parcel": "^2.7.0"
   }
 }

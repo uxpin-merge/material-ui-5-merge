@@ -2,18 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import FormControlLabelM from "../FormControlLabel/FormControlLabel";
 import Switch from "../Switch/Switch";
-import { makeStyles } from '@mui/styles';
 import { v4 as uuidv4 } from 'uuid';
 
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-  },
-});
-
 function SwitchWithLabel(props) {
-  const classes = useStyles();
  // Unique Id 
  const id = uuidv4();
   return (
@@ -29,7 +21,6 @@ function SwitchWithLabel(props) {
         />
       }
       label={props.label}
-      className={classes.root}
     />
   );
 }
