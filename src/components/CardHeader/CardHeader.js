@@ -11,11 +11,12 @@ import { iconVariants } from '../Icon/icon-variants'
  * @uxpindocurl https://mui.com/api/card-header/
  */
 function CardHeader(props) {
+  const { iconOnClick, ...other } = props;
     return (
         <CardHeaderM 
-          {...props} 
+          {...other} 
           avatar={props.avatar && <Avatar color={props.color}>{props.avatar}</Avatar>}
-          action={props.action && <IconButton aria-label={props.ariaLabel} onClick={props.iconOnClick}><Icon>{props.action}</Icon></IconButton>}
+          action={props.action && <IconButton onClick={props.iconOnClick}>{props.action}</IconButton>}
         >
           {props.children}
         </CardHeaderM>
@@ -92,7 +93,7 @@ CardHeader.propTypes = {
   /**
    * Aria tag for accessibility
    */
-  ariaLabel: PropTypes.string,
+  // ariaLabel: PropTypes.string,
 
   /**
    * These props will be forwarded to the title (as long as disableTypography is not true).

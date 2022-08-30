@@ -8,7 +8,9 @@ import CardM from '@mui/material/Card';
  */
 function Card(props) {
     return (
-        <CardM {...props}>{props.children}</CardM>
+        <CardM {...props}>
+          {props.children}
+          </CardM>
     )
 } 
 
