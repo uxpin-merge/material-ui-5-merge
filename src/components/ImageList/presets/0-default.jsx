@@ -12,8 +12,7 @@ export default (
       <ImageListItemBar
         uxpId="1.1.2"
         title="Trends"
-        titlePosition="top"
-        actionIcon={<IconButton uxpId="Icon-Button-1" color="inherit" ariaLabel="Trends icon button">star_border</IconButton>}
+        actionIcon={<IconButton uxpId="Icon-Button-1" color="inherit" >star_border</IconButton>}
         postion="left"
       />
     </ImageListItem>
@@ -24,8 +23,7 @@ export default (
         uxpId="1.2.2"
         title="Insights
         "
-        titlePosition="top"
-        actionIcon={<IconButton uxpId="Icon-Button-2" color="inherit" ariaLabel="Insights icon button">star_border</IconButton>}
+        actionIcon={<IconButton uxpId="Icon-Button-2" color="inherit" >star_border</IconButton>}
         postion="left"
       />
     </ImageListItem>
@@ -34,8 +32,7 @@ export default (
       <ImageListItemBar
         uxpId="1.3.2"
         title="Inspiration"
-        titlePosition="top"
-        actionIcon={<IconButton uxpId="Icon-Button-3" color="inherit" ariaLabel="Inspiration icon button">star_border</IconButton>}
+        actionIcon={<IconButton uxpId="Icon-Button-3" color="inherit" >star_border</IconButton>}
         postion="left"
       />
     </ImageListItem>
