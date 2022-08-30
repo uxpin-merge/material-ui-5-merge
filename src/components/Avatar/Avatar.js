@@ -20,7 +20,7 @@ Avatar.propTypes = {
    * Letters for initial icons
    */
   /** @uxpinpropname  Letters */
-  children: PropTypes.string,
+  children: PropTypes.node,
   
 
   color: PropTypes.oneOf([
