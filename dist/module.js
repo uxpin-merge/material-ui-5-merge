@@ -2810,8 +2810,9 @@ $32f6f47ecc4dff25$export$2e2bcd8739ae039.defaultProps = {
 /**
  * @uxpindocurl https://mui.com/api/toggle-button/
  */ function $d03f1c667bc620fc$var$ToggleButton(props) {
+    const { startIcon: startIcon , endIcon: endIcon , ...other } = props;
     return /*#__PURE__*/ (0, $5OpyM$jsxs)((0, $5OpyM$muimaterialToggleButton), {
-        ...props,
+        ...other,
         children: [
             props.startIcon && /*#__PURE__*/ (0, $5OpyM$jsx)((0, $09b8e26079f07644$export$2e2bcd8739ae039), {
                 children: props.startIcon
@@ -2982,13 +2983,15 @@ $c397b901a36e7105$export$2e2bcd8739ae039.propTypes = {
 
 
 
+
 /**
  * @uxpindocurl https://mui.com/api/checkbox/
  */ function $79eaa4bf3ad97230$var$Checkbox(props) {
+    // Unique Id 
+    const id = (0, $5OpyM$v4)();
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$muimaterialCheckbox), {
-        ...props,
-        defaultChecked: true
-    });
+        ...props
+    }, id);
 }
 $79eaa4bf3ad97230$var$Checkbox.propTypes = {
     /**
@@ -3035,11 +3038,6 @@ $79eaa4bf3ad97230$var$Checkbox.propTypes = {
     /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */ sx: (0, $5OpyM$proptypes).object
-};
-$79eaa4bf3ad97230$var$Checkbox.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false
 };
 var $79eaa4bf3ad97230$export$2e2bcd8739ae039 = $79eaa4bf3ad97230$var$Checkbox;
 
@@ -3124,7 +3122,6 @@ var $1e7ad72ad8077e55$export$2e2bcd8739ae039 = $1e7ad72ad8077e55$var$FormControl
 
 
 function $ebc9cf1798a0529b$export$2e2bcd8739ae039(props) {
-    // const classes = useStyles();
     // Unique Id 
     const id = (0, $5OpyM$v4)();
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $1e7ad72ad8077e55$export$2e2bcd8739ae039), {
@@ -3197,12 +3194,6 @@ $ebc9cf1798a0529b$export$2e2bcd8739ae039.propTypes = {
         "success",
         "warning", 
     ])
-};
-$ebc9cf1798a0529b$export$2e2bcd8739ae039.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false,
-    onChange: ()=>undefined
 };
 
 
@@ -3520,7 +3511,6 @@ var $4139f8bf7d68d83b$export$2e2bcd8739ae039 = $4139f8bf7d68d83b$var$Radio;
 
 
 function $0be6dea942dcb6c6$export$2e2bcd8739ae039(props) {
-    const classes = useStyles();
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $1e7ad72ad8077e55$export$2e2bcd8739ae039), {
         ...props,
         htmlFor: "radioWithLabel",
@@ -3580,12 +3570,6 @@ $0be6dea942dcb6c6$export$2e2bcd8739ae039.propTypes = {
    * A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
    * @uxpinignoreprop
    */ control: (0, $5OpyM$proptypes).element
-};
-$0be6dea942dcb6c6$export$2e2bcd8739ae039.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false,
-    onChange: ()=>undefined
 };
 
 

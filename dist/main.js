@@ -2910,8 +2910,9 @@ $508024a1db868383$export$2e2bcd8739ae039.defaultProps = {
 /**
  * @uxpindocurl https://mui.com/api/toggle-button/
  */ function $786c7d91445b1133$var$ToggleButton(props) {
+    const { startIcon: startIcon , endIcon: endIcon , ...other } = props;
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsxs)((0, ($parcel$interopDefault($gXNCa$muimaterialToggleButton))), {
-        ...props,
+        ...other,
         children: [
             props.startIcon && /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $5d5b538196f0734e$export$2e2bcd8739ae039), {
                 children: props.startIcon
@@ -3082,13 +3083,15 @@ $e78bf3e4a6265e43$export$2e2bcd8739ae039.propTypes = {
 
 
 
+
 /**
  * @uxpindocurl https://mui.com/api/checkbox/
  */ function $728f39e51d9e3a76$var$Checkbox(props) {
+    // Unique Id 
+    const id = (0, $gXNCa$uuid.v4)();
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, ($parcel$interopDefault($gXNCa$muimaterialCheckbox))), {
-        ...props,
-        defaultChecked: true
-    });
+        ...props
+    }, id);
 }
 $728f39e51d9e3a76$var$Checkbox.propTypes = {
     /**
@@ -3135,11 +3138,6 @@ $728f39e51d9e3a76$var$Checkbox.propTypes = {
     /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */ sx: (0, ($parcel$interopDefault($gXNCa$proptypes))).object
-};
-$728f39e51d9e3a76$var$Checkbox.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false
 };
 var $728f39e51d9e3a76$export$2e2bcd8739ae039 = $728f39e51d9e3a76$var$Checkbox;
 
@@ -3224,7 +3222,6 @@ var $a762a684b81311c2$export$2e2bcd8739ae039 = $a762a684b81311c2$var$FormControl
 
 
 function $66fc9036dc1c8ae6$export$2e2bcd8739ae039(props) {
-    // const classes = useStyles();
     // Unique Id 
     const id = (0, $gXNCa$uuid.v4)();
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $a762a684b81311c2$export$2e2bcd8739ae039), {
@@ -3297,12 +3294,6 @@ $66fc9036dc1c8ae6$export$2e2bcd8739ae039.propTypes = {
         "success",
         "warning", 
     ])
-};
-$66fc9036dc1c8ae6$export$2e2bcd8739ae039.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false,
-    onChange: ()=>undefined
 };
 
 
@@ -3620,7 +3611,6 @@ var $5ce4ba1ecca0e306$export$2e2bcd8739ae039 = $5ce4ba1ecca0e306$var$Radio;
 
 
 function $90115a66fa45abfe$export$2e2bcd8739ae039(props) {
-    const classes = useStyles();
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $a762a684b81311c2$export$2e2bcd8739ae039), {
         ...props,
         htmlFor: "radioWithLabel",
@@ -3680,12 +3670,6 @@ $90115a66fa45abfe$export$2e2bcd8739ae039.propTypes = {
    * A control element. For instance, it can be be a `Radio`, a `Switch` or a `Checkbox`.
    * @uxpinignoreprop
    */ control: (0, ($parcel$interopDefault($gXNCa$proptypes))).element
-};
-$90115a66fa45abfe$export$2e2bcd8739ae039.defaultProps = {
-    // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-    // see: https://fb.me/react-controlled-components
-    checked: false,
-    onChange: ()=>undefined
 };
 
 
