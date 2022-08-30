@@ -2583,9 +2583,6 @@ $96422b95da4c2932$var$IconButton.propTypes = {
         "warning"
     ]),
     /**
-   * Aria tag for accessibility
-   */ ariaLabel: (0, $5OpyM$proptypes).string,
-    /**
    * If `true`, the button will be disabled.
    */ disabled: (0, $5OpyM$proptypes).bool,
     /**
@@ -4449,7 +4446,7 @@ var $68798e9c9b14fbc2$export$2e2bcd8739ae039 = $68798e9c9b14fbc2$var$CardContent
 $ce3930eba6e7760b$var$Avatar.propTypes = {
     /**
    * Letters for initial icons
-   */ /** @uxpinpropname  Letters */ children: (0, $5OpyM$proptypes).string,
+   */ /** @uxpinpropname  Letters */ children: (0, $5OpyM$proptypes).node,
     color: (0, $5OpyM$proptypes).oneOf([
         "red",
         "pink",
@@ -4512,18 +4509,16 @@ var $ce3930eba6e7760b$export$2e2bcd8739ae039 = $ce3930eba6e7760b$var$Avatar;
 /**
  * @uxpindocurl https://mui.com/api/card-header/
  */ function $d2014f5db2c3781d$var$CardHeader(props) {
+    const { iconOnClick: iconOnClick , ...other } = props;
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$muimaterialCardHeader), {
-        ...props,
+        ...other,
         avatar: props.avatar && /*#__PURE__*/ (0, $5OpyM$jsx)((0, $ce3930eba6e7760b$export$2e2bcd8739ae039), {
             color: props.color,
             children: props.avatar
         }),
         action: props.action && /*#__PURE__*/ (0, $5OpyM$jsx)((0, $96422b95da4c2932$export$2e2bcd8739ae039), {
-            "aria-label": props.ariaLabel,
             onClick: props.iconOnClick,
-            children: /*#__PURE__*/ (0, $5OpyM$jsx)((0, $09b8e26079f07644$export$2e2bcd8739ae039), {
-                children: props.action
-            })
+            children: props.action
         }),
         children: props.children
     });
@@ -4579,7 +4574,7 @@ $d2014f5db2c3781d$var$CardHeader.propTypes = {
    */ title: (0, $5OpyM$proptypes).node,
     /**
    * Aria tag for accessibility
-   */ ariaLabel: (0, $5OpyM$proptypes).string,
+   */ // ariaLabel: PropTypes.string,
     /**
    * These props will be forwarded to the title (as long as disableTypography is not true).
    * @uxpinignoreprop
@@ -4788,7 +4783,7 @@ var $a149568af65af764$export$2e2bcd8739ae039 = $a149568af65af764$var$AccordionDe
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$muimaterialAccordionSummary), {
         ...props,
         expandIcon: /*#__PURE__*/ (0, $5OpyM$jsx)((0, $09b8e26079f07644$export$2e2bcd8739ae039), {
-            children: props.expandedIcon
+            children: props.expandIcon
         }),
         children: props.children
     });
@@ -4805,8 +4800,7 @@ $7e7a665160dc4541$var$AccordionSummary.propTypes = {
     /**
    * The icon to display as the expand indicator.
    * Icon prop is used to improve Merge usability.
-   * @uxpinpropname icon
-   */ expandedIcon: (0, $5OpyM$proptypes).oneOf((0, $aa480ee5454dc9fc$export$84babfcc2344e650)),
+   */ expandIcon: (0, $5OpyM$proptypes).oneOf((0, $aa480ee5454dc9fc$export$84babfcc2344e650)),
     /**
    * This prop can help identify which element has keyboard focus. The class name will be applied when the element gains the focus through keyboard interaction. 
     * @uxpinignoreprop
@@ -7575,7 +7569,8 @@ $102f2ef606b4b7af$var$Typography.propTypes = {
         "success.main",
         "text.primary",
         "text.secondary",
-        "text.disabled"
+        "text.disabled",
+        "inherit"
     ]),
     /**
    * Color of the Background.
@@ -8097,6 +8092,7 @@ $e2489546bd00f486$var$Tabs.propTypes = {
    */ value: (0, $5OpyM$proptypes).number,
     /**
    * Number of the tab that supposed to be active initially. Starts with  0 for the first tab.
+   * @uxpinignoreprop
    */ defaultValue: (0, $5OpyM$proptypes).number,
     /**
    *  Determines additional display behavior of the Tabss:
@@ -8265,14 +8261,14 @@ var $2deecf0a8730d962$export$2e2bcd8739ae039 = $2deecf0a8730d962$var$Badge;
 
 
 
-
-
 function $4d4e4fd7803c34b8$export$2e2bcd8739ae039(props) {
     const [chipDeleted, setChipDeleted] = (0, $5OpyM$react).useState(false);
+    const { deletable: deletable , ...other } = props;
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$Fragment1), {
         children: !chipDeleted ? /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$muimaterialChip), {
-            ...props,
+            ...other,
             onDelete: props.deletable ? ()=>{
+                props.onDelete;
                 setChipDeleted(true);
             } : null,
             deleteIcon: props.iconDelete ? /*#__PURE__*/ (0, $5OpyM$jsx)((0, $09b8e26079f07644$export$2e2bcd8739ae039), {
@@ -8368,9 +8364,6 @@ $4d4e4fd7803c34b8$export$2e2bcd8739ae039.propTypes = {
    * Delete event to use with UXPin interactions.
    * @uxpinignoreprop
    */ onDelete: (0, $5OpyM$proptypes).func
-};
-$4d4e4fd7803c34b8$export$2e2bcd8739ae039.defaultProps = {
-    onDelete: ()=>null
 };
 
 
@@ -9698,8 +9691,9 @@ $d12d5612bf4c683e$export$2e2bcd8739ae039.propTypes = {
 /**
  * @uxpindocurl https://mui.com/api/toolbar/
  */ function $40a2506721a5e0f4$var$Toolbar(props) {
+    const { justifyContent: justifyContent , ...other } = props;
     return /*#__PURE__*/ (0, $5OpyM$jsx)((0, $5OpyM$muimaterialToolbar), {
-        ...props,
+        ...other,
         sx: {
             "justifyContent": props.justifyContent
         },

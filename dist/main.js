@@ -2683,9 +2683,6 @@ $9d0d3f7ec61b36bb$var$IconButton.propTypes = {
         "warning"
     ]),
     /**
-   * Aria tag for accessibility
-   */ ariaLabel: (0, ($parcel$interopDefault($gXNCa$proptypes))).string,
-    /**
    * If `true`, the button will be disabled.
    */ disabled: (0, ($parcel$interopDefault($gXNCa$proptypes))).bool,
     /**
@@ -4549,7 +4546,7 @@ var $c286ba353d41e89d$export$2e2bcd8739ae039 = $c286ba353d41e89d$var$CardContent
 $c9dc73d564bb1f09$var$Avatar.propTypes = {
     /**
    * Letters for initial icons
-   */ /** @uxpinpropname  Letters */ children: (0, ($parcel$interopDefault($gXNCa$proptypes))).string,
+   */ /** @uxpinpropname  Letters */ children: (0, ($parcel$interopDefault($gXNCa$proptypes))).node,
     color: (0, ($parcel$interopDefault($gXNCa$proptypes))).oneOf([
         "red",
         "pink",
@@ -4612,18 +4609,16 @@ var $c9dc73d564bb1f09$export$2e2bcd8739ae039 = $c9dc73d564bb1f09$var$Avatar;
 /**
  * @uxpindocurl https://mui.com/api/card-header/
  */ function $56e5384b9e51b151$var$CardHeader(props) {
+    const { iconOnClick: iconOnClick , ...other } = props;
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, ($parcel$interopDefault($gXNCa$muimaterialCardHeader))), {
-        ...props,
+        ...other,
         avatar: props.avatar && /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $c9dc73d564bb1f09$export$2e2bcd8739ae039), {
             color: props.color,
             children: props.avatar
         }),
         action: props.action && /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $9d0d3f7ec61b36bb$export$2e2bcd8739ae039), {
-            "aria-label": props.ariaLabel,
             onClick: props.iconOnClick,
-            children: /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $5d5b538196f0734e$export$2e2bcd8739ae039), {
-                children: props.action
-            })
+            children: props.action
         }),
         children: props.children
     });
@@ -4679,7 +4674,7 @@ $56e5384b9e51b151$var$CardHeader.propTypes = {
    */ title: (0, ($parcel$interopDefault($gXNCa$proptypes))).node,
     /**
    * Aria tag for accessibility
-   */ ariaLabel: (0, ($parcel$interopDefault($gXNCa$proptypes))).string,
+   */ // ariaLabel: PropTypes.string,
     /**
    * These props will be forwarded to the title (as long as disableTypography is not true).
    * @uxpinignoreprop
@@ -4888,7 +4883,7 @@ var $217e6435bd73e449$export$2e2bcd8739ae039 = $217e6435bd73e449$var$AccordionDe
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, ($parcel$interopDefault($gXNCa$muimaterialAccordionSummary))), {
         ...props,
         expandIcon: /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $5d5b538196f0734e$export$2e2bcd8739ae039), {
-            children: props.expandedIcon
+            children: props.expandIcon
         }),
         children: props.children
     });
@@ -4905,8 +4900,7 @@ $7f98b5de5977d9bb$var$AccordionSummary.propTypes = {
     /**
    * The icon to display as the expand indicator.
    * Icon prop is used to improve Merge usability.
-   * @uxpinpropname icon
-   */ expandedIcon: (0, ($parcel$interopDefault($gXNCa$proptypes))).oneOf((0, $3453f0e80f57b546$export$84babfcc2344e650)),
+   */ expandIcon: (0, ($parcel$interopDefault($gXNCa$proptypes))).oneOf((0, $3453f0e80f57b546$export$84babfcc2344e650)),
     /**
    * This prop can help identify which element has keyboard focus. The class name will be applied when the element gains the focus through keyboard interaction. 
     * @uxpinignoreprop
@@ -7675,7 +7669,8 @@ $c69c9af64d1bcbbd$var$Typography.propTypes = {
         "success.main",
         "text.primary",
         "text.secondary",
-        "text.disabled"
+        "text.disabled",
+        "inherit"
     ]),
     /**
    * Color of the Background.
@@ -8197,6 +8192,7 @@ $8555edef2633e438$var$Tabs.propTypes = {
    */ value: (0, ($parcel$interopDefault($gXNCa$proptypes))).number,
     /**
    * Number of the tab that supposed to be active initially. Starts with  0 for the first tab.
+   * @uxpinignoreprop
    */ defaultValue: (0, ($parcel$interopDefault($gXNCa$proptypes))).number,
     /**
    *  Determines additional display behavior of the Tabss:
@@ -8365,14 +8361,14 @@ var $f2a08d72c1177b65$export$2e2bcd8739ae039 = $f2a08d72c1177b65$var$Badge;
 
 
 
-
-
 function $9e79b9d8ae79cfbb$export$2e2bcd8739ae039(props) {
     const [chipDeleted, setChipDeleted] = (0, ($parcel$interopDefault($gXNCa$react))).useState(false);
+    const { deletable: deletable , ...other } = props;
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $gXNCa$reactjsxruntime.Fragment), {
         children: !chipDeleted ? /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, ($parcel$interopDefault($gXNCa$muimaterialChip))), {
-            ...props,
+            ...other,
             onDelete: props.deletable ? ()=>{
+                props.onDelete;
                 setChipDeleted(true);
             } : null,
             deleteIcon: props.iconDelete ? /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, $5d5b538196f0734e$export$2e2bcd8739ae039), {
@@ -8468,9 +8464,6 @@ $9e79b9d8ae79cfbb$export$2e2bcd8739ae039.propTypes = {
    * Delete event to use with UXPin interactions.
    * @uxpinignoreprop
    */ onDelete: (0, ($parcel$interopDefault($gXNCa$proptypes))).func
-};
-$9e79b9d8ae79cfbb$export$2e2bcd8739ae039.defaultProps = {
-    onDelete: ()=>null
 };
 
 
@@ -9798,8 +9791,9 @@ $8eb01ec45439757f$export$2e2bcd8739ae039.propTypes = {
 /**
  * @uxpindocurl https://mui.com/api/toolbar/
  */ function $bb4187969528d741$var$Toolbar(props) {
+    const { justifyContent: justifyContent , ...other } = props;
     return /*#__PURE__*/ (0, $gXNCa$reactjsxruntime.jsx)((0, ($parcel$interopDefault($gXNCa$muimaterialToolbar))), {
-        ...props,
+        ...other,
         sx: {
             "justifyContent": props.justifyContent
         },
