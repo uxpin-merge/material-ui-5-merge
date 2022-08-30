@@ -41,11 +41,6 @@ IconButton.propTypes = {
   color: PropTypes.oneOf(["default", "inherit", "primary", "secondary", "error", "info", "success", "warning"]),
 
   /**
-   * Aria tag for accessibility
-   */
-  ariaLabel: PropTypes.string,
- 
-  /**
    * If `true`, the button will be disabled.
    */
   disabled: PropTypes.bool,
