@@ -140,6 +140,7 @@ Tabs.propTypes = {
 
   /**
    * Number of the tab that supposed to be active initially. Starts with  0 for the first tab.
+   * @uxpinignoreprop
    */
   defaultValue: PropTypes.number,
 

@@ -7,7 +7,7 @@ export default (
     indicatorColor="primary"
     textColor="primary"
     uxpId="tabs-1"
-    defaultValue={1}
+    value={0}
   >
     <Tab label="Active" uxpId="tab-1" fullWidth />
     <Tab label="Disabled" uxpId="tab-2" fullWidth />
