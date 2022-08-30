@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 function CheckboxWithLabel(props) {
-  // const classes = useStyles();
 
   // Unique Id 
   const id = uuidv4();
@@ -25,6 +24,7 @@ function CheckboxWithLabel(props) {
         />
       }
       label={props.label}
+
     />
   );
 }
@@ -91,13 +91,6 @@ CheckboxWithLabel.propTypes = {
       'success',
       'warning',
     ]),
-};
-
-CheckboxWithLabel.defaultProps = {
-  // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-  // see: https://fb.me/react-controlled-components
-  checked: false,
-  onChange: () => undefined,
 };
 
 export { CheckboxWithLabel as default };
