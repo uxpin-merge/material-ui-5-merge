@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CheckboxM from '@mui/material/Checkbox';
-
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * @uxpindocurl https://mui.com/api/checkbox/
  */
 function Checkbox(props) {
-  return <CheckboxM {...props} defaultChecked/>;
+
+  // Unique Id 
+  const id = uuidv4();
+
+  return <CheckboxM key={id} {...props} />;
 }
 
 Checkbox.propTypes = {
@@ -71,11 +75,5 @@ Checkbox.propTypes = {
    */
   sx: PropTypes.object,
 }
-
-Checkbox.defaultProps = {
-  // NOTE: Checked must be controlled state from the outset, otherwise changing state in the app will trigger an error
-  // see: https://fb.me/react-controlled-components
-  checked: false,
-};
 
 export default Checkbox;
