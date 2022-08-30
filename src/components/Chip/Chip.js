@@ -2,23 +2,24 @@ import React from 'react';
 import PropTypes from "prop-types";
 import ChipM from '@mui/material/Chip';
 import Icon from '../Icon/Icon';
-import Avatar from '../Avatar/Avatar';
-import { iconVariants } from '../Icon/icon-variants';
 
 /**
  * @uxpindocurl https://mui.com/components/chips/
  */
 export default function Chip(props) {
   const [chipDeleted, setChipDeleted] = React.useState(false);
+  const { deletable, ...other } = props;
 
   return (
+    
     <>
       {!chipDeleted ? (
         <ChipM
-          {...props}
+          {...other}
           onDelete={
             props.deletable
               ? () => {
+                props.onDelete;
                   setChipDeleted(true);
                 }
               : null
@@ -141,6 +142,3 @@ Chip.propTypes = {
   onDelete: PropTypes.func,
 }
 
-Chip.defaultProps = {
-  onDelete: () => null,
-};
