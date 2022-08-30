@@ -6,8 +6,10 @@ import ToolbarM from '@mui/material/Toolbar';
  * @uxpindocurl https://mui.com/api/toolbar/
  */
 function Toolbar(props) {
+    const { justifyContent, ...other } = props;
+
     return (
-        <ToolbarM {...props} sx={{"justifyContent": props.justifyContent}}>{props.children}</ToolbarM>
+        <ToolbarM {...other} sx={{"justifyContent": props.justifyContent}}>{props.children}</ToolbarM>
     )
 }
 
