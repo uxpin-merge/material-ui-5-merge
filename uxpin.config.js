@@ -130,7 +130,7 @@ module.exports = {
           'src/components/BottomNavigation/BottomNavigation.js',
           'src/components/BottomNavigationAction/BottomNavigationAction.js',
           'src/components/Breadcrumbs/Breadcrumbs.js',
-          // STYLE 'src/components/Drawer/Drawer.js',
+          'src/components/Drawer/Drawer.js',
           'src/components/Menu/Menu.js',
           'src/components/Link/Link.js',
           'src/components/MenuList/MenuList.js',
