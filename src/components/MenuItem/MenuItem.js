@@ -44,6 +44,8 @@ MenuItem.propTypes = {
   sx: PropTypes.object,
 
   value: PropTypes.string,
+
+  onClick: PropTypes.func,
 }
 
 export default MenuItem;
