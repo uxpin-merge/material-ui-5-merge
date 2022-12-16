@@ -1,33 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DialogM from '@mui/material/Dialog';
+import OriginalDialog from '@mui/material/Dialog';
 
 /**
  * @uxpindocurl https://mui.com/api/dialog/#main-content
+ * @uxpinuseportal
  */
 
 function Dialog(props) {
-  const { uxpinRef, ...other } = props;
+  const { children, open, ...otherProps } = props;
+  const [isOpen, setIsOpen] = React.useState(open);
 
-  const [open, setOpen] = React.useState(props.open);
-
-  React.useEffect(() => setOpen(props.open), [props]);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  React.useEffect(() => setIsOpen(open), [open]);
 
   return (
-    <DialogM
-      open={open}
-      onClose={() => setOpen(false)}
+    <OriginalDialog
+      open={isOpen}
+      onClose={() => setIsOpen(false)}
       TransitionProps={{ tabIndex: 'null' }}
-      // disableEnforceFocus
-      // keepMounted
       disablePortal={true}
       style={{
         minWidth: '300px',
@@ -35,10 +25,10 @@ function Dialog(props) {
         width: '100%',
         height: '100%',
       }}
-      {...props}
+      {...otherProps}
     >
-      {props.children}
-    </DialogM>
+      {children}
+    </OriginalDialog>
   );
 }
 
@@ -126,15 +116,6 @@ Dialog.propTypes = {
    * Determine the container for scrolling the dialog.
    */
   scroll: PropTypes.oneOf(['body', 'paper']),
-  /**
-   * Enter event to use with UXPin interactions.
-   */
-  onEnter: PropTypes.func,
-
-  /**
-   * Exit event to use with UXPin interactions.
-   */
-  onExit: PropTypes.func,
 
   onClose: PropTypes.func,
 
