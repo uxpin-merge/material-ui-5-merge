@@ -1,53 +1,64 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import SnackbarM from '@mui/material/Snackbar';
+import OriginalSnackbar from '@mui/material/Snackbar';
+
 import IconButton from '../IconButton/IconButton';
-import Icon from '../Icon/Icon';
 
 /**
- * @uxpindocurl https://mui.com/components/skeleton/#main-content
+ * @uxpindocurl https://mui.com/material-ui/react-snackbar/
+ * @uxpinuseportal
  */
 export default function Snackbar(props) {
-  const { uxpinRef, ...other } = props;
+  const { horizontal, open, sx, undo, uxpinRef, vertical, ...other } = props;
 
-  const [open, setOpen] = React.useState(props.open);
+  const [isOpen, setIsOpen] = React.useState(open);
 
   React.useEffect(() => {
-    setOpen(props.open);
-  }, [props.open]); // Only re-run the effect if open prop changes
+    setIsOpen(open);
+  }, [open]); // Only re-run the effect if open prop changes
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
+      // prevents from closing in the UXPin Editor when switching props
       return;
     }
 
-    setOpen(false);
+    setIsOpen(false);
   };
 
-  const action = (
-    <React.Fragment>
-      <div>
-        {props.undo ? (
-          <Button color="primary" size="small" onClick={handleClose}>
-            UNDO
-          </Button>
-        ) : null}
+  const anchorOrigin = { vertical, horizontal };
+  const styles = { ...sx, position: 'absolute' }; // override `fixed` position to display related to the Preview main area
 
-        {props.children}
-        <IconButton
-          size="small"
-          aria-label="close"
-          color="inherit"
-          onClick={handleClose}
-        >
-          <Icon fontSize="small">close</Icon>
-        </IconButton>
-      </div>
-    </React.Fragment>
+  const action = (
+    <>
+      {undo && (
+        <Button color="primary" size="small" onClick={() => setIsOpen(false)}>
+          Undo
+        </Button>
+      )}
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={() => setIsOpen(false)}
+      >
+        close
+      </IconButton>
+    </>
   );
 
-  return <SnackbarM {...other} open={open} action={action} ref={uxpinRef} />;
+  return (
+    <OriginalSnackbar
+      {...other}
+      onClose={handleClose}
+      open={isOpen}
+      anchorOrigin={anchorOrigin}
+      action={action}
+      ref={uxpinRef}
+      sx={styles}
+    />
+  );
 }
 
 Snackbar.propTypes = {
@@ -159,4 +170,13 @@ Snackbar.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
   sx: PropTypes.object,
+
+  // New properties added to be able to set up the position on the screen from the UXPin Editor
+  vertical: PropTypes.oneOf(['top', 'bottom']),
+  horizontal: PropTypes.oneOf(['left', 'center', 'right']),
+};
+
+Snackbar.defaultProps = {
+  vertical: 'bottom',
+  horizontal: 'left',
 };

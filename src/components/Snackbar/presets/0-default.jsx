@@ -6,5 +6,6 @@ export default (
     uxpId='Snackbar-1' 
     open={true}
     message="Note archived"
+    undo
   />
 );
