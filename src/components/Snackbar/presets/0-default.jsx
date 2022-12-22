@@ -2,9 +2,10 @@ import * as React from 'react';
 import Snackbar from '../Snackbar';
 
 export default (
-  <Snackbar 
-    uxpId='Snackbar-1' 
-    open={true}
+  <Snackbar
     message="Note archived"
+    open={true}
+    undo={true}
+    uxpId="Snackbar-1"
   />
 );

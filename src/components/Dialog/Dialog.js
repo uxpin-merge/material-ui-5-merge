@@ -1,42 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DialogM from "@mui/material/Dialog";
-
+import OriginalDialog from '@mui/material/Dialog';
 
 /**
  * @uxpindocurl https://mui.com/api/dialog/#main-content
+ * @uxpinuseportal
  */
 
 function Dialog(props) {
+  const { children, open, sx, ...otherProps } = props;
+  const [isOpen, setIsOpen] = React.useState(open);
 
-  const { uxpinRef, ...other } = props;
+  React.useEffect(() => setIsOpen(open), [open]);
 
-  const [open, setOpen] = React.useState(props.open);
-
-  React.useEffect(() => setOpen(props.open), [props]);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const styles = { ...sx, position: 'absolute' }; // override `fixed` position to display related to the Preview main area
 
   return (
-    <DialogM
-      open={open}
-      onClose={() => setOpen(false)}
-      TransitionProps={ {tabIndex: "null"} }
-      // disableEnforceFocus
-      // keepMounted
+    <OriginalDialog
+      open={isOpen}
+      onClose={() => setIsOpen(false)}
+      TransitionProps={{ tabIndex: 'null' }}
       disablePortal={true}
-      style={{ minWidth: "300px", minHeight: "300px", width: "100%", height: "100%" }}
-      {...props}
+      sx={styles}
+      {...otherProps}
     >
-      {props.children}
-    </DialogM>
-  )
+      {children}
+    </OriginalDialog>
+  );
 }
 
 Dialog.propTypes = {
@@ -74,16 +64,18 @@ Dialog.propTypes = {
   /** @uxpinignoreprop */
   onBackdropClick: PropTypes.func,
 
-
   /**
    * Determine the max width of the dialog.
    * The dialog width grows with the size of the screen, this property is useful
    * on the desktop where you might need some coherent different width size across your
    * application. Set to `false` to disable `maxWidth`.
    */
-  maxWidth: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", false]),
+  maxWidth: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl', false]),
 
-
+  /**
+   * If `true`, the dialog stretches to `maxWidth`.
+   */
+  fullWidth: PropTypes.bool,
 
   /**
    *  @uxpinignoreprop
@@ -97,8 +89,8 @@ Dialog.propTypes = {
   PaperComponent: PropTypes.elementType,
 
   /**
-   * The component used for the transition. 
-   * Follow this guide: https://mui.com/components/transitions/#transitioncomponent-prop 
+   * The component used for the transition.
+   * Follow this guide: https://mui.com/components/transitions/#transitioncomponent-prop
    * to learn more about the requirements for this component.
    */
   /** @uxpinignoreprop */
@@ -126,32 +118,15 @@ Dialog.propTypes = {
    * Determine the container for scrolling the dialog.
    */
   scroll: PropTypes.oneOf(['body', 'paper']),
-  /**
- * Enter event to use with UXPin interactions.
- */
-  onEnter: PropTypes.func,
 
-  /**
-   * Exit event to use with UXPin interactions.
-   */
-  onExit: PropTypes.func,
-  
   onClose: PropTypes.func,
 
   /**
- * If `true`, the dialog stretches to `maxWidth`.
- * @uxpinignoreprop
- */
-  fullWidth: PropTypes.bool,
-
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles. 
+   * The system prop that allows defining system overrides as well as additional CSS styles.
    * See the `sx` page for more details. https://mui.com/system/the-sx-prop/
    */
   /** */
   sx: PropTypes.object,
-
 };
-
 
 export default Dialog;

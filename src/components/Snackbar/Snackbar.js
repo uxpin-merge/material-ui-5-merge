@@ -1,72 +1,70 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import SnackbarM from '@mui/material/Snackbar';
+import OriginalSnackbar from '@mui/material/Snackbar';
+
 import IconButton from '../IconButton/IconButton';
-import Icon from '../Icon/Icon';
 
 /**
- * @uxpindocurl https://mui.com/components/skeleton/#main-content
+ * @uxpindocurl https://mui.com/material-ui/react-snackbar/
+ * @uxpinuseportal
  */
 export default function Snackbar(props) {
+  const { horizontal, open, sx, undo, uxpinRef, vertical, ...other } = props;
 
-  const { uxpinRef, ...other } = props;
-
-  const [open, setOpen] = React.useState(props.open);
-
+  const [isOpen, setIsOpen] = React.useState(open);
 
   React.useEffect(() => {
-    setOpen(props.open)
-  }, [props.open]); // Only re-run the effect if open prop changes
-
+    setIsOpen(open);
+  }, [open]); // Only re-run the effect if open prop changes
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
+      // prevents from closing in the UXPin Editor when switching props
       return;
     }
 
-    setOpen(false);
+    setIsOpen(false);
   };
 
-  const action = (
-    <React.Fragment >
-      <div >
-        {props.undo ?
-          <Button color="primary" size="small" onClick={handleClose} >
-            UNDO
-          </Button>
-          :
-          null}
+  const anchorOrigin = { vertical, horizontal };
+  const styles = { ...sx, position: 'absolute' }; // override `fixed` position to display related to the Preview main area
 
-        {props.children}
-        <IconButton
-          size="small"
-          aria-label="close"
-          color="inherit"
-          onClick={handleClose}
-        >
-          <Icon fontSize="small">close</Icon>
-        </IconButton>
-      </div>
-    </React.Fragment>
+  const action = (
+    <>
+      {undo && (
+        <Button color="primary" size="small" onClick={() => setIsOpen(false)}>
+          Undo
+        </Button>
+      )}
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={() => setIsOpen(false)}
+      >
+        close
+      </IconButton>
+    </>
   );
 
   return (
-    <SnackbarM
+    <OriginalSnackbar
       {...other}
-      open={open}
+      onClose={handleClose}
+      open={isOpen}
+      anchorOrigin={anchorOrigin}
       action={action}
       ref={uxpinRef}
+      sx={styles}
     />
   );
 }
 
-
 Snackbar.propTypes = {
-
   /**
- * The message to display.
- */
+   * The message to display.
+   */
   message: PropTypes.string,
 
   /**
@@ -75,8 +73,8 @@ Snackbar.propTypes = {
   open: PropTypes.bool,
 
   /**
- * If true, the undo button is shown.
- */
+   * If true, the undo button is shown.
+   */
   undo: PropTypes.bool,
 
   /**
@@ -86,23 +84,23 @@ Snackbar.propTypes = {
   action: PropTypes.node,
 
   /**
-   * The anchor of the Snackbar. 
+   * The anchor of the Snackbar.
    * On smaller screens, the component grows to occupy all the available width, the horizontal alignment is ignored.
    * @uxpinignoreprop
    */
   actionOrigin: PropTypes.object,
 
   /**
-   * The number of milliseconds to wait before automatically calling the onClose function. 
-   * onClose should then set the state of the open prop to hide the Snackbar. 
+   * The number of milliseconds to wait before automatically calling the onClose function.
+   * onClose should then set the state of the open prop to hide the Snackbar.
    * This behavior is disabled by default with the null value.
-* @uxpinignoreprop
+   * @uxpinignoreprop
    */
   autoHideDuration: PropTypes.number,
 
   /**
    * The content of the component.
-    * @uxpinignoreprop
+   * @uxpinignoreprop
    */
   children: PropTypes.node,
 
@@ -131,23 +129,20 @@ Snackbar.propTypes = {
   disableWindowBlurListener: PropTypes.bool,
 
   /**
-   * When displaying multiple consecutive Snackbars from a parent rendering a single <Snackbar/>, add the key prop to ensure independent treatment of each message. 
+   * When displaying multiple consecutive Snackbars from a parent rendering a single <Snackbar/>, add the key prop to ensure independent treatment of each message.
    * e.g. <Snackbar key={message} />, otherwise, the message may update-in-place and features such as autoHideDuration may be canceled.
    * @uxpinignoreprop
    */
   key: PropTypes.node,
 
-
-
   /**
-   * Callback fired when the component requests to be closed. Typically onClose is used to set state in the parent component, which is used to control the Snackbar open prop. 
+   * Callback fired when the component requests to be closed. Typically onClose is used to set state in the parent component, which is used to control the Snackbar open prop.
    * The reason parameter can optionally be used to control the response to onClose, for example ignoring clickaway.
    */
   onClose: PropTypes.func,
 
-
   /**
-   * The number of milliseconds to wait before dismissing after user interaction. If autoHideDuration prop isn't specified, it does nothing. 
+   * The number of milliseconds to wait before dismissing after user interaction. If autoHideDuration prop isn't specified, it does nothing.
    * If autoHideDuration prop is specified but resumeHideDuration isn't, we default to autoHideDuration / 2 ms.
    * @uxpinignoreprop
    */
@@ -160,7 +155,7 @@ Snackbar.propTypes = {
   TransitionComponent: PropTypes.elementType,
 
   /**
-   * The duration for the transition, in milliseconds. 
+   * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
    */
   // transitionDuration: PropTypes.number | { appear?: number, enter?: number, exit?: number },
@@ -175,4 +170,13 @@ Snackbar.propTypes = {
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
   sx: PropTypes.object,
-}
+
+  // New properties added to be able to set up the position on the screen from the UXPin Editor
+  vertical: PropTypes.oneOf(['top', 'bottom']),
+  horizontal: PropTypes.oneOf(['left', 'center', 'right']),
+};
+
+Snackbar.defaultProps = {
+  vertical: 'bottom',
+  horizontal: 'left',
+};
