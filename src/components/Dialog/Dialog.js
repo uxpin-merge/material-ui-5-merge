@@ -8,10 +8,12 @@ import OriginalDialog from '@mui/material/Dialog';
  */
 
 function Dialog(props) {
-  const { children, open, ...otherProps } = props;
+  const { children, open, sx, ...otherProps } = props;
   const [isOpen, setIsOpen] = React.useState(open);
 
   React.useEffect(() => setIsOpen(open), [open]);
+
+  const styles = { ...sx, position: 'absolute' }; // override `fixed` position to display related to the Preview main area
 
   return (
     <OriginalDialog
@@ -19,12 +21,7 @@ function Dialog(props) {
       onClose={() => setIsOpen(false)}
       TransitionProps={{ tabIndex: 'null' }}
       disablePortal={true}
-      style={{
-        minWidth: '300px',
-        minHeight: '300px',
-        width: '100%',
-        height: '100%',
-      }}
+      sx={styles}
       {...otherProps}
     >
       {children}
@@ -76,6 +73,11 @@ Dialog.propTypes = {
   maxWidth: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl', false]),
 
   /**
+   * If `true`, the dialog stretches to `maxWidth`.
+   */
+  fullWidth: PropTypes.bool,
+
+  /**
    *  @uxpinignoreprop
    */
   children: PropTypes.node,
@@ -118,12 +120,6 @@ Dialog.propTypes = {
   scroll: PropTypes.oneOf(['body', 'paper']),
 
   onClose: PropTypes.func,
-
-  /**
-   * If `true`, the dialog stretches to `maxWidth`.
-   * @uxpinignoreprop
-   */
-  fullWidth: PropTypes.bool,
 
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
